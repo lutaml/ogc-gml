@@ -1,0 +1,3 @@
+[submodule "ets-gml32"]
+	path = ets-gml32
+	url = git@github.com:opengeospatial/ets-gml32.git
