@@ -1,0 +1,42 @@
+# frozen_string_literal: true
+
+# --- time_instant_type.rb ---
+require "shale"
+
+require_relative "code"
+require_relative "code_with_authority"
+require_relative "meta_data_property"
+require_relative "reference"
+require_relative "related_time"
+require_relative "time_position"
+
+module Ogc
+  module Gml
+    class TimeInstant < Shale::Mapper
+      attribute :id, Shale::Type::Value
+      attribute :frame, Shale::Type::Value, default: -> { "#ISO-8601" }
+      attribute :meta_data_property, MetaDataProperty, collection: true
+      attribute :description, Shale::Type::String
+      attribute :description_reference, Reference
+      attribute :identifier, CodeWithAuthority
+      attribute :name, Code, collection: true
+      attribute :related_time, RelatedTime, collection: true
+      attribute :time_position, TimePosition
+
+      xml do
+        root "TimeInstant"
+        namespace "http://www.opengis.net/gml/3.2", "gml"
+
+        map_attribute "id", to: :id, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
+        map_attribute "frame", to: :frame
+        map_element "metaDataProperty", to: :meta_data_property
+        map_element "description", to: :description
+        map_element "descriptionReference", to: :description_reference
+        map_element "identifier", to: :identifier
+        map_element "name", to: :name
+        map_element "relatedTime", to: :related_time
+        map_element "timePosition", to: :time_position
+      end
+    end
+  end
+end

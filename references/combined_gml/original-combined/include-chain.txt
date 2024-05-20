@@ -1,0 +1,78 @@
+gml
+  -> dynamicFeature DONE
+    X gml
+    -> feature DONE
+      X gml
+      -> geometryAggregates DONE
+        X gml
+        -> geometryPrimitives DONE
+          X gml
+          -> geometryBasic2d DONE
+            X gml
+            -> geometryBasic0d1d DONE
+              X gml
+              -> measures DONE
+                X gml
+                -> units DONE
+                  X gml
+                  -> dictionary DONE
+                    X gml
+                    -> gmlBase DONE
+                      X gml
+                      -> basicTypes DONE
+                        X gml
+      -> temporal DONE
+        X gml
+        X gmlBase
+    -> direction DONE
+      X gml
+      X geometryBasic0d1d
+  -> toploogy DONE
+    X gml
+    -> geometryComplexes DONE
+      X gml
+      X geometryAggregates
+  -> coverage
+    X gml
+    X feature
+    -> valueObjects DONE
+      X gml
+      X geometryBasic0d1d
+      X temporal
+    -> grids
+      X gml
+      X geometryBasic0d1d
+    X geometryAggregates
+  -> coordinateReferenceSystems
+    X gml
+    -> coordinateSystems DONE
+      X gml
+      -> referenceSystems DONE
+        X gml
+        X dictionary
+    -> datums
+      X gml
+      X referenceSystems
+      X measures
+    -> coordinateOperations
+      X gml
+      X referenceSystems
+      X measures
+  -> observation
+    X gml
+    X feature
+    X direction
+    X valueObjects
+  -> temporalReferenceSystems DONE
+    X gml
+    -> temporalTopology
+      X gml
+      X temporal
+    X dictionary
+  -> deprecatedTypes
+    X gml
+
+
+Not in use:
+defaultStyle
+SchematronConstraints

@@ -1,0 +1,51 @@
+# frozen_string_literal: true
+
+# --- conventional_unit_type.rb ---
+require "shale"
+
+require_relative "code"
+require_relative "code_with_authority"
+require_relative "conversion_to_preferred_unit"
+require_relative "derivation_unit_term"
+require_relative "meta_data_property"
+require_relative "reference"
+require_relative "string_or_ref"
+
+module Ogc
+  module Gml
+    class ConventionalUnit < Shale::Mapper
+      attribute :id, Shale::Type::Value
+      attribute :meta_data_property, MetaDataProperty, collection: true
+      attribute :description, Shale::Type::String
+      attribute :description_reference, Reference
+      attribute :identifier, CodeWithAuthority
+      attribute :name, Code, collection: true
+      attribute :remarks, Shale::Type::String
+      attribute :quantity_type, StringOrRef
+      attribute :quantity_type_reference, Reference
+      attribute :catalog_symbol, Code
+      attribute :conversion_to_preferred_unit, ConversionToPreferredUnit
+      attribute :rough_conversion_to_preferred_unit, ConversionToPreferredUnit
+      attribute :derivation_unit_term, DerivationUnitTerm, collection: true
+
+      xml do
+        root "ConventionalUnit"
+        namespace "http://www.opengis.net/gml/3.2", "gml"
+
+        map_attribute "id", to: :id, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
+        map_element "metaDataProperty", to: :meta_data_property
+        map_element "description", to: :description
+        map_element "descriptionReference", to: :description_reference
+        map_element "identifier", to: :identifier
+        map_element "name", to: :name
+        map_element "remarks", to: :remarks
+        map_element "quantityType", to: :quantity_type
+        map_element "quantityTypeReference", to: :quantity_type_reference
+        map_element "catalogSymbol", to: :catalog_symbol
+        map_element "conversionToPreferredUnit", to: :conversion_to_preferred_unit
+        map_element "roughConversionToPreferredUnit", to: :rough_conversion_to_preferred_unit
+        map_element "derivationUnitTerm", to: :derivation_unit_term
+      end
+    end
+  end
+end

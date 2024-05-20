@@ -4,37 +4,40 @@ require_relative "lib/ogc/gml/version"
 
 Gem::Specification.new do |spec|
   spec.name = "ogc-gml"
-  spec.version = Ogc::Gml::VERSION
-  spec.authors = ["Ronald Tse"]
-  spec.email = ["ronald.tse@ribose.com"]
+  spec.version       = Ogc::Gml::VERSION
+  spec.authors       = ["Ribose Inc."]
+  spec.email         = ["open.source@ribose.com'"]
 
-  spec.summary = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
-  spec.required_ruby_version = ">= 3.0.0"
-
-  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
+  spec.summary       = "OGC GML data model parser"
+  spec.description   = "OGC GML data model parser"
+  spec.homepage      = "https://github.com/lutaml/ogc-gml"
+  spec.license       = "MIT"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = spec.homepage
+  spec.metadata["changelog_uri"] = "https://github.com/lutaml/ogc-gml/releases"
 
   # Specify which files should be added to the gem when it is released.
-  # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
-  gemspec = File.basename(__FILE__)
-  spec.files = IO.popen(%w[git ls-files -z], chdir: __dir__, err: IO::NULL) do |ls|
-    ls.readlines("\x0", chomp: true).reject do |f|
-      (f == gemspec) ||
-        f.start_with?(*%w[bin/ test/ spec/ features/ .git .github appveyor Gemfile])
-    end
+  # The `git ls-files -z` loads the files in the RubyGem
+  # that have been added into git.
+  spec.files = Dir.chdir(File.expand_path(__dir__)) do
+    `git ls-files -z`
+      .split("\x0")
+      .reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
-  spec.bindir = "exe"
-  spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
+  spec.bindir        = "exe"
+  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
+  spec.required_ruby_version = ">= 2.7.0"
 
-  # For more information and examples about making a new gem, check out our
-  # guide at: https://bundler.io/guides/creating_gem.html
+  spec.add_runtime_dependency "nokogiri"
+  spec.add_runtime_dependency "shale"
+
+  spec.add_development_dependency "equivalent-xml"
+  spec.add_development_dependency "pry", "~> 0.12.2"
+  spec.add_development_dependency "rake", "~> 13.0"
+  spec.add_development_dependency "rspec", "~> 3.11"
+  spec.add_development_dependency "rubocop", "~> 1.58"
+  spec.add_development_dependency "xml-c14n"
 end
