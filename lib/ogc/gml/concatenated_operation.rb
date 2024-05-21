@@ -5,15 +5,14 @@ require "shale"
 
 require_relative "code"
 require_relative "code_with_authority"
-require_relative "coordinate_operation_accuracy"
 require_relative "coordinate_operation_property"
-require_relative "crs_property"
 require_relative "meta_data_property"
 require_relative "reference"
+require_relative "abstract_coordinate_operation"
 
 module Ogc
   module Gml
-    class ConcatenatedOperation < Shale::Mapper
+    class ConcatenatedOperation < AbstractCoordinateOperation
       attribute :id, Shale::Type::Value
       attribute :aggregation_type, Shale::Type::String
       attribute :meta_data_property, MetaDataProperty, collection: true
@@ -21,13 +20,6 @@ module Ogc
       attribute :description_reference, Reference
       attribute :identifier, CodeWithAuthority
       attribute :name, Code, collection: true
-      attribute :remarks, Shale::Type::String
-      attribute :domain_of_validity, Shale::Type::String
-      attribute :scope, Shale::Type::String, collection: true
-      attribute :operation_version, Shale::Type::String
-      attribute :coordinate_operation_accuracy, CoordinateOperationAccuracy, collection: true
-      attribute :source_crs, CRSProperty
-      attribute :target_crs, CRSProperty
       attribute :coord_operation, CoordinateOperationProperty, collection: true
 
       xml do

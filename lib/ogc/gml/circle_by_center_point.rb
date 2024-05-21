@@ -8,13 +8,11 @@ require_relative "direct_position_list"
 require_relative "direct_position"
 require_relative "length"
 require_relative "point_property"
+require_relative "abstract_curve_segment"
 
 module Ogc
   module Gml
-    class CircleByCenterPoint < Shale::Mapper
-      attribute :num_derivatives_at_start, Shale::Type::Integer, default: -> { "0" }
-      attribute :num_derivatives_at_end, Shale::Type::Integer, default: -> { "0" }
-      attribute :num_derivative_interior, Shale::Type::Integer, default: -> { "0" }
+    class CircleByCenterPoint < AbstractCurveSegment
       attribute :interpolation, Shale::Type::String
       attribute :num_arc, Shale::Type::Integer
       attribute :pos, DirectPosition

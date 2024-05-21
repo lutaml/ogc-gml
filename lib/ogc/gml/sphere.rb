@@ -2,16 +2,11 @@
 
 # --- sphere_type.rb ---
 require "shale"
+require_relative "cylinder"
 
 module Ogc
   module Gml
-    class Sphere < Shale::Mapper
-      attribute :aggregation_type, Shale::Type::String
-      attribute :rows, Shale::Type::Integer
-      attribute :columns, Shale::Type::Integer
-      attribute :horizontal_curve_type, Shale::Type::String
-      attribute :vertical_curve_type, Shale::Type::String
-
+    class Sphere < Cylinder
       xml do
         root "Sphere"
         namespace "http://www.opengis.net/gml/3.2", "gml"

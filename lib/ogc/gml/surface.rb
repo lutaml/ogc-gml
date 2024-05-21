@@ -2,30 +2,16 @@
 
 # --- surface_type.rb ---
 require "shale"
-
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "meta_data_property"
-require_relative "reference"
+require_relative "abstract_surface"
 require_relative "surface_patch_array_property"
 
 module Ogc
   module Gml
-    class Surface < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :srs_name, Shale::Type::Value
-      attribute :srs_dimension, Shale::Type::Integer
-      attribute :axis_labels, Shale::Type::Value
-      attribute :uom_labels, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
+    class Surface < AbstractSurface
       attribute :patches, SurfacePatchArrayProperty
 
       xml do
-        root "TriangulatedSurface"
+        root "Surface"
         namespace "http://www.opengis.net/gml/3.2", "gml"
 
         map_attribute "id", to: :id, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"

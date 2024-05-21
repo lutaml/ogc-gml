@@ -6,9 +6,9 @@ require "shale"
 module Ogc
   module Gml
     class AssociationRole < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
       attribute :nil_reason, Shale::Type::Value
       attribute :remote_schema, Shale::Type::Value
+      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
 
       xml do
         root "member"

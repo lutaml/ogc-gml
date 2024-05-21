@@ -2,25 +2,12 @@
 
 # --- time_instant_type.rb ---
 require "shale"
-
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "meta_data_property"
-require_relative "reference"
-require_relative "related_time"
+require_relative "abstract_time_geometric_primitive"
 require_relative "time_position"
 
 module Ogc
   module Gml
-    class TimeInstant < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :frame, Shale::Type::Value, default: -> { "#ISO-8601" }
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
-      attribute :related_time, RelatedTime, collection: true
+    class TimeInstant < AbstractTimeGeometricPrimitive
       attribute :time_position, TimePosition
 
       xml do

@@ -9,16 +9,11 @@ require_relative "meta_data_property"
 require_relative "reference"
 require_relative "string_or_ref"
 require_relative "time_primitive_property"
+require_relative "abstract_topology"
 
 module Ogc
   module Gml
-    class AbstractTimeSlice < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
+    class AbstractTimeSlice < AbstractTopology
       attribute :valid_time, TimePrimitiveProperty
       attribute :data_source, StringOrRef
 

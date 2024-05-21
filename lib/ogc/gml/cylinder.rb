@@ -2,13 +2,11 @@
 
 # --- cylinder_type.rb ---
 require "shale"
+require_relative "abstract_gridded_surface"
 
 module Ogc
   module Gml
-    class Cylinder < Shale::Mapper
-      attribute :aggregation_type, Shale::Type::String
-      attribute :rows, Shale::Type::Integer
-      attribute :columns, Shale::Type::Integer
+    class Cylinder < AbstractGriddedSurface
       attribute :horizontal_curve_type, Shale::Type::String
       attribute :vertical_curve_type, Shale::Type::String
 

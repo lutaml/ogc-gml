@@ -15,16 +15,11 @@ require_relative "reference"
 require_relative "result"
 require_relative "target_property"
 require_relative "time_primitive_property"
+require_relative "abstract_topology"
 
 module Ogc
   module Gml
-    class DirectedObservationAtDistance < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
+    class DirectedObservationAtDistance < AbstractTopology
       attribute :bounded_by, BoundingShape
       attribute :location, LocationProperty
       attribute :valid_time, TimePrimitiveProperty

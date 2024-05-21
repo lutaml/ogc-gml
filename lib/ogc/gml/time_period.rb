@@ -2,27 +2,14 @@
 
 # --- time_period_type.rb ---
 require "shale"
-
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "meta_data_property"
-require_relative "reference"
-require_relative "related_time"
 require_relative "time_instant_property"
 require_relative "time_interval_length"
 require_relative "time_position"
+require_relative "abstract_time_geometric_primitive"
 
 module Ogc
   module Gml
-    class TimePeriod < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :frame, Shale::Type::Value, default: -> { "#ISO-8601" }
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
-      attribute :related_time, RelatedTime, collection: true
+    class TimePeriod < AbstractTimeGeometricPrimitive
       attribute :begin_position, TimePosition
       attribute :begin, TimeInstantProperty
       attribute :end_position, TimePosition

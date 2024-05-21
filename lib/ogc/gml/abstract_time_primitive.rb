@@ -2,11 +2,6 @@
 
 # --- abstract_time_primitive_type.rb ---
 require "shale"
-
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "meta_data_property"
-require_relative "reference"
 # require_relative "related_time"
 
 module Ogc
@@ -14,13 +9,7 @@ module Ogc
     class RelatedTime < Shale::Mapper
     end
 
-    class AbstractTimePrimitive < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
+    class AbstractTimePrimitive < AbstractTopology
       attribute :related_time, RelatedTime, collection: true
 
       xml do

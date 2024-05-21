@@ -2,28 +2,13 @@
 
 # --- geodetic_datum_type.rb ---
 require "shale"
-
-require_relative "code"
-require_relative "code_with_authority"
 require_relative "ellipsoid_property"
-require_relative "meta_data_property"
 require_relative "prime_meridian_property"
-require_relative "reference"
+require_relative "abstract_datum"
 
 module Ogc
   module Gml
-    class GeodeticDatum < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
-      attribute :remarks, Shale::Type::String
-      attribute :domain_of_validity, Shale::Type::String
-      attribute :scope, Shale::Type::String, collection: true
-      attribute :anchor_definition, Code
-      attribute :realization_epoch, Shale::Type::Date
+    class GeodeticDatum < AbstractDatum
       attribute :prime_meridian, PrimeMeridianProperty
       attribute :ellipsoid, EllipsoidProperty
 

@@ -9,16 +9,11 @@ require_relative "meta_data_property"
 require_relative "reference"
 require_relative "string_or_ref"
 require_relative "time_period_property"
+require_relative "abstract_topology"
 
 module Ogc
   module Gml
-    class TimeCalendarEra < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
+    class TimeCalendarEra < AbstractTopology
       attribute :remarks, Shale::Type::String
       attribute :reference_event, StringOrRef
       attribute :reference_date, Shale::Type::Value

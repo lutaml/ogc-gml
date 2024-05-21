@@ -2,26 +2,11 @@
 
 # --- oblique_cartesian_cs_type.rb ---
 require "shale"
-
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "coordinate_system_axis_property"
-require_relative "meta_data_property"
-require_relative "reference"
+require_relative "abstract_coordinate_system"
 
 module Ogc
   module Gml
-    class ObliqueCartesianCS < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :aggregation_type, Shale::Type::String
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
-      attribute :remarks, Shale::Type::String
-      attribute :axis, CoordinateSystemAxisProperty, collection: true
-
+    class ObliqueCartesianCS < AbstractCoordinateSystem
       xml do
         root "ObliqueCartesianCS"
         namespace "http://www.opengis.net/gml/3.2", "gml"

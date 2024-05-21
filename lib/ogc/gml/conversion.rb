@@ -2,28 +2,13 @@
 
 # --- conversion_type.rb ---
 require "shale"
-
 require_relative "abstract_general_parameter_value_property"
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "coordinate_operation_accuracy"
-require_relative "meta_data_property"
 require_relative "operation_method_property"
-require_relative "reference"
+require_relative "abstract_general_conversion"
 
 module Ogc
   module Gml
-    class Conversion < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
-      attribute :remarks, Shale::Type::String
-      attribute :domain_of_validity, Shale::Type::String
-      attribute :scope, Shale::Type::String, collection: true
-      attribute :coordinate_operation_accuracy, CoordinateOperationAccuracy, collection: true
+    class Conversion < AbstractGeneralConversion
       attribute :method, OperationMethodProperty
       attribute :parameter_value, AbstractGeneralParameterValueProperty, collection: true
 

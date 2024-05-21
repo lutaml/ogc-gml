@@ -13,19 +13,11 @@ require_relative "measure"
 require_relative "meta_data_property"
 require_relative "reference"
 require_relative "string_or_ref"
-require_relative "time_primitive_property"
+require_relative "abstract_time_complex"
 
 module Ogc
   module Gml
-    class MovingObjectStatus < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
-      attribute :valid_time, TimePrimitiveProperty
-      attribute :data_source, StringOrRef
+    class MovingObjectStatus < AbstractTimeComplex
       attribute :position, GeometryProperty
       attribute :pos, DirectPosition
       attribute :location_name, Code

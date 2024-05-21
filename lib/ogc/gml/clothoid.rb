@@ -4,13 +4,11 @@
 require "shale"
 
 require_relative "ref_location"
+require_relative "abstract_curve_segment"
 
 module Ogc
   module Gml
-    class Clothoid < Shale::Mapper
-      attribute :num_derivatives_at_start, Shale::Type::Integer, default: -> { "0" }
-      attribute :num_derivatives_at_end, Shale::Type::Integer, default: -> { "0" }
-      attribute :num_derivative_interior, Shale::Type::Integer, default: -> { "0" }
+    class Clothoid < AbstractCurveSegment
       attribute :interpolation, Shale::Type::String
       attribute :ref_location, RefLocation
       attribute :scale_factor, Shale::Type::Float

@@ -2,29 +2,16 @@
 
 # --- time_node_type.rb ---
 require "shale"
-
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "meta_data_property"
-require_relative "reference"
-require_relative "related_time"
 # require_relative "time_edge_property"
 require_relative "time_instant_property"
+require_relative "abstract_time_topology_primitive"
 
 module Ogc
   module Gml
     class TimeEdgeProperty < Shale::Mapper
     end
 
-    class TimeNode < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
-      attribute :related_time, RelatedTime, collection: true
-      attribute :complex, Reference
+    class TimeNode < AbstractTimeTopologyPrimitive
       attribute :previous_edge, TimeEdgeProperty, collection: true
       attribute :next_edge, TimeEdgeProperty, collection: true
       attribute :position, TimeInstantProperty

@@ -2,27 +2,14 @@
 
 # --- temporal_crs_type.rb ---
 require "shale"
-
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "meta_data_property"
-require_relative "reference"
 require_relative "temporal_cs_property"
 require_relative "temporal_datum_property"
 require_relative "time_cs_property"
+require_relative "abstract_topology"
 
 module Ogc
   module Gml
-    class TemporalCRS < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
-      attribute :remarks, Shale::Type::String
-      attribute :domain_of_validity, Shale::Type::String, collection: true
-      attribute :scope, Shale::Type::String, collection: true
+    class TemporalCRS < AbstractCRS
       attribute :time_cs, TimeCSProperty
       attribute :uses_temporal_cs, TemporalCSProperty
       attribute :temporal_datum, TemporalDatumProperty

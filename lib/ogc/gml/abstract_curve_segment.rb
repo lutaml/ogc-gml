@@ -6,9 +6,9 @@ require "shale"
 module Ogc
   module Gml
     class AbstractCurveSegment < Shale::Mapper
-      attribute :num_derivatives_at_start, Shale::Type::Integer, default: -> { "0" }
-      attribute :num_derivatives_at_end, Shale::Type::Integer, default: -> { "0" }
-      attribute :num_derivative_interior, Shale::Type::Integer, default: -> { "0" }
+      attribute :num_derivatives_at_start, Shale::Type::Integer#, default: -> { "0" }
+      attribute :num_derivatives_at_end, Shale::Type::Integer#, default: -> { "0" }
+      attribute :num_derivative_interior, Shale::Type::Integer#, default: -> { "0" }
 
       xml do
         root "AbstractCurveSegment"

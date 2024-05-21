@@ -10,18 +10,11 @@ require_relative "reference"
 require_relative "related_time"
 require_relative "time_node_property"
 require_relative "time_period_property"
+require_relative "abstract_time_topology_primitive"
 
 module Ogc
   module Gml
-    class TimeEdge < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
-      attribute :related_time, RelatedTime, collection: true
-      attribute :complex, Reference
+    class TimeEdge < AbstractTimeTopologyPrimitive
       attribute :start, TimeNodeProperty
       attribute :end, TimeNodeProperty
       attribute :extent, TimePeriodProperty

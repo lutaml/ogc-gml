@@ -4,25 +4,18 @@
 require "shale"
 
 require_relative "angle"
-require_relative "coordinates"
-require_relative "direct_position_list"
 require_relative "direct_position"
 require_relative "length"
-require_relative "point_property"
+require_relative "arc"
 
 module Ogc
   module Gml
-    class ArcByCenterPoint < Shale::Mapper
-      attribute :num_derivatives_at_start, Shale::Type::Integer, default: -> { "0" }
-      attribute :num_derivatives_at_end, Shale::Type::Integer, default: -> { "0" }
-      attribute :num_derivative_interior, Shale::Type::Integer, default: -> { "0" }
-      attribute :interpolation, Shale::Type::String
-      attribute :num_arc, Shale::Type::Integer
+    class ArcByCenterPoint < Arc
+      # Overrides Arc
       attribute :pos, DirectPosition
       attribute :point_property, PointProperty
-      attribute :point_rep, PointProperty
-      attribute :pos_list, DirectPositionList
-      attribute :coordinates, Coordinates
+
+      # Self
       attribute :radius, Length
       attribute :start_angle, Angle
       attribute :end_angle, Angle

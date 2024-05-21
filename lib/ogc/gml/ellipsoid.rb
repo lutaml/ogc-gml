@@ -9,16 +9,11 @@ require_relative "measure"
 require_relative "meta_data_property"
 require_relative "reference"
 require_relative "second_defining_parameter1"
+require_relative "abstract_topology"
 
 module Ogc
   module Gml
-    class Ellipsoid < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
+    class Ellipsoid < AbstractTopology
       attribute :remarks, Shale::Type::String
       attribute :semi_major_axis, Measure
       attribute :second_defining_parameter, SecondDefiningParameter1

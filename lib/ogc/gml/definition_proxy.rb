@@ -7,16 +7,11 @@ require_relative "code"
 require_relative "code_with_authority"
 require_relative "meta_data_property"
 require_relative "reference"
+require_relative "abstract_topology"
 
 module Ogc
   module Gml
-    class DefinitionProxy < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
+    class DefinitionProxy < AbstractTopology
       attribute :remarks, Shale::Type::String
       attribute :definition_ref, Reference
 

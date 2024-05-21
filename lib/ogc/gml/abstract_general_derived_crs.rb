@@ -2,25 +2,12 @@
 
 # --- abstract_general_derived_crs_type.rb ---
 require "shale"
-
-require_relative "code"
-require_relative "code_with_authority"
 require_relative "general_conversion_property"
-require_relative "meta_data_property"
-require_relative "reference"
+require_relative "abstract_crs"
 
 module Ogc
   module Gml
-    class AbstractGeneralDerivedCRS < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
-      attribute :remarks, Shale::Type::String
-      attribute :domain_of_validity, Shale::Type::String, collection: true
-      attribute :scope, Shale::Type::String, collection: true
+    class AbstractGeneralDerivedCRS < AbstractCRS
       attribute :conversion, GeneralConversionProperty
 
       xml do

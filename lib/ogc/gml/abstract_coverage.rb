@@ -2,25 +2,15 @@
 
 # --- abstract_coverage_type.rb ---
 require "shale"
-
 require_relative "bounding_shape"
-require_relative "code"
-require_relative "code_with_authority"
 require_relative "domain_set"
 require_relative "location_property"
-require_relative "meta_data_property"
 require_relative "range_set"
-require_relative "reference"
+require_relative "abstract_topology"
 
 module Ogc
   module Gml
-    class AbstractCoverage < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
+    class AbstractCoverage < AbstractTopology
       attribute :bounded_by, BoundingShape
       attribute :location, LocationProperty
       attribute :domain_set, DomainSet

@@ -2,31 +2,11 @@
 
 # --- abstract_general_transformation_type.rb ---
 require "shale"
-
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "coordinate_operation_accuracy"
-require_relative "crs_property"
-require_relative "meta_data_property"
-require_relative "reference"
+require_relative "abstract_coordinate_operation"
 
 module Ogc
   module Gml
-    class AbstractGeneralTransformation < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
-      attribute :remarks, Shale::Type::String
-      attribute :domain_of_validity, Shale::Type::String
-      attribute :scope, Shale::Type::String, collection: true
-      attribute :operation_version, Shale::Type::String
-      attribute :coordinate_operation_accuracy, CoordinateOperationAccuracy, collection: true
-      attribute :source_crs, CRSProperty
-      attribute :target_crs, CRSProperty
-
+    class AbstractGeneralTransformation < AbstractCoordinateOperation
       xml do
         root "AbstractGeneralTransformation"
         namespace "http://www.opengis.net/gml/3.2", "gml"

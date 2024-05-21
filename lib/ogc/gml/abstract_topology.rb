@@ -2,7 +2,6 @@
 
 # --- abstract_topology_type.rb ---
 require "shale"
-
 require_relative "code"
 require_relative "code_with_authority"
 require_relative "meta_data_property"

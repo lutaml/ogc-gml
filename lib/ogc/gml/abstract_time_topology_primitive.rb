@@ -8,16 +8,11 @@ require_relative "code_with_authority"
 require_relative "meta_data_property"
 require_relative "reference"
 require_relative "related_time"
+require_relative "abstract_topology"
 
 module Ogc
   module Gml
-    class AbstractTimeTopologyPrimitive < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
+    class AbstractTimeTopologyPrimitive < AbstractTopology
       attribute :related_time, RelatedTime, collection: true
       attribute :complex, Reference
 

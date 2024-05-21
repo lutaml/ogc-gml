@@ -10,16 +10,11 @@ require_relative "reference"
 require_relative "time_instant_property"
 require_relative "time_interval_length"
 require_relative "time_position"
+require_relative "abstract_topology"
 
 module Ogc
   module Gml
-    class TimeCoordinateSystem < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
+    class TimeCoordinateSystem < AbstractTopology
       attribute :remarks, Shale::Type::String
       attribute :domain_of_validity, Shale::Type::String
       attribute :origin_position, TimePosition

@@ -6,13 +6,11 @@ require "shale"
 require_relative "curve_property"
 require_relative "length"
 require_relative "vector"
+require_relative "abstract_curve_segment"
 
 module Ogc
   module Gml
-    class OffsetCurve < Shale::Mapper
-      attribute :num_derivatives_at_start, Shale::Type::Integer, default: -> { "0" }
-      attribute :num_derivatives_at_end, Shale::Type::Integer, default: -> { "0" }
-      attribute :num_derivative_interior, Shale::Type::Integer, default: -> { "0" }
+    class OffsetCurve < AbstractCurveSegment
       attribute :offset_base, CurveProperty
       attribute :distance, Length
       attribute :ref_direction, Vector

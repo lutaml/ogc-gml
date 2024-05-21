@@ -2,27 +2,12 @@
 
 # --- geometric_complex_type.rb ---
 require "shale"
-
-require_relative "code"
-require_relative "code_with_authority"
 require_relative "geometric_primitive_property"
-require_relative "meta_data_property"
-require_relative "reference"
+require_relative "abstract_geometric_aggregate"
 
 module Ogc
   module Gml
-    class GeometricComplex < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :srs_name, Shale::Type::Value
-      attribute :srs_dimension, Shale::Type::Integer
-      attribute :axis_labels, Shale::Type::Value
-      attribute :uom_labels, Shale::Type::Value
-      attribute :aggregation_type, Shale::Type::String
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
+    class GeometricComplex < AbstractGeometricAggregate
       attribute :element, GeometricPrimitiveProperty, collection: true
 
       xml do

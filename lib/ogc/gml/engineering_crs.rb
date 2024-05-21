@@ -2,33 +2,20 @@
 
 # --- engineering_crs_type.rb ---
 require "shale"
-
 require_relative "affine_cs_property"
 require_relative "cartesian_cs_property"
-require_relative "code"
-require_relative "code_with_authority"
 require_relative "coordinate_system_property"
 require_relative "cylindrical_cs_property"
 require_relative "engineering_datum_property"
 require_relative "linear_cs_property"
-require_relative "meta_data_property"
 require_relative "polar_cs_property"
-require_relative "reference"
 require_relative "spherical_cs_property"
 require_relative "user_defined_cs_property"
+require_relative "abstract_crs"
 
 module Ogc
   module Gml
-    class EngineeringCRS < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
-      attribute :remarks, Shale::Type::String
-      attribute :domain_of_validity, Shale::Type::String, collection: true
-      attribute :scope, Shale::Type::String, collection: true
+    class EngineeringCRS < AbstractCRS
       attribute :affine_cs, AffineCSProperty
       attribute :cartesian_cs, CartesianCSProperty
       attribute :cylindrical_cs, CylindricalCSProperty

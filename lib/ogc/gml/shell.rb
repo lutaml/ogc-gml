@@ -2,11 +2,13 @@
 
 # --- shell_type.rb ---
 require "shale"
-
 require_relative "surface_property"
 
 module Ogc
   module Gml
+    class SurfaceProperty < Shale::Mapper
+    end
+
     class Shell < Shale::Mapper
       attribute :aggregation_type, Shale::Type::String
       attribute :surface_member, SurfaceProperty, collection: true

@@ -2,14 +2,12 @@
 
 # --- ring_type.rb ---
 require "shale"
-
-require_relative "curve_property"
+require_relative "composite_curve"
 
 module Ogc
   module Gml
-    class Ring < Shale::Mapper
+    class Ring < CompositeCurve
       attribute :aggregation_type, Shale::Type::String
-      attribute :curve_member, CurveProperty, collection: true
 
       xml do
         root "Ring"

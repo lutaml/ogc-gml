@@ -11,23 +11,11 @@ require_relative "crs_property"
 require_relative "meta_data_property"
 require_relative "operation_method_property"
 require_relative "reference"
+require_relative "abstract_general_transformation"
 
 module Ogc
   module Gml
-    class Transformation < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
-      attribute :description_reference, Reference
-      attribute :identifier, CodeWithAuthority
-      attribute :name, Code, collection: true
-      attribute :remarks, Shale::Type::String
-      attribute :domain_of_validity, Shale::Type::String
-      attribute :scope, Shale::Type::String, collection: true
-      attribute :operation_version, Shale::Type::String
-      attribute :coordinate_operation_accuracy, CoordinateOperationAccuracy, collection: true
-      attribute :source_crs, CRSProperty
-      attribute :target_crs, CRSProperty
+    class Transformation < AbstractGeneralTransformation
       attribute :method, OperationMethodProperty
       attribute :parameter_value, AbstractGeneralParameterValueProperty, collection: true
 
