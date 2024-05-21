@@ -5,17 +5,18 @@ RSpec.describe Ogc::Gml::Polygon do
   def file_contents(filename)
     File.read(
       Pathname.new(__dir__)
-        .join("../../../ets-gml32/src/test/resources/geom/#{filename}")
+        .join("../../../ets-gml32/src/test/resources/#{filename}")
     ).gsub("\t", "  ")
   end
 
   %w(
-    Polygon-InteriorCrossesExterior.xml
-    Polygon-InteriorNotClosed.xml
-    Polygon-InteriorRing.xml
-    Polygon-InteriorTouchesExterior.xml
-    Polygon-NotClosed.xml
-    Polygon-UTM.xml
+    geom/Polygon-InteriorCrossesExterior.xml
+    geom/Polygon-InteriorNotClosed.xml
+    geom/Polygon-InteriorRing.xml
+    geom/Polygon-InteriorTouchesExterior.xml
+    geom/Polygon-NotClosed.xml
+    geom/Polygon-UTM.xml
+    gmlring2.xml
   ).each do |filename|
     it "round-trips #{filename}" do
       input = file_contents(filename)

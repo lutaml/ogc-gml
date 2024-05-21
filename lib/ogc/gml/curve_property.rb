@@ -6,6 +6,7 @@ require "shale"
 require_relative "abstract_curve"
 require_relative "curve"
 require_relative "orientable_curve"
+require_relative "line_string"
 
 module Ogc
   module Gml
@@ -16,6 +17,7 @@ module Ogc
       attribute :abstract_curve, AbstractCurve
       attribute :curve, Curve
       attribute :orientable_curve, OrientableCurve
+      attribute :line_string, LineString
 
       xml do
         root "centerLineOf"
@@ -28,6 +30,7 @@ module Ogc
         map_element "AbstractCurve", to: :abstract_curve
         map_element "Curve", to: :curve, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
         map_element "OrientableCurve", to: :orientable_curve, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
+        map_element "LineString", to: :line_string, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
       end
     end
   end
