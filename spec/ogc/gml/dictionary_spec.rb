@@ -15,10 +15,10 @@ RSpec.describe Ogc::Gml::Dictionary do
   glob_path = Pathname.new(__dir__)
     .join("../../fixtures/geospatial_jp_iur_3.1/*.xml")
 
-  Dir.glob(glob_path).each do |filename|
+  Dir.glob(glob_path).each do |filepath|
 
-    # it "round-trips #{filename} with equivalent-xml" do
-    #   input = file_contents(Pathname.new(filename).basename)
+    # it "round-trips #{filepath} with equivalent-xml" do
+    #   input = file_contents(Pathname.new(filepath).basename)
     #   output = Ogc::Gml::Dictionary.from_xml(input).to_xml(
     #     pretty: true,
     #     declaration: true,
@@ -28,8 +28,9 @@ RSpec.describe Ogc::Gml::Dictionary do
     #   expect(output).to be_equivalent_to(input)
     # end
 
+    filename = File.basename(filepath)
     it "round-trips #{filename} with xml-c14" do
-      input = file_contents(Pathname.new(filename).basename)
+      input = file_contents(filename)
       output = Ogc::Gml::Dictionary.from_xml(input).to_xml(
         pretty: true,
         declaration: true,
