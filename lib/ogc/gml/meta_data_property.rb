@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- meta_data_property_type.rb ---
 require "shale"
 
 require_relative "abstract_meta_data"

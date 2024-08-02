@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- abstract_gridded_surface_type.rb ---
 require "shale"
 
 module Ogc

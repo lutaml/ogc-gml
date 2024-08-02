@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- sphere_type.rb ---
 require "shale"
 require_relative "cylinder"
 

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- coordinates_type.rb ---
 require "shale"
 
 module Ogc

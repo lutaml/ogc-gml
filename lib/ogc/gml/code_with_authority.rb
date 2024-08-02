@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- code_with_authority_type.rb ---
 require "shale"
 
 require_relative "code"

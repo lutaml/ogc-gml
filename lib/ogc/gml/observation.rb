@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- observation_type.rb ---
 require "shale"
 
 require_relative "bounding_shape"

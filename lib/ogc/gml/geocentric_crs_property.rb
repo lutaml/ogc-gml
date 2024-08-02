@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- geocentric_crs_property_type.rb ---
 require "shale"
 
 require_relative "geocentric_crs"

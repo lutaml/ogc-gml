@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- bag_type.rb ---
 require "shale"
 
 require_relative "array_association"

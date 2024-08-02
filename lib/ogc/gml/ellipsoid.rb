@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- ellipsoid_type.rb ---
 require "shale"
 
 require_relative "code"

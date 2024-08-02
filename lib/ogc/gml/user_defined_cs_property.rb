@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- user_defined_cs_property_type.rb ---
 require "shale"
 
 require_relative "user_defined_cs"

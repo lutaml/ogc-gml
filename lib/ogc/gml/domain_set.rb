@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- domain_set_type.rb ---
 require "shale"
 
 require_relative "abstract_geometry"

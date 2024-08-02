@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- geodetic_datum_property_type.rb ---
 require "shale"
 
 require_relative "geodetic_datum"

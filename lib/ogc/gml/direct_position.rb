@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- direct_position_type.rb ---
 require "shale"
 
 module Ogc

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- file_type.rb ---
 require "shale"
 
 require_relative "association_role"

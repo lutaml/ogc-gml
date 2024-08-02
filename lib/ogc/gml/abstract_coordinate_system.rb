@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- abstract_coordinate_system_type.rb ---
 require "shale"
 
 require_relative "code"

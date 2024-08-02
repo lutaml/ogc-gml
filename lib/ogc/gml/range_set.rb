@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- range_set_type.rb ---
 require "shale"
 
 require_relative "data_block"

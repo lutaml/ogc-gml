@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- curve_segment_array_property_type.rb ---
 require "shale"
 
 require_relative "abstract_curve_segment"

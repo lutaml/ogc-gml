@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- category_extent_type.rb ---
 require "shale"
 
 require_relative "code_or_nil_reason_list"

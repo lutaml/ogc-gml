@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- derivation_unit_term_type.rb ---
 require "shale"
 
 module Ogc

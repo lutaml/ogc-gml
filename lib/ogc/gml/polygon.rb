@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- polygon_type.rb ---
 require "shale"
 require_relative "reference"
 require_relative "shell_property"

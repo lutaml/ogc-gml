@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- clothoid_type.rb ---
 require "shale"
 
 require_relative "ref_location"

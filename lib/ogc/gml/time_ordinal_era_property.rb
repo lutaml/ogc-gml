@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- time_ordinal_era_property_type.rb ---
 require "shale"
 
 require_relative "time_ordinal_era"

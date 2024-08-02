@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- generic_meta_data_type.rb ---
 require "shale"
 
 module Ogc

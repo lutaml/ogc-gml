@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-# --- length_type.rb ---
 require "shale"
 
 require_relative "measure"
 
 module Ogc
   module Gml
+    # Represents a length value in GML.
     class Length < Measure
       xml do
         root "LengthType"

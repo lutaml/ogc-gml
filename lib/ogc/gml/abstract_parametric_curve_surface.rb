@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- abstract_parametric_curve_surface_type.rb ---
 require "shale"
 
 module Ogc

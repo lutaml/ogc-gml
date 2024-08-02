@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- directed_topo_solid_property_type.rb ---
 require "shale"
 
 require_relative "topo_solid"

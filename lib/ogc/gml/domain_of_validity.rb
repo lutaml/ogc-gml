@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- domain_of_validity.rb ---
 require "shale"
 
 require_relative "string_or_ref"

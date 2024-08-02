@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- geographic_crs_property_type.rb ---
 require "shale"
 
 require_relative "geographic_crs"

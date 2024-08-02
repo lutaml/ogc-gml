@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- conversion_type.rb ---
 require "shale"
 require_relative "abstract_general_parameter_value_property"
 require_relative "operation_method_property"

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- image_datum_property_type.rb ---
 require "shale"
 
 require_relative "image_datum"

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- abstract_ring_type.rb ---
 require "shale"
 
 module Ogc

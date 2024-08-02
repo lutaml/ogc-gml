@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- history_property_type.rb ---
 require "shale"
 
 require_relative "abstract_time_slice"

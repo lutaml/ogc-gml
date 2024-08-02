@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- value_array_type.rb ---
 require "shale"
 
 require_relative "code"

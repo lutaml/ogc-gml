@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- abstract_topo_primitive_type.rb ---
 require "shale"
 
 require_relative "code"

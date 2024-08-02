@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- abstract_surface_patch_type.rb ---
 require "shale"
 
 module Ogc

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- time_instant_type.rb ---
 require "shale"
 require_relative "abstract_time_geometric_primitive"
 require_relative "time_position"

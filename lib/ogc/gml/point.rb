@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- point_type.rb ---
 require "shale"
 require_relative "direct_position"
 require_relative "abstract_geometry"

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- topo_complex_property_type.rb ---
 require "shale"
 
 require_relative "topo_complex"

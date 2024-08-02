@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- cone_type.rb ---
 require "shale"
 require_relative "cylinder"
 

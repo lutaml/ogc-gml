@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- abstract_general_conversion_type.rb ---
 require "shale"
 
 require_relative "code"

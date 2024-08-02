@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- abstract_time_topology_primitive_type.rb ---
 require "shale"
 
 require_relative "code"

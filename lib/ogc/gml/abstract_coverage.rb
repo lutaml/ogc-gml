@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- abstract_coverage_type.rb ---
 require "shale"
 require_relative "bounding_shape"
 require_relative "domain_set"

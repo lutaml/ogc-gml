@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- topo_primitive_array_association_type.rb ---
 require "shale"
 
 require_relative "abstract_topo_primitive"

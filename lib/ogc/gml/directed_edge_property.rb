@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- directed_edge_property_type.rb ---
 require "shale"
 
 require_relative "edge"
