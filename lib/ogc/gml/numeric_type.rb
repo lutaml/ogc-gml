@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "shale/type/value"
 
 module Ogc
