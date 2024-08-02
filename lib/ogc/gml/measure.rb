@@ -2,12 +2,13 @@
 
 # --- measure_type.rb ---
 require "shale"
+require_relative "numeric_type"
 
 module Ogc
   module Gml
     class Measure < Shale::Mapper
-      attribute :content, Shale::Type::Float
-      attribute :uom, Shale::Type::Value
+      attribute :content, NumericType
+      attribute :uom, Shale::Type::String
 
       xml do
         root "value"
