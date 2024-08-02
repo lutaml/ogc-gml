@@ -1,13 +1,12 @@
 # frozen_string_literal: true
 
 RSpec.describe Ogc::Gml::CompositeCurve do
-
-  let(:input) {
+  let(:input) do
     File.read(
       Pathname.new(__dir__)
         .join("../../../ets-gml32/src/test/resources/geom/CompositeCurve.xml")
     ).gsub("\t", "  ")
-  }
+  end
 
   it "does something useful" do
     output = Ogc::Gml::CompositeCurve.from_xml(input).to_xml(

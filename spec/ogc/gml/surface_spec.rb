@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 RSpec.describe Ogc::Gml::Surface do
-
   def file_contents(filename)
     File.read(
       Pathname.new(__dir__)
@@ -9,7 +8,7 @@ RSpec.describe Ogc::Gml::Surface do
     ).gsub("\t", "  ")
   end
 
-  %w(
+  %w[
     Surface-Curve-ID_250.xml
     Surface-DiscontiguousPatches.xml
     Surface-ExteriorCCW.xml
@@ -22,7 +21,7 @@ RSpec.describe Ogc::Gml::Surface do
     Surface-PolygonPatch-ExteriorCurve.xml
     Surface-PolygonPatch-ExteriorCurveCW.xml
     Surface-RectangleTriangle.xml
-  ).each do |filename|
+  ].each do |filename|
     it "round-trips #{filename}" do
       input = file_contents(filename)
       output = Ogc::Gml::Surface.from_xml(input).to_xml(

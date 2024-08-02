@@ -9,8 +9,8 @@ module Ogc
   end
 end
 
-require 'shale'
-require 'shale/adapter/nokogiri'
+require "shale"
+require "shale/adapter/nokogiri"
 Shale.xml_adapter = Shale::Adapter::Nokogiri
 
 require_relative "gml/abstract_continuous_coverage"
@@ -330,7 +330,6 @@ require_relative "gml/value_array_property"
 require_relative "gml/value_array"
 require_relative "gml/value_property"
 require_relative "gml/vector"
-require_relative "gml/version"
 require_relative "gml/vertical_crs_property"
 require_relative "gml/vertical_crs"
 require_relative "gml/vertical_cs_property"

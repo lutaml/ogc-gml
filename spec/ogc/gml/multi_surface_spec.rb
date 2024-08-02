@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 RSpec.describe Ogc::Gml::MultiSurface do
-
   def file_contents(filename)
     File.read(
       Pathname.new(__dir__)
@@ -9,10 +8,10 @@ RSpec.describe Ogc::Gml::MultiSurface do
     ).gsub("\t", "  ")
   end
 
-  %w(
+  %w[
     MultiSurface-ROSPA0080.xml
     MultiSurface.xml
-  ).each do |filename|
+  ].each do |filename|
     it "round-trips #{filename}" do
       input = file_contents(filename)
       output = Ogc::Gml::MultiSurface.from_xml(input).to_xml(

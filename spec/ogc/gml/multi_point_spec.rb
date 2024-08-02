@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 RSpec.describe Ogc::Gml::MultiPoint do
-
   def file_contents(filename)
     File.read(
       Pathname.new(__dir__)
@@ -9,9 +8,9 @@ RSpec.describe Ogc::Gml::MultiPoint do
     ).gsub("\t", "  ")
   end
 
-  %w(
+  %w[
     MultiPoint-1.xml
-  ).each do |filename|
+  ].each do |filename|
     it "round-trips #{filename}" do
       input = file_contents(filename)
       output = Ogc::Gml::MultiPoint.from_xml(input).to_xml(
