@@ -8,7 +8,7 @@ module Ogc
   module Gml
     class DictionaryEntry < Shale::Mapper
       attribute :id, Shale::Type::String
-      attribute :owns, Shale::Type::Boolean#, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :nil_reason, Shale::Type::Value
       attribute :remote_schema, Shale::Type::Value
       attribute :definition, Definition

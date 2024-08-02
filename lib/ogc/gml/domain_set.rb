@@ -8,7 +8,7 @@ require_relative "abstract_time_object"
 module Ogc
   module Gml
     class DomainSet < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :nil_reason, Shale::Type::Value
       attribute :remote_schema, Shale::Type::Value
       attribute :abstract_geometry, AbstractGeometry

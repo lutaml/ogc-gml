@@ -7,7 +7,7 @@ require_relative "abstract_solid"
 module Ogc
   module Gml
     class SolidArrayProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :abstract_solid, AbstractSolid, collection: true
 
       xml do

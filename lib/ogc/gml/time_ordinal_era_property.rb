@@ -7,7 +7,7 @@ require_relative "time_ordinal_era"
 module Ogc
   module Gml
     class TimeOrdinalEraProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :nil_reason, Shale::Type::Value
       attribute :remote_schema, Shale::Type::Value
       attribute :time_ordinal_era, TimeOrdinalEra

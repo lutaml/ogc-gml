@@ -10,7 +10,7 @@ require_relative "string_or_ref"
 module Ogc
   module Gml
     class DirectionProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :nil_reason, Shale::Type::Value
       attribute :remote_schema, Shale::Type::Value
       attribute :direction_vector, DirectionVector

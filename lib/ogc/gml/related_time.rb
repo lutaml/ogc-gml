@@ -9,7 +9,7 @@ module Ogc
     class RelatedTime < Shale::Mapper
       attribute :nil_reason, Shale::Type::Value
       attribute :remote_schema, Shale::Type::Value
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :relative_position, Shale::Type::String
       attribute :abstract_time_primitive, AbstractTimePrimitive
 

@@ -7,7 +7,7 @@ require_relative "point"
 module Ogc
   module Gml
     class PointArrayProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :point, Point, collection: true
 
       xml do

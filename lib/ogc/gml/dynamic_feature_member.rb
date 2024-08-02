@@ -7,7 +7,7 @@ require_relative "dynamic_feature"
 module Ogc
   module Gml
     class DynamicFeatureMember < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :nil_reason, Shale::Type::Value
       attribute :remote_schema, Shale::Type::Value
       attribute :dynamic_feature, DynamicFeature, collection: true

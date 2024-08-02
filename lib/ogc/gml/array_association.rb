@@ -5,7 +5,7 @@ require "shale"
 module Ogc
   module Gml
     class ArrayAssociation < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :abstract_object, Shale::Type::Value, collection: true
 
       xml do

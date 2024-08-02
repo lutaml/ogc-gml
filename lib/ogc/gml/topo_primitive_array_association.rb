@@ -7,7 +7,7 @@ require_relative "abstract_topo_primitive"
 module Ogc
   module Gml
     class TopoPrimitiveArrayAssociation < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :abstract_topo_primitive, AbstractTopoPrimitive, collection: true
 
       xml do

@@ -9,7 +9,7 @@ module Ogc
   module Gml
     # Represents a value array property.
     class ValueArrayProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :abstract_value, Shale::Type::Value, collection: true
       attribute :abstract_geometry, AbstractGeometry, collection: true
       attribute :abstract_time_object, AbstractTimeObject, collection: true

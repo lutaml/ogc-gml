@@ -7,7 +7,7 @@ require_relative "topo_curve"
 module Ogc
   module Gml
     class TopoCurveProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :topo_curve, TopoCurve
 
       xml do

@@ -7,7 +7,7 @@ require_relative "topo_point"
 module Ogc
   module Gml
     class TopoPointProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :topo_point, TopoPoint
 
       xml do

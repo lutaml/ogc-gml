@@ -17,7 +17,7 @@ module Ogc
 
     class TopoComplex < Shale::Mapper
       attribute :id, Shale::Type::Value
-      attribute :is_maximal, Shale::Type::Boolean, default: -> { "false" }
+      attribute :is_maximal, Shale::Type::Boolean
       attribute :aggregation_type, Shale::Type::String
       attribute :meta_data_property, MetaDataProperty, collection: true
       attribute :description, Shale::Type::String

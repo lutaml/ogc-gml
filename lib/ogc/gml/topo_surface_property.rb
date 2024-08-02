@@ -8,7 +8,7 @@ module Ogc
   module Gml
     # Represents a topo surface property.
     class TopoSurfaceProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :topo_surface, TopoSurface
 
       xml do

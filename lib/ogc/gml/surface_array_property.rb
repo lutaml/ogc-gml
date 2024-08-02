@@ -7,7 +7,7 @@ require_relative "abstract_surface"
 module Ogc
   module Gml
     class SurfaceArrayProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :abstract_surface, AbstractSurface, collection: true
 
       xml do

@@ -19,7 +19,7 @@ module Ogc
     class TopoSolid < Shale::Mapper
       attribute :id, Shale::Type::Value
       attribute :aggregation_type, Shale::Type::String
-      attribute :universal, Shale::Type::Boolean, default: -> { "false" }
+      attribute :universal, Shale::Type::Boolean
       attribute :meta_data_property, MetaDataProperty, collection: true
       attribute :description, Shale::Type::String
       attribute :description_reference, Reference

@@ -7,7 +7,7 @@ require_relative "abstract_geometry"
 module Ogc
   module Gml
     class GeometryArrayProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :abstract_geometry, AbstractGeometry, collection: true
 
       xml do

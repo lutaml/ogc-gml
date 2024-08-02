@@ -7,7 +7,7 @@ require_relative "time_calendar"
 module Ogc
   module Gml
     class TimeCalendarProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :nil_reason, Shale::Type::Value
       attribute :remote_schema, Shale::Type::Value
       attribute :time_calendar, TimeCalendar

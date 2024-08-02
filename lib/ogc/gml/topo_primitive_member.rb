@@ -9,7 +9,7 @@ module Ogc
     class TopoPrimitiveMember < Shale::Mapper
       attribute :nil_reason, Shale::Type::Value
       attribute :remote_schema, Shale::Type::Value
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :abstract_topo_primitive, AbstractTopoPrimitive
 
       xml do

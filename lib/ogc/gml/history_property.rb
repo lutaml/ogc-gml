@@ -7,7 +7,7 @@ require_relative "abstract_time_slice"
 module Ogc
   module Gml
     class HistoryProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :abstract_time_slice, AbstractTimeSlice, collection: true
 
       xml do

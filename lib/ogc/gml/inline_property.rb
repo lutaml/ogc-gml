@@ -5,7 +5,7 @@ require "shale"
 module Ogc
   module Gml
     class InlineProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
 
       xml do
         root "abstractInlineProperty"

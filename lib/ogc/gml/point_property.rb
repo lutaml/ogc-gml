@@ -9,7 +9,7 @@ module Ogc
     class PointProperty < Shale::Mapper
       attribute :nil_reason, Shale::Type::Value
       attribute :remote_schema, Shale::Type::Value
-      attribute :owns, Shale::Type::Boolean#, default: -> { "false" }
+      attribute :owns, Shale::Type::Boolean
       attribute :point, Point
 
       xml do
