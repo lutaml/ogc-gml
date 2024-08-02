@@ -5,6 +5,7 @@ require_relative "abstract_geometric_primitive"
 
 module Ogc
   module Gml
+    # An abstract curve.
     class AbstractCurve < AbstractGeometricPrimitive
       xml do
         root "AbstractCurve"

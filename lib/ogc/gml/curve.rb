@@ -6,6 +6,7 @@ require_relative "abstract_curve"
 
 module Ogc
   module Gml
+    # Represents a curve.
     class Curve < AbstractCurve
       attribute :segments, CurveSegmentArrayProperty, collection: true
 

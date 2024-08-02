@@ -7,6 +7,7 @@ require_relative "abstract_time_object"
 
 module Ogc
   module Gml
+    # Represents a value property.
     class ValueProperty < Shale::Mapper
       attribute :nil_reason, Shale::Type::Value
       attribute :remote_schema, Shale::Type::Value

@@ -12,6 +12,7 @@ require_relative "abstract_topology"
 
 module Ogc
   module Gml
+    # An abstract feature.
     class AbstractFeature < AbstractTopology
       attribute :bounded_by, BoundingShape
       attribute :location, LocationProperty

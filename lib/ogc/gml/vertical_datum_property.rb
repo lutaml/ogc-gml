@@ -6,6 +6,7 @@ require_relative "vertical_datum"
 
 module Ogc
   module Gml
+    # Represents a vertical datum property.
     class VerticalDatumProperty < Shale::Mapper
       attribute :nil_reason, Shale::Type::Value
       attribute :remote_schema, Shale::Type::Value

@@ -11,6 +11,7 @@ require_relative "abstract_topology"
 
 module Ogc
   module Gml
+    # A unit definition.
     class UnitDefinition < AbstractTopology
       attribute :remarks, Shale::Type::String
       attribute :quantity_type, StringOrRef

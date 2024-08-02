@@ -5,6 +5,7 @@ require_relative "abstract_coordinate_system"
 
 module Ogc
   module Gml
+    # Represents a vertical coordinate system.
     class VerticalCS < AbstractCoordinateSystem
       xml do
         root "VerticalCS"

@@ -10,6 +10,7 @@ require_relative "abstract_topology"
 
 module Ogc
   module Gml
+    # A definition.
     class Definition < AbstractTopology
       attribute :remarks, Shale::Type::String
 

@@ -6,6 +6,7 @@ require_relative "topo_solid"
 
 module Ogc
   module Gml
+    # Represents a topo solid property.
     class TopoSolidProperty < Shale::Mapper
       attribute :nil_reason, Shale::Type::Value
       attribute :remote_schema, Shale::Type::Value

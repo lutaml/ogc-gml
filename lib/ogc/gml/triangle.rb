@@ -6,6 +6,7 @@ require_relative "shell_property"
 
 module Ogc
   module Gml
+    # Represents a triangle.
     class Triangle < Shale::Mapper
       attribute :interpolation, Shale::Type::String
       attribute :exterior, ShellProperty

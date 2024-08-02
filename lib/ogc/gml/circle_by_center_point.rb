@@ -11,6 +11,8 @@ require_relative "abstract_curve_segment"
 
 module Ogc
   module Gml
+    # Circle by center point represents a circle defined by a center point and a
+    # radius.
     class CircleByCenterPoint < AbstractCurveSegment
       attribute :interpolation, Shale::Type::String
       attribute :num_arc, Shale::Type::Integer

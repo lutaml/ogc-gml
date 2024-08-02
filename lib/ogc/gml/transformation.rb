@@ -14,6 +14,7 @@ require_relative "abstract_general_transformation"
 
 module Ogc
   module Gml
+    # A transformation.
     class Transformation < AbstractGeneralTransformation
       attribute :method, OperationMethodProperty
       attribute :parameter_value, AbstractGeneralParameterValueProperty, collection: true

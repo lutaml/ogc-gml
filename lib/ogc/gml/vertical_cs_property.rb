@@ -6,6 +6,7 @@ require_relative "vertical_cs"
 
 module Ogc
   module Gml
+    # Represents a vertical coordinate system property.
     class VerticalCSProperty < Shale::Mapper
       attribute :nil_reason, Shale::Type::Value
       attribute :remote_schema, Shale::Type::Value

@@ -11,6 +11,7 @@ require_relative "value_property"
 
 module Ogc
   module Gml
+    # Represents a value array.
     class ValueArray < Shale::Mapper
       attribute :id, Shale::Type::Value
       attribute :aggregation_type, Shale::Type::String

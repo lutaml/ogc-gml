@@ -10,6 +10,7 @@ require_relative "abstract_topology"
 
 module Ogc
   module Gml
+    # An abstract coordinate reference system.
     class AbstractCRS < AbstractTopology
       attribute :remarks, Shale::Type::String
       attribute :domain_of_validity, Shale::Type::String, collection: true

@@ -12,6 +12,7 @@ require_relative "abstract_topology"
 
 module Ogc
   module Gml
+    # A derived unit.
     class DerivedUnit < AbstractTopology
       attribute :remarks, Shale::Type::String
       attribute :quantity_type, StringOrRef

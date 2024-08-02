@@ -6,6 +6,7 @@ require_relative "cylindrical_cs"
 
 module Ogc
   module Gml
+    # A cylindrical CS property.
     class CylindricalCSProperty < Shale::Mapper
       attribute :nil_reason, Shale::Type::Value
       attribute :remote_schema, Shale::Type::Value

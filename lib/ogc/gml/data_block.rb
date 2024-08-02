@@ -7,6 +7,7 @@ require_relative "coordinates"
 
 module Ogc
   module Gml
+    # Represents a data block in GML.
     class DataBlock < Shale::Mapper
       attribute :range_parameters, AssociationRole
       attribute :tuple_list, Coordinates

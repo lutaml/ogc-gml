@@ -10,6 +10,7 @@ require_relative "abstract_topology"
 
 module Ogc
   module Gml
+    # An abstract datum.
     class AbstractDatum < AbstractTopology
       attribute :remarks, Shale::Type::String
       attribute :domain_of_validity, Shale::Type::String

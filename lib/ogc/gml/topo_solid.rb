@@ -15,6 +15,7 @@ module Ogc
     class DirectedFaceProperty < Shale::Mapper
     end
 
+    # Represents a topological solid.
     class TopoSolid < Shale::Mapper
       attribute :id, Shale::Type::Value
       attribute :aggregation_type, Shale::Type::String

@@ -8,6 +8,7 @@ require_relative "abstract_general_derived_crs"
 
 module Ogc
   module Gml
+    # Represents a derived coordinate reference system.
     class DerivedCRS < AbstractGeneralDerivedCRS
       attribute :base_crs, SingleCRSProperty
       attribute :derived_crs_type, CodeWithAuthority

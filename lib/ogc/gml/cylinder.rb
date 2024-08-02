@@ -5,6 +5,7 @@ require_relative "abstract_gridded_surface"
 
 module Ogc
   module Gml
+    # Represents a cylinder.
     class Cylinder < AbstractGriddedSurface
       attribute :horizontal_curve_type, Shale::Type::String
       attribute :vertical_curve_type, Shale::Type::String

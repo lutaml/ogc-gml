@@ -5,6 +5,7 @@ require_relative "abstract_coordinate_system"
 
 module Ogc
   module Gml
+    # Represents a user-defined coordinate system.
     class UserDefinedCS < AbstractCoordinateSystem
       xml do
         root "UserDefinedCS"

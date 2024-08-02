@@ -7,6 +7,7 @@ require_relative "abstract_crs"
 
 module Ogc
   module Gml
+    # Represents a vertical coordinate reference system.
     class VerticalCRS < AbstractCRS
       attribute :vertical_cs, VerticalCSProperty
       attribute :vertical_datum, VerticalDatumProperty

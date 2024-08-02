@@ -5,6 +5,7 @@ require_relative "abstract_coordinate_system"
 
 module Ogc
   module Gml
+    # Represents a cylindrical coordinate system.
     class CylindricalCS < AbstractCoordinateSystem
       xml do
         root "CylindricalCS"

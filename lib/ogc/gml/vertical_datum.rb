@@ -5,6 +5,7 @@ require_relative "abstract_datum"
 
 module Ogc
   module Gml
+    # A vertical datum.
     class VerticalDatum < AbstractDatum
       xml do
         root "VerticalDatum"

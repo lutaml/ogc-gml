@@ -6,6 +6,7 @@ require_relative "user_defined_cs"
 
 module Ogc
   module Gml
+    # Represents a user-defined coordinate system property.
     class UserDefinedCSProperty < Shale::Mapper
       attribute :nil_reason, Shale::Type::Value
       attribute :remote_schema, Shale::Type::Value

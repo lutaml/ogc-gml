@@ -9,6 +9,7 @@ require_relative "abstract_topology"
 
 module Ogc
   module Gml
+    # Represents a collection of features.
     class AbstractFeatureCollection < AbstractTopology
       attribute :bounded_by, BoundingShape
       attribute :location, LocationProperty

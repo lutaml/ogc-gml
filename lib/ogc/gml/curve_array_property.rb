@@ -7,6 +7,7 @@ require_relative "line_string"
 
 module Ogc
   module Gml
+    # A curve array property.
     class CurveArrayProperty < Shale::Mapper
       attribute :owns, Shale::Type::Boolean
       attribute :abstract_curve, AbstractCurve, collection: true

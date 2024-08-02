@@ -10,6 +10,7 @@ require_relative "reference"
 
 module Ogc
   module Gml
+    # Represents a topological volume.
     class TopoVolume < Shale::Mapper
       attribute :id, Shale::Type::Value
       attribute :aggregation_type, Shale::Type::String

@@ -6,6 +6,7 @@ require_relative "transformation"
 
 module Ogc
   module Gml
+    # Represents a transformation property.
     class TransformationProperty < Shale::Mapper
       attribute :nil_reason, Shale::Type::Value
       attribute :remote_schema, Shale::Type::Value

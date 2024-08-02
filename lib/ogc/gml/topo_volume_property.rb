@@ -6,6 +6,7 @@ require_relative "topo_volume"
 
 module Ogc
   module Gml
+    # Represents a topo volume property.
     class TopoVolumeProperty < Shale::Mapper
       attribute :owns, Shale::Type::Boolean, default: -> { "false" }
       attribute :topo_volume, TopoVolume

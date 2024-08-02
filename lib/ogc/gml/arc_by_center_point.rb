@@ -9,6 +9,8 @@ require_relative "arc"
 
 module Ogc
   module Gml
+    # Arc by center point is a curve segment defined by a center point, a
+    # radius, a start angle, and an end angle.
     class ArcByCenterPoint < Arc
       # Overrides Arc
       attribute :pos, DirectPosition

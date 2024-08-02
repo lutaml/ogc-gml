@@ -6,6 +6,7 @@ require_relative "topo_surface"
 
 module Ogc
   module Gml
+    # Represents a topo surface property.
     class TopoSurfaceProperty < Shale::Mapper
       attribute :owns, Shale::Type::Boolean, default: -> { "false" }
       attribute :topo_surface, TopoSurface

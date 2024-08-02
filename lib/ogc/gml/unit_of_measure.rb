@@ -4,6 +4,7 @@ require "shale"
 
 module Ogc
   module Gml
+    # Represents a unit of measure.
     class UnitOfMeasure < Shale::Mapper
       attribute :uom, Shale::Type::Value
 

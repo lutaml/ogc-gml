@@ -6,6 +6,7 @@ require_relative "direct_position"
 
 module Ogc
   module Gml
+    # Represents a vector.
     class Vector < Shale::Mapper
       attribute :content, DirectPosition
 

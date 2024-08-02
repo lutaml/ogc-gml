@@ -4,6 +4,7 @@ require "shale"
 
 module Ogc
   module Gml
+    # Represents degrees.
     class Degrees < Shale::Mapper
       attribute :content, Shale::Type::Integer
       attribute :direction, Shale::Type::String

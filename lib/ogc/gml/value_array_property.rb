@@ -7,6 +7,7 @@ require_relative "abstract_time_object"
 
 module Ogc
   module Gml
+    # Represents a value array property.
     class ValueArrayProperty < Shale::Mapper
       attribute :owns, Shale::Type::Boolean, default: -> { "false" }
       attribute :abstract_value, Shale::Type::Value, collection: true
