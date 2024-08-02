@@ -4,6 +4,7 @@ require "shale"
 
 module Ogc
   module Gml
+    # Represents an array association.
     class ArrayAssociation < Shale::Mapper
       attribute :owns, Shale::Type::Boolean
       attribute :abstract_object, Shale::Type::Value, collection: true
