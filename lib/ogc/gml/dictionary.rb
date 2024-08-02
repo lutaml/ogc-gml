@@ -10,6 +10,8 @@ require_relative "reference"
 
 module Ogc
   module Gml
+    # A dictionary is a collection of definitions of the meanings of codes or
+    # terms.
     class Dictionary < Shale::Mapper
       attribute :id, Shale::Type::String
       attribute :aggregation_type, Shale::Type::String

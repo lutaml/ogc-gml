@@ -5,6 +5,7 @@ require_relative "numeric_type"
 
 module Ogc
   module Gml
+    # Represents a unit of measure value in GML.
     class Measure < Shale::Mapper
       attribute :content, NumericType
       attribute :uom, Shale::Type::String

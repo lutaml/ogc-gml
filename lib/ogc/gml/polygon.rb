@@ -7,6 +7,7 @@ require_relative "abstract_geometry"
 
 module Ogc
   module Gml
+    # Polygon geometry
     class Polygon < AbstractGeometry
       attribute :exterior, ShellProperty
       attribute :interior, ShellProperty, collection: true
