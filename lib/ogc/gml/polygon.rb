@@ -11,12 +11,14 @@ module Ogc
     class Polygon < AbstractGeometry
       attribute :exterior, ShellProperty
       attribute :interior, ShellProperty, collection: true
+      attribute :schema_location, Shale::Type::String
 
       xml do
         root "Polygon"
         namespace "http://www.opengis.net/gml/3.2", "gml"
 
         map_attribute "id", to: :id, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
+        map_attribute "schemaLocation", to: :schema_location, prefix: "xsi", namespace: "http://www.w3.org/2001/XMLSchema-instance"
         map_attribute "srsName", to: :srs_name
         map_attribute "srsDimension", to: :srs_dimension
         map_attribute "axisLabels", to: :axis_labels
