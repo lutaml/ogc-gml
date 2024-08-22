@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- base_unit_type.rb ---
 require "shale"
 
 require_relative "code"

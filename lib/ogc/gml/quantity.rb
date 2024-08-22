@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- quantity.rb ---
 require "shale"
 
 require_relative "measure"

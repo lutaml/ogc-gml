@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- related_time_type.rb ---
 require "shale"
 
 require_relative "abstract_time_primitive"

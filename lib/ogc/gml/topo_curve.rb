@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- topo_curve_type.rb ---
 require "shale"
 
 require_relative "code"

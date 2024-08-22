@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- time_node_type.rb ---
 require "shale"
 # require_relative "time_edge_property"
 require_relative "time_instant_property"

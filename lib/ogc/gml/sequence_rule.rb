@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- sequence_rule_type.rb ---
 require "shale"
 
 module Ogc

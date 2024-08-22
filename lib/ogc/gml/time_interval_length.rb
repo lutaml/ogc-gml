@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- time_interval_length_type.rb ---
 require "shale"
 
 module Ogc

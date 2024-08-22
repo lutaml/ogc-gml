@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- arc_by_bulge_type.rb ---
 require "shale"
 require_relative "vector"
 require_relative "arc"

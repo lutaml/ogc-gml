@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- quantity_extent_type.rb ---
 require "shale"
 
 require_relative "measure_or_nil_reason_list"

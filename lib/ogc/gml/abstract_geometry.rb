@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- abstract_geometry_type.rb ---
 require "shale"
 require_relative "abstract_geometric_primitive"
 

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- arc_by_center_point_type.rb ---
 require "shale"
 
 require_relative "angle"

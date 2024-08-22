@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- abstract_topology_type.rb ---
 require "shale"
 require_relative "code"
 require_relative "code_with_authority"

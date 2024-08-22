@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- derived_crs_property_type.rb ---
 require "shale"
 
 require_relative "derived_crs"

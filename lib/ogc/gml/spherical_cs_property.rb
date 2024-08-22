@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- spherical_cs_property_type.rb ---
 require "shale"
 
 require_relative "spherical_cs"

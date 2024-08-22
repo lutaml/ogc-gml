@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- abstract_general_transformation_type.rb ---
 require "shale"
 require_relative "abstract_coordinate_operation"
 

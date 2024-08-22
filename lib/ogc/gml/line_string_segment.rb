@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- line_string_segment_type.rb ---
 require "shale"
 
 require_relative "coordinates"

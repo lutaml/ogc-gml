@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- tin_type.rb ---
 require "shale"
 
 require_relative "control_point"

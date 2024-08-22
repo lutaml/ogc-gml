@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- linear_ring_type.rb ---
 require "shale"
 
 require_relative "coordinates"

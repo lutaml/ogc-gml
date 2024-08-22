@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- derived_crs_type.rb ---
 require "shale"
 require_relative "code_with_authority"
 require_relative "coordinate_system_property"

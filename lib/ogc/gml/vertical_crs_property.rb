@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- vertical_crs_property_type.rb ---
 require "shale"
 
 require_relative "vertical_crs"

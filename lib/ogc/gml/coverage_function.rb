@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- coverage_function_type.rb ---
 require "shale"
 
 require_relative "grid_function"

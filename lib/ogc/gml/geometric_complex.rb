@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- geometric_complex_type.rb ---
 require "shale"
 require_relative "geometric_primitive_property"
 require_relative "abstract_geometric_aggregate"

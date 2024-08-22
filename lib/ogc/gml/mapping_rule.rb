@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- mapping_rule_type.rb ---
 require "shale"
 
 require_relative "reference"

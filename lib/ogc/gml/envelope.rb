@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- envelope_type.rb ---
 require "shale"
 
 require_relative "coordinates"

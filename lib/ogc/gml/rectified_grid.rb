@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- rectified_grid_type.rb ---
 require "shale"
 
 require_relative "code"

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- geocentric_crs_type.rb ---
 require "shale"
 require_relative "cartesian_cs_property"
 require_relative "geodetic_datum_property"

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- abstract_general_parameter_value_property_type.rb ---
 require "shale"
 
 require_relative "abstract_general_parameter_value"

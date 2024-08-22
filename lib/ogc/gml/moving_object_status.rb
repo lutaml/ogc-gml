@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- moving_object_status_type.rb ---
 require "shale"
 
 require_relative "code"

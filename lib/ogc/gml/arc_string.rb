@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- arc_string_type.rb ---
 require "shale"
 
 require_relative "coordinates"

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- transformation_property_type.rb ---
 require "shale"
 
 require_relative "transformation"

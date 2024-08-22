@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- coordinate_operation_accuracy.rb ---
 require "shale"
 
 require_relative "string_or_ref"

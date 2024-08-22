@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- temporal_cs_type.rb ---
 require "shale"
 require_relative "abstract_coordinate_system"
 

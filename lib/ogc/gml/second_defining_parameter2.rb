@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- second_defining_parameter2.rb ---
 require "shale"
 
 require_relative "length"

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- grid_function_type.rb ---
 require "shale"
 
 require_relative "sequence_rule"

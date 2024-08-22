@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- discrete_coverage_type.rb ---
 require "shale"
 require_relative "abstract_continuous_coverage"
 

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- definition_proxy_type.rb ---
 require "shale"
 
 require_relative "code"

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- dictionary_entry_type.rb ---
 require "shale"
 
 require_relative "definition"

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- engineering_crs_type.rb ---
 require "shale"
 require_relative "affine_cs_property"
 require_relative "cartesian_cs_property"

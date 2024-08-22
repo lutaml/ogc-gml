@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- conversion_to_preferred_unit_type.rb ---
 require "shale"
 
 require_relative "formula"

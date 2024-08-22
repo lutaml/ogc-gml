@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- prime_meridian_type.rb ---
 require "shale"
 
 require_relative "angle"

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- temporal_crs_type.rb ---
 require "shale"
 require_relative "temporal_cs_property"
 require_relative "temporal_datum_property"

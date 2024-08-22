@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- triangle_type.rb ---
 require "shale"
 
 require_relative "shell_property"

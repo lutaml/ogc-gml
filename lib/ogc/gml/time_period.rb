@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- time_period_type.rb ---
 require "shale"
 require_relative "time_instant_property"
 require_relative "time_interval_length"
