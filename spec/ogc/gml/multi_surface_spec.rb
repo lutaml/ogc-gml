@@ -8,16 +8,16 @@ RSpec.describe Ogc::Gml::MultiSurface do
     ).gsub("\t", "  ")
   end
 
-  %w(
+  %w[
     MultiSurface-ROSPA0080.xml
     MultiSurface.xml
-  ).each do |filename|
+  ].each do |filename|
     it "round-trips #{filename}" do
       input = file_contents(filename)
       output = Ogc::Gml::MultiSurface.from_xml(input).to_xml(
         pretty: true,
         declaration: true,
-        encoding: "utf-8",
+        encoding: "utf-8"
       )
 
       expect(output).to be_equivalent_to(input)

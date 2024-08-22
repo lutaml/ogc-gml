@@ -8,19 +8,19 @@ RSpec.describe Ogc::Gml::Envelope do
     ).gsub("\t", "  ")
   end
 
-  %w(
+  %w[
     Envelope-httpRef.xml
     Envelope-invalidCRS.xml
     Envelope-invalidCorner.xml
     Envelope-noCRS.xml
     Envelope-valid.xml
-  ).each do |filename|
+  ].each do |filename|
     it "round-trips #{filename}" do
       input = file_contents(filename)
       output = Ogc::Gml::Envelope.from_xml(input).to_xml(
         pretty: true,
         declaration: true,
-        encoding: "utf-8",
+        encoding: "utf-8"
       )
 
       expect(output).to be_equivalent_to(input)

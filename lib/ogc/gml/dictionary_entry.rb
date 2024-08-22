@@ -8,7 +8,7 @@ module Ogc
   module Gml
     class DictionaryEntry < Lutaml::Model::Serializable
       attribute :id, :string
-      attribute :owns, :boolean #, default: -> { "false" }
+      attribute :owns, :boolean # , default: -> { "false" }
       attribute :nil_reason, :string
       attribute :remote_schema, :string
       attribute :definition, Definition

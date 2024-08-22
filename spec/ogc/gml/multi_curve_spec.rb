@@ -8,16 +8,16 @@ RSpec.describe Ogc::Gml::MultiCurve do
     ).gsub("\t", "  ")
   end
 
-  %w(
+  %w[
     MultiCurve-1.xml
     MultiCurve-2.xml
-  ).each do |filename|
+  ].each do |filename|
     it "round-trips #{filename}" do
       input = file_contents(filename)
       output = Ogc::Gml::MultiCurve.from_xml(input).to_xml(
         pretty: true,
         declaration: true,
-        encoding: "utf-8",
+        encoding: "utf-8"
       )
 
       expect(output).to be_equivalent_to(input)
