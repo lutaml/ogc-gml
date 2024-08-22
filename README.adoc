@@ -1,0 +1,102 @@
+= OGC GML parser and generator
+
+== Purpose
+
+This library parses and generates GML 3.2 application schemas and data sets that
+conform to:
+
+* https://www.iso.org/standard/32554.html[ISO 19136:2007, _Geographic information -- Geography Markup Language_]
+* http://portal.opengeospatial.org/files/?artifact_id=20509[OGC 07-036]
+
+
+== Installation
+
+To install the gem, add the following line to your Gemfile:
+
+[source,ruby]
+----
+gem 'ogc-gml'
+----
+
+And then execute:
+
+[source,bash]
+----
+$ bundle install
+----
+
+== Usage
+
+To use the OGC GML gem in your Ruby project, require it in your code:
+
+[source,ruby]
+----
+require 'ogc-gml'
+----
+
+Then, you can start using the gem's functionality.
+
+
+For example:
+
+[source,ruby]
+----
+# Parse a GML file
+gml_data = File.read('spec/fixtures/geospatial_jp_iur_3.1/Bridge_class.xml')
+gml = Ogc::Gml::Dictionary.from_xml(gml_data)
+
+# Access the loaded GML Dictionary
+gml_dictionary = gml.dictionary
+gml_dictionary.features.each do |feature|
+  puts feature.name
+end
+----
+
+It is possible to utilize the library to develop an Executable Test Suite
+for GML, similar to the
+http://opengeospatial.github.io/ets-gml32/[OGC ETS for GML 3.2].
+
+
+== Test suites
+
+The OGC GML gem includes test fixtures from the following sources:
+
+GML dictionary::
+From the Cabinet Office, Government Of Japan, i-UR data.
+Downloaded from: https://www.chisou.go.jp/tiiki/toshisaisei/itoshisaisei/iur/index.html[here].
+
+GML objects::
+Curve, Polygon, Line, Surface, etc. from the test suite of http://opengeospatial.github.io/ets-gml32/[OGC ETS for GML 3.2].
+
+
+
+== Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for
+improvements, please open an issue or submit a pull request.
+
+== Copyright and license
+
+Copyright Ribose.
+
+The OGC GML gem is released under the MIT License.
+
+
+
+// The GML specification defines 10 conformance classes that pertain to application
+// schemas. Five of these are currently covered by the test suite:
+
+// * A.1.1: All GML application schemas
+// * A.1.4: GML application schemas defining features and feature collections
+// * A.1.5: GML application schemas defining spatial geometries
+// * A.1.6: GML application schemas defining spatial topologies
+// * A.1.7: GML application schemas defining time
+
+// While an instance document is always checked for schema validity, the suite also
+// includes tests that validate fundamental GML geometry elements against various
+// constraints that cannot be expressed in an XML Schema grammar (e.g. surface boundary
+// orientation); these tests also apply to any application-defined geometries that
+// can substitute for the base GML geometry.
+
+// Visit the [project documentation website](http://opengeospatial.github.io/ets-gml32/)
+// for more information about test suite coverage, including the API documentation.
