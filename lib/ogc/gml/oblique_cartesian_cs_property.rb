@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- oblique_cartesian_cs_property_type.rb ---
 require "shale"
 
 require_relative "oblique_cartesian_cs"

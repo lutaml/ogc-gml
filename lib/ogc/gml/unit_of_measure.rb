@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- unit_of_measure_type.rb ---
 require "shale"
 
 module Ogc

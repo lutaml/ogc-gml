@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- polar_cs_property_type.rb ---
 require "shale"
 
 require_relative "polar_cs"

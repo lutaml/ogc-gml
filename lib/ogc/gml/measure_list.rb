@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- measure_list_type.rb ---
 require "shale"
 
 module Ogc

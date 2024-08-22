@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- coordinate_system_axis_property_type.rb ---
 require "shale"
 
 require_relative "coordinate_system_axis"

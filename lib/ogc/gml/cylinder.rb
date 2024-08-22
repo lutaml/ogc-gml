@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- cylinder_type.rb ---
 require "shale"
 require_relative "abstract_gridded_surface"
 

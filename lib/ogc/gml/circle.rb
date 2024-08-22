@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- circle_type.rb ---
 require "shale"
 require_relative "arc_string"
 

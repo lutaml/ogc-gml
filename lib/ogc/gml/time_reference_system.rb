@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- time_reference_system_type.rb ---
 require "shale"
 
 require_relative "code"

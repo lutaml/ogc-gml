@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- abstract_feature_type.rb ---
 require "shale"
 
 require_relative "bounding_shape"

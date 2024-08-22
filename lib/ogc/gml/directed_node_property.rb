@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- directed_node_property_type.rb ---
 require "shale"
 
 require_relative "node"

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- multi_point_property_type.rb ---
 require "shale"
 
 require_relative "multi_point"

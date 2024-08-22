@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- bounding_shape_type.rb ---
 require "shale"
 
 require_relative "envelope"

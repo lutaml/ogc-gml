@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- multi_geometry_type.rb ---
 require "shale"
 require_relative "geometry_array_property"
 require_relative "geometry_property"

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- multi_surface_type.rb ---
 require "shale"
 require_relative "abstract_geometric_aggregate"
 require_relative "surface_array_property"

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- pass_through_operation_type.rb ---
 require "shale"
 
 require_relative "code"

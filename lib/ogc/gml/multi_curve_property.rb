@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- multi_curve_property_type.rb ---
 require "shale"
 
 require_relative "multi_curve"

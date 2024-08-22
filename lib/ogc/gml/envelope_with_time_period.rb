@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- envelope_with_time_period_type.rb ---
 require "shale"
 
 require_relative "coordinates"

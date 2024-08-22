@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- target_property_type.rb ---
 require "shale"
 
 require_relative "abstract_feature"

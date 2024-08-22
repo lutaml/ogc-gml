@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- grid_envelope_type.rb ---
 require "shale"
 
 module Ogc

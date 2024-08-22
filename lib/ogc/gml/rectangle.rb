@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- rectangle_type.rb ---
 require "shale"
 
 require_relative "shell_property"

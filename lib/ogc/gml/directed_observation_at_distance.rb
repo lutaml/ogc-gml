@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- directed_observation_at_distance_type.rb ---
 require "shale"
 
 require_relative "bounding_shape"

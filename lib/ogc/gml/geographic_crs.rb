@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- geographic_crs_type.rb ---
 require "shale"
 require_relative "ellipsoidal_cs_property"
 require_relative "geodetic_datum_property"

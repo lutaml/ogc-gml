@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- cubic_spline_type.rb ---
 require "shale"
 
 require_relative "coordinates"

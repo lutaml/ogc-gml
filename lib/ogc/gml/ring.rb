@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- ring_type.rb ---
 require "shale"
 require_relative "composite_curve"
 

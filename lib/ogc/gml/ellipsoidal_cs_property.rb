@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- ellipsoidal_cs_property_type.rb ---
 require "shale"
 
 require_relative "ellipsoidal_cs"

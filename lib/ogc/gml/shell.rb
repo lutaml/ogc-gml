@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- shell_type.rb ---
 require "shale"
 require_relative "surface_property"
 

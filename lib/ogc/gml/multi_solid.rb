@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- multi_solid_type.rb ---
 require "shale"
 require_relative "abstract_geometric_aggregate"
 require_relative "solid_array_property"

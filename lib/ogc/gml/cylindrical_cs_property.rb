@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- cylindrical_cs_property_type.rb ---
 require "shale"
 
 require_relative "cylindrical_cs"

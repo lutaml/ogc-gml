@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- face_or_topo_solid_property_type.rb ---
 require "shale"
 
 # require_relative "face"

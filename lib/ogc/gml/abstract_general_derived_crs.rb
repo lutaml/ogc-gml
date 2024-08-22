@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- abstract_general_derived_crs_type.rb ---
 require "shale"
 require_relative "general_conversion_property"
 require_relative "abstract_crs"

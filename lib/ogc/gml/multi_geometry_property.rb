@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- multi_geometry_property_type.rb ---
 require "shale"
 
 require_relative "abstract_geometric_aggregate"

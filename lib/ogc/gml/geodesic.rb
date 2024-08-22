@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- geodesic_type.rb ---
 require "shale"
 
 require_relative "direct_position_list"

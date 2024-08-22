@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- concatenated_operation_type.rb ---
 require "shale"
 
 require_relative "code"

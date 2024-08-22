@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- compound_crs_type.rb ---
 require "shale"
 require_relative "single_crs_property"
 require_relative "abstract_crs"

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- composite_curve_type.rb ---
 require "shale"
 require_relative "curve_property"
 require_relative "abstract_geometric_aggregate"

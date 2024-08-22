@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# --- topo_volume_property_type.rb ---
 require "shale"
 
 require_relative "topo_volume"
