@@ -1,17 +1,21 @@
 # frozen_string_literal: true
 
+require "lutaml/model"
+
+Lutaml::Model::Config.configure do |config|
+  require "lutaml/model/xml_adapter/nokogiri_adapter"
+  config.xml_adapter = Lutaml::Model::XmlAdapter::NokogiriAdapter
+end
+
 require_relative "gml/version"
 
 module Ogc
   module Gml
     class Error < StandardError; end
+
     # Your code goes here...
   end
 end
-
-require 'shale'
-require 'shale/adapter/nokogiri'
-Shale.xml_adapter = Shale::Adapter::Nokogiri
 
 require_relative "gml/abstract_continuous_coverage"
 require_relative "gml/abstract_coordinate_operation"

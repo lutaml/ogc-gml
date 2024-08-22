@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "code"
 require_relative "code_with_authority"
@@ -12,9 +12,9 @@ require_relative "abstract_topology"
 module Ogc
   module Gml
     class TemporalDatum < AbstractTopology
-      attribute :remarks, Shale::Type::String
-      attribute :domain_of_validity, Shale::Type::String
-      attribute :scope, Shale::Type::String, collection: true
+      attribute :remarks, :string
+      attribute :domain_of_validity, :string
+      attribute :scope, :string, collection: true
       attribute :origin, TimeInstantProperty
 
       xml do

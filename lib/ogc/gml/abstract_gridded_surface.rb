@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class AbstractGriddedSurface < Shale::Mapper
-      attribute :aggregation_type, Shale::Type::String
-      attribute :rows, Shale::Type::Integer
-      attribute :columns, Shale::Type::Integer
+    class AbstractGriddedSurface < Lutaml::Model::Serializable
+      attribute :aggregation_type, :string
+      attribute :rows, :integer
+      attribute :columns, :integer
 
       xml do
         root "AbstractGriddedSurface"

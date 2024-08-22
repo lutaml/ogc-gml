@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class Boolean < Shale::Mapper
-      attribute :content, Shale::Type::Boolean
-      attribute :nil_reason, Shale::Type::Value
+    class Boolean < Lutaml::Model::Serializable
+      attribute :content, :boolean
+      attribute :nil_reason, :string
 
       xml do
         root "Boolean"

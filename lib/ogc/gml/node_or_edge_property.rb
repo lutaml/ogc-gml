@@ -1,19 +1,19 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 # require_relative "edge"
 require_relative "node"
 
 module Ogc
   module Gml
-    class Edge < Shale::Mapper
+    class Edge < Lutaml::Model::Serializable
     end
 
-    class NodeOrEdgeProperty < Shale::Mapper
-      attribute :nil_reason, Shale::Type::Value
-      attribute :remote_schema, Shale::Type::Value
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+    class NodeOrEdgeProperty < Lutaml::Model::Serializable
+      attribute :nil_reason, :string
+      attribute :remote_schema, :string
+      attribute :owns, :boolean, default: -> { false }
       attribute :node, Node
       attribute :edge, Edge
 

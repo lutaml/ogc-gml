@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "envelope"
 
 module Ogc
   module Gml
-    class BoundingShape < Shale::Mapper
-      attribute :nil_reason, Shale::Type::Value
+    class BoundingShape < Lutaml::Model::Serializable
+      attribute :nil_reason, :string
       attribute :envelope, Envelope
-      attribute :null, Shale::Type::Value
+      attribute :null, :string
 
       xml do
         root "boundedBy"

@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class SequenceRule < Shale::Mapper
-      attribute :content, Shale::Type::String
-      attribute :order, Shale::Type::String
-      attribute :axis_order, Shale::Type::Value
+    class SequenceRule < Lutaml::Model::Serializable
+      attribute :content, :string
+      attribute :order, :string
+      attribute :axis_order, :string
 
       xml do
         root "SequenceRuleType"

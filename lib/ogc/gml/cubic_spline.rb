@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "coordinates"
 require_relative "direct_position_list"
@@ -12,8 +12,8 @@ require_relative "abstract_curve_segment"
 module Ogc
   module Gml
     class CubicSpline < AbstractCurveSegment
-      attribute :interpolation, Shale::Type::String
-      attribute :degree, Shale::Type::Integer
+      attribute :interpolation, :string
+      attribute :degree, :integer
       attribute :pos, DirectPosition, collection: true
       attribute :point_property, PointProperty, collection: true
       attribute :point_rep, PointProperty, collection: true

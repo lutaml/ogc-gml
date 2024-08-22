@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "abstract_curve_segment"
 require_relative "arc"
@@ -10,7 +10,7 @@ require_relative "geodesic_string"
 
 module Ogc
   module Gml
-    class CurveSegmentArrayProperty < Shale::Mapper
+    class CurveSegmentArrayProperty < Lutaml::Model::Serializable
       attribute :abstract_curve_segment, AbstractCurveSegment, collection: true
       attribute :arc, Arc, collection: true
       attribute :arc_by_center_point, ArcByCenterPoint, collection: true

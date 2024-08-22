@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "string_or_ref"
 
 module Ogc
   module Gml
-    class CoordinateOperationAccuracy < Shale::Mapper
-      attribute :nil_reason, Shale::Type::Value
-      attribute :remote_schema, Shale::Type::Value
+    class CoordinateOperationAccuracy < Lutaml::Model::Serializable
+      attribute :nil_reason, :string
+      attribute :remote_schema, :string
       attribute :reference_event, StringOrRef
 
       xml do

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "abstract_general_parameter_value_property"
 require_relative "operation_method_property"
 require_relative "abstract_general_conversion"

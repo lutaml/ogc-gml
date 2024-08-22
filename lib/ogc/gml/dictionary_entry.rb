@@ -1,19 +1,19 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "definition"
 
 module Ogc
   module Gml
-    class DictionaryEntry < Shale::Mapper
-      attribute :id, Shale::Type::String
-      attribute :owns, Shale::Type::Boolean#, default: -> { "false" }
-      attribute :nil_reason, Shale::Type::Value
-      attribute :remote_schema, Shale::Type::Value
+    class DictionaryEntry < Lutaml::Model::Serializable
+      attribute :id, :string
+      attribute :owns, :boolean #, default: -> { "false" }
+      attribute :nil_reason, :string
+      attribute :remote_schema, :string
       attribute :definition, Definition
-      attribute :name, Shale::Type::String
-      attribute :description, Shale::Type::String
+      attribute :name, :string
+      attribute :description, :string
 
       xml do
         root "dictionaryEntry"

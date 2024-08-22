@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class AbstractParametricCurveSurface < Shale::Mapper
-      attribute :aggregation_type, Shale::Type::String
+    class AbstractParametricCurveSurface < Lutaml::Model::Serializable
+      attribute :aggregation_type, :string
 
       xml do
         root "AbstractParametricCurveSurface"

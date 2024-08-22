@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "affine_placement"
 
 module Ogc
   module Gml
-    class RefLocation < Shale::Mapper
+    class RefLocation < Lutaml::Model::Serializable
       attribute :affine_placement, AffinePlacement
 
       xml do

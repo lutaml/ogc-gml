@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class Coordinates < Shale::Mapper
-      attribute :content, Shale::Type::String
-      attribute :decimal, Shale::Type::String, default: -> { "." }
-      attribute :cs, Shale::Type::String, default: -> { "," }
-      attribute :ts, Shale::Type::String, default: -> { " " }
+    class Coordinates < Lutaml::Model::Serializable
+      attribute :content, :string
+      attribute :decimal, :string, default: -> { "." }
+      attribute :cs, :string, default: -> { "," }
+      attribute :ts, :string, default: -> { " " }
 
       xml do
         root "coordinates"

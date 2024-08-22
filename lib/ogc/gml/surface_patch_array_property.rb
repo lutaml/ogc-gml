@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "abstract_surface_patch"
 require_relative "triangle"
 
 module Ogc
   module Gml
-    class SurfacePatchArrayProperty < Shale::Mapper
+    class SurfacePatchArrayProperty < Lutaml::Model::Serializable
       attribute :abstract_surface_patch, AbstractSurfacePatch, collection: true
       attribute :polygon_patch, PolygonPatch, collection: true
       attribute :rectangle, Rectangle, collection: true

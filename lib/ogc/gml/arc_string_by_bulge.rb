@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "vector"
 require_relative "arc_string"
 
 module Ogc
   module Gml
     class ArcStringByBulge < ArcString
-      attribute :bulge, Shale::Type::Float, collection: true
+      attribute :bulge, :float, collection: true
       attribute :normal, Vector, collection: true
 
       xml do

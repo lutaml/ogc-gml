@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "reference"
 
 module Ogc
   module Gml
-    class MappingRule < Shale::Mapper
-      attribute :rule_definition, Shale::Type::String
+    class MappingRule < Lutaml::Model::Serializable
+      attribute :rule_definition, :string
       attribute :rule_reference, Reference
 
       xml do

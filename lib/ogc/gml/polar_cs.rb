@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "abstract_coordinate_system"
 
 module Ogc
   module Gml
-    class PolarCS < Shale::Mapper
+    class PolarCS < Lutaml::Model::Serializable
       xml do
         root "PolarCS"
         namespace "http://www.opengis.net/gml/3.2", "gml"

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "code_with_authority"
 require_relative "dictionary_entry"
@@ -10,18 +10,18 @@ require_relative "reference"
 
 module Ogc
   module Gml
-    class Dictionary < Shale::Mapper
-      attribute :id, Shale::Type::String
-      attribute :aggregation_type, Shale::Type::String
+    class Dictionary < Lutaml::Model::Serializable
+      attribute :id, :string
+      attribute :aggregation_type, :string
       attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
+      attribute :description, :string
       attribute :description_reference, Reference
       attribute :identifier, CodeWithAuthority
-      attribute :name, Shale::Type::String, collection: true
-      attribute :remarks, Shale::Type::String
+      attribute :name, :string, collection: true
+      attribute :remarks, :string
       attribute :dictionary_entry, DictionaryEntry, collection: true
       attribute :indirect_entry, IndirectEntry, collection: true
-      attribute :schema_location, Shale::Type::String
+      attribute :schema_location, :string
 
       xml do
         root "Dictionary"

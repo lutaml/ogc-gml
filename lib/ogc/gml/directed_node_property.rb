@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "node"
 
 module Ogc
   module Gml
-    class DirectedNodeProperty < Shale::Mapper
-      attribute :orientation, Shale::Type::String, default: -> { "+" }
-      attribute :nil_reason, Shale::Type::Value
-      attribute :remote_schema, Shale::Type::Value
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+    class DirectedNodeProperty < Lutaml::Model::Serializable
+      attribute :orientation, :string, default: -> { "+" }
+      attribute :nil_reason, :string
+      attribute :remote_schema, :string
+      attribute :owns, :boolean, default: -> { false }
       attribute :node, Node
 
       xml do

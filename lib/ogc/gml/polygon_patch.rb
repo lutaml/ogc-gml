@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "shell_property"
 
 module Ogc
   module Gml
-    class PolygonPatch < Shale::Mapper
-      attribute :interpolation, Shale::Type::String
+    class PolygonPatch < Lutaml::Model::Serializable
+      attribute :interpolation, :string
       attribute :exterior, ShellProperty
       attribute :interior, ShellProperty, collection: true
 

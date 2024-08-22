@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class TimeIntervalLength < Shale::Mapper
-      attribute :content, Shale::Type::Float
-      attribute :unit, Shale::Type::String
-      attribute :radix, Shale::Type::Integer
-      attribute :factor, Shale::Type::Integer
+    class TimeIntervalLength < Lutaml::Model::Serializable
+      attribute :content, :float
+      attribute :unit, :string
+      attribute :radix, :integer
+      attribute :factor, :integer
 
       xml do
         root "timeInterval"

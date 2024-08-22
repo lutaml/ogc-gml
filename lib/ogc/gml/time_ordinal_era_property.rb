@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "time_ordinal_era"
 
 module Ogc
   module Gml
-    class TimeOrdinalEraProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
-      attribute :nil_reason, Shale::Type::Value
-      attribute :remote_schema, Shale::Type::Value
+    class TimeOrdinalEraProperty < Lutaml::Model::Serializable
+      attribute :owns, :boolean, default: -> { false }
+      attribute :nil_reason, :string
+      attribute :remote_schema, :string
       attribute :time_ordinal_era, TimeOrdinalEra
 
       xml do

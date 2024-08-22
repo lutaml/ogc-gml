@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "coverage_function"
 require_relative "abstract_coverage"
 

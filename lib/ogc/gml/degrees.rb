@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class Degrees < Shale::Mapper
-      attribute :content, Shale::Type::Integer
-      attribute :direction, Shale::Type::String
+    class Degrees < Lutaml::Model::Serializable
+      attribute :content, :integer
+      attribute :direction, :string
 
       xml do
         root "degrees"

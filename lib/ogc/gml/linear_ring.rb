@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "coordinates"
 require_relative "direct_position_list"
@@ -9,7 +9,7 @@ require_relative "point_property"
 
 module Ogc
   module Gml
-    class LinearRing < Shale::Mapper
+    class LinearRing < Lutaml::Model::Serializable
       attribute :pos, DirectPosition, collection: true
       attribute :point_property, PointProperty, collection: true
       attribute :point_rep, PointProperty, collection: true

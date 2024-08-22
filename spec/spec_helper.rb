@@ -15,3 +15,10 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+
+require "lutaml/model"
+require "lutaml/model/xml_adapter/nokogiri_adapter"
+
+Lutaml::Model::Config.configure do |config|
+  config.xml_adapter = Lutaml::Model::XmlAdapter::NokogiriAdapter
+end

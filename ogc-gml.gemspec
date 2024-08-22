@@ -4,14 +4,14 @@ require_relative "lib/ogc/gml/version"
 
 Gem::Specification.new do |spec|
   spec.name = "ogc-gml"
-  spec.version       = Ogc::Gml::VERSION
-  spec.authors       = ["Ribose Inc."]
-  spec.email         = ["open.source@ribose.com'"]
+  spec.version = Ogc::Gml::VERSION
+  spec.authors = ["Ribose Inc."]
+  spec.email = ["open.source@ribose.com'"]
 
-  spec.summary       = "OGC GML data model parser"
-  spec.description   = "OGC GML data model parser"
-  spec.homepage      = "https://github.com/lutaml/ogc-gml"
-  spec.license       = "MIT"
+  spec.summary = "OGC GML data model parser"
+  spec.description = "OGC GML data model parser"
+  spec.homepage = "https://github.com/lutaml/ogc-gml"
+  spec.license = "MIT"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
@@ -25,14 +25,14 @@ Gem::Specification.new do |spec|
       .split("\x0")
       .reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.bindir = "exe"
+  spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
   spec.required_ruby_version = ">= 2.7.0"
 
   spec.add_runtime_dependency "nokogiri"
-  spec.add_runtime_dependency "shale"
+  spec.add_runtime_dependency "lutaml-model"
 
   spec.add_development_dependency "equivalent-xml"
   spec.add_development_dependency "pry", "~> 0.12.2"

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "code"
 require_relative "code_with_authority"
@@ -12,15 +12,15 @@ require_relative "topo_primitive_member"
 
 module Ogc
   module Gml
-    class TopoComplexProperty < Shale::Mapper
+    class TopoComplexProperty < Lutaml::Model::Serializable
     end
 
-    class TopoComplex < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :is_maximal, Shale::Type::Boolean, default: -> { "false" }
-      attribute :aggregation_type, Shale::Type::String
+    class TopoComplex < Lutaml::Model::Serializable
+      attribute :id, :string
+      attribute :is_maximal, :boolean, default: -> { false }
+      attribute :aggregation_type, :string
       attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
+      attribute :description, :string
       attribute :description_reference, Reference
       attribute :identifier, CodeWithAuthority
       attribute :name, Code, collection: true

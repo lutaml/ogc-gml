@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class UnitOfMeasure < Shale::Mapper
-      attribute :uom, Shale::Type::Value
+    class UnitOfMeasure < Lutaml::Model::Serializable
+      attribute :uom, :string
 
       xml do
         root "unitOfMeasure"

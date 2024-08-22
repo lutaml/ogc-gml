@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "direct_position_list"
 require_relative "direct_position"
@@ -8,7 +8,7 @@ require_relative "point_property"
 
 module Ogc
   module Gml
-    class ControlPoint < Shale::Mapper
+    class ControlPoint < Lutaml::Model::Serializable
       attribute :pos_list, DirectPositionList
       attribute :pos, DirectPosition, collection: true
       attribute :point_property, PointProperty, collection: true

@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "direct_position"
 
 module Ogc
   module Gml
-    class Vector < Shale::Mapper
+    class Vector < Lutaml::Model::Serializable
       attribute :content, DirectPosition
 
       xml do

@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class CodeOrNilReasonList < Shale::Mapper
-      attribute :content, Shale::Type::Value
-      attribute :code_space, Shale::Type::Value
+    class CodeOrNilReasonList < Lutaml::Model::Serializable
+      attribute :content, :string
+      attribute :code_space, :string
 
       xml do
         root "CategoryList"

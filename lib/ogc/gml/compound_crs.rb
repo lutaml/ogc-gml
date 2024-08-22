@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "single_crs_property"
 require_relative "abstract_crs"
 
 module Ogc
   module Gml
     class CompoundCRS < AbstractCRS
-      attribute :aggregation_type, Shale::Type::String
+      attribute :aggregation_type, :string
       attribute :component_reference_system, SingleCRSProperty, collection: true
 
       xml do

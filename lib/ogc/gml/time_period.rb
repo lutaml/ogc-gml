@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "time_instant_property"
 require_relative "time_interval_length"
 require_relative "time_position"
@@ -13,7 +13,7 @@ module Ogc
       attribute :begin, TimeInstantProperty
       attribute :end_position, TimePosition
       attribute :end, TimeInstantProperty
-      attribute :duration, Shale::Type::Value
+      attribute :duration, :string
       attribute :time_interval, TimeIntervalLength
 
       xml do

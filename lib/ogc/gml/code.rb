@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class Code < Shale::Mapper
-      attribute :content, Shale::Type::String
-      attribute :code_space, Shale::Type::Value
+    class Code < Lutaml::Model::Serializable
+      attribute :content, :string
+      attribute :code_space, :string
 
       xml do
         root "LocationKeyWord"

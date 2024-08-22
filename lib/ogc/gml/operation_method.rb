@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "abstract_general_operation_parameter_property"
 require_relative "code"
@@ -13,11 +13,11 @@ require_relative "abstract_topology"
 module Ogc
   module Gml
     class OperationMethod < AbstractTopology
-      attribute :remarks, Shale::Type::String
+      attribute :remarks, :string
       attribute :formula_citation, FormulaCitation
       attribute :formula, Code
-      attribute :source_dimensions, Shale::Type::Integer
-      attribute :target_dimensions, Shale::Type::Integer
+      attribute :source_dimensions, :integer
+      attribute :target_dimensions, :integer
       attribute :parameter, AbstractGeneralOperationParameterProperty, collection: true
 
       xml do

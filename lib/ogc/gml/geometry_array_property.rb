@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "abstract_geometry"
 
 module Ogc
   module Gml
-    class GeometryArrayProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+    class GeometryArrayProperty < Lutaml::Model::Serializable
+      attribute :owns, :boolean, default: -> { false }
       attribute :abstract_geometry, AbstractGeometry, collection: true
 
       xml do

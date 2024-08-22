@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "code"
 require_relative "code_with_authority"
@@ -9,19 +9,19 @@ require_relative "reference"
 
 module Ogc
   module Gml
-    class CoordinateSystemAxis < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :uom, Shale::Type::Value
+    class CoordinateSystemAxis < Lutaml::Model::Serializable
+      attribute :id, :string
+      attribute :uom, :string
       attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
+      attribute :description, :string
       attribute :description_reference, Reference
       attribute :identifier, CodeWithAuthority
       attribute :name, Code, collection: true
-      attribute :remarks, Shale::Type::String
+      attribute :remarks, :string
       attribute :axis_abbrev, Code
       attribute :axis_direction, CodeWithAuthority
-      attribute :minimum_value, Shale::Type::Float
-      attribute :maximum_value, Shale::Type::Float
+      attribute :minimum_value, :float
+      attribute :maximum_value, :float
       attribute :range_meaning, CodeWithAuthority
 
       xml do

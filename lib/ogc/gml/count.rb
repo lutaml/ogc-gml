@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class Count < Shale::Mapper
-      attribute :content, Shale::Type::Integer
-      attribute :nil_reason, Shale::Type::Value
+    class Count < Lutaml::Model::Serializable
+      attribute :content, :integer
+      attribute :nil_reason, :string
 
       xml do
         root "Count"

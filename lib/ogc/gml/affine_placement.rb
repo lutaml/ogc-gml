@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "direct_position"
 require_relative "vector"
 
 module Ogc
   module Gml
-    class AffinePlacement < Shale::Mapper
+    class AffinePlacement < Lutaml::Model::Serializable
       attribute :location, DirectPosition
       attribute :ref_direction, Vector, collection: true
-      attribute :in_dimension, Shale::Type::Integer
-      attribute :out_dimension, Shale::Type::Integer
+      attribute :in_dimension, :integer
+      attribute :out_dimension, :integer
 
       xml do
         root "AffinePlacement"

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "code"
 require_relative "code_with_authority"
@@ -13,7 +13,7 @@ require_relative "abstract_topology"
 module Ogc
   module Gml
     class Ellipsoid < AbstractTopology
-      attribute :remarks, Shale::Type::String
+      attribute :remarks, :string
       attribute :semi_major_axis, Measure
       attribute :second_defining_parameter, SecondDefiningParameter1
 

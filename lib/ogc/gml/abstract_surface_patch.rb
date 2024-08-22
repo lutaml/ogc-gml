@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class AbstractSurfacePatch < Shale::Mapper
+    class AbstractSurfacePatch < Lutaml::Model::Serializable
       xml do
         root "AbstractSurfacePatch"
         namespace "http://www.opengis.net/gml/3.2", "gml"

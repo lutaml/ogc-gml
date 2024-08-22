@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class GridEnvelope < Shale::Mapper
-      attribute :low, Shale::Type::Value
-      attribute :high, Shale::Type::Value
+    class GridEnvelope < Lutaml::Model::Serializable
+      attribute :low, :string
+      attribute :high, :string
 
       xml do
         root "GridEnvelopeType"

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "code"
 require_relative "code_with_authority"
@@ -11,9 +11,9 @@ require_relative "abstract_topology"
 module Ogc
   module Gml
     class AbstractCRS < AbstractTopology
-      attribute :remarks, Shale::Type::String
-      attribute :domain_of_validity, Shale::Type::String, collection: true
-      attribute :scope, Shale::Type::String, collection: true
+      attribute :remarks, :string
+      attribute :domain_of_validity, :string, collection: true
+      attribute :scope, :string, collection: true
 
       xml do
         root "AbstractSingleCRS"

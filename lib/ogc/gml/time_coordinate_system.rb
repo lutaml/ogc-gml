@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "code"
 require_relative "code_with_authority"
@@ -14,8 +14,8 @@ require_relative "abstract_topology"
 module Ogc
   module Gml
     class TimeCoordinateSystem < AbstractTopology
-      attribute :remarks, Shale::Type::String
-      attribute :domain_of_validity, Shale::Type::String
+      attribute :remarks, :string
+      attribute :domain_of_validity, :string
       attribute :origin_position, TimePosition
       attribute :origin, TimeInstantProperty
       attribute :interval, TimeIntervalLength

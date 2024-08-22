@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "shell"
 require_relative "ring"
@@ -8,7 +8,7 @@ require_relative "linear_ring"
 
 module Ogc
   module Gml
-    class ShellProperty < Shale::Mapper
+    class ShellProperty < Lutaml::Model::Serializable
       attribute :shell, Shell
       attribute :ring, Ring
       attribute :linear_ring, LinearRing

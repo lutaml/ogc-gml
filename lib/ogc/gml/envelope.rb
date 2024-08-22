@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "coordinates"
 require_relative "direct_position"
 
 module Ogc
   module Gml
-    class Envelope < Shale::Mapper
-      attribute :srs_name, Shale::Type::Value
-      attribute :srs_dimension, Shale::Type::Integer
-      attribute :axis_labels, Shale::Type::Value
-      attribute :uom_labels, Shale::Type::Value
+    class Envelope < Lutaml::Model::Serializable
+      attribute :srs_name, :string
+      attribute :srs_dimension, :integer
+      attribute :axis_labels, :string
+      attribute :uom_labels, :string
       attribute :lower_corner, DirectPosition
       attribute :upper_corner, DirectPosition
       attribute :pos, DirectPosition, collection: true
