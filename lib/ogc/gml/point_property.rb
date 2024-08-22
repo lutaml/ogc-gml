@@ -9,7 +9,7 @@ module Ogc
     class PointProperty < Lutaml::Model::Serializable
       attribute :nil_reason, :string
       attribute :remote_schema, :string
-      attribute :owns, :boolean #, default: -> { "false" }
+      attribute :owns, :boolean # , default: -> { "false" }
       attribute :point, Point
 
       xml do

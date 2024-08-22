@@ -8,15 +8,15 @@ RSpec.describe Ogc::Gml::MultiPoint do
     ).gsub("\t", "  ")
   end
 
-  %w(
+  %w[
     MultiPoint-1.xml
-  ).each do |filename|
+  ].each do |filename|
     it "round-trips #{filename}" do
       input = file_contents(filename)
       output = Ogc::Gml::MultiPoint.from_xml(input).to_xml(
         pretty: true,
         declaration: true,
-        encoding: "utf-8",
+        encoding: "utf-8"
       )
 
       expect(output).to be_equivalent_to(input)

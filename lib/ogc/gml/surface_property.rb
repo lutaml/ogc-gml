@@ -10,7 +10,7 @@ module Ogc
     class SurfaceProperty < Lutaml::Model::Serializable
       attribute :nil_reason, :string
       attribute :remote_schema, :string
-      attribute :owns, :boolean #, default: -> { "false" }
+      attribute :owns, :boolean # , default: -> { "false" }
       attribute :abstract_surface, AbstractSurface
       attribute :polygon, Polygon
 

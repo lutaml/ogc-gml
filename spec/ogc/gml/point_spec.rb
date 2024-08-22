@@ -8,19 +8,19 @@ RSpec.describe Ogc::Gml::Point do
     ).gsub("\t", "  ")
   end
 
-  %w(
+  %w[
     Point-2.5D.xml
     Point-27700.xml
     Point-axisOrder.xml
     Point-epsg3045.xml
     Point-srsNameOnPos.xml
-  ).each do |filename|
+  ].each do |filename|
     it "round-trips #{filename}" do
       input = file_contents(filename)
       output = Ogc::Gml::Point.from_xml(input).to_xml(
         pretty: true,
         declaration: true,
-        encoding: "utf-8",
+        encoding: "utf-8"
       )
 
       expect(output).to be_equivalent_to(input)

@@ -8,17 +8,17 @@ RSpec.describe Ogc::Gml::LineString do
     ).gsub("\t", "  ")
   end
 
-  %w(
+  %w[
     LineString-invalidCoords.xml
     LineString-srsName-http.xml
     LineString.xml
-  ).each do |filename|
+  ].each do |filename|
     it "round-trips #{filename}" do
       input = file_contents(filename)
       output = Ogc::Gml::LineString.from_xml(input).to_xml(
         pretty: true,
         declaration: true,
-        encoding: "utf-8",
+        encoding: "utf-8"
       )
 
       expect(output).to be_equivalent_to(input)

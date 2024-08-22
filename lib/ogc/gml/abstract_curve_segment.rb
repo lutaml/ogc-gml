@@ -5,9 +5,9 @@ require "lutaml/model"
 module Ogc
   module Gml
     class AbstractCurveSegment < Lutaml::Model::Serializable
-      attribute :num_derivatives_at_start, :integer #, default: -> { "0" }
-      attribute :num_derivatives_at_end, :integer #, default: -> { "0" }
-      attribute :num_derivative_interior, :integer #, default: -> { "0" }
+      attribute :num_derivatives_at_start, :integer # , default: -> { "0" }
+      attribute :num_derivatives_at_end, :integer # , default: -> { "0" }
+      attribute :num_derivative_interior, :integer # , default: -> { "0" }
 
       xml do
         root "AbstractCurveSegment"
