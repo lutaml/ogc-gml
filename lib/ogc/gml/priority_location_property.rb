@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "abstract_geometry"
 require_relative "code"
@@ -8,14 +8,14 @@ require_relative "string_or_ref"
 
 module Ogc
   module Gml
-    class PriorityLocationProperty < Shale::Mapper
-      attribute :nil_reason, Shale::Type::Value
-      attribute :remote_schema, Shale::Type::Value
-      attribute :priority, Shale::Type::String
+    class PriorityLocationProperty < Lutaml::Model::Serializable
+      attribute :nil_reason, :string
+      attribute :remote_schema, :string
+      attribute :priority, :string
       attribute :abstract_geometry, AbstractGeometry
       attribute :location_key_word, Code
       attribute :location_string, StringOrRef
-      attribute :null, Shale::Type::Value
+      attribute :null, :string
 
       xml do
         root "priorityLocation"

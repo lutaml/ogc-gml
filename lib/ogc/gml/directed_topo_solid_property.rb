@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "topo_solid"
 
 module Ogc
   module Gml
-    class DirectedTopoSolidProperty < Shale::Mapper
-      attribute :orientation, Shale::Type::String, default: -> { "+" }
-      attribute :nil_reason, Shale::Type::Value
-      attribute :remote_schema, Shale::Type::Value
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+    class DirectedTopoSolidProperty < Lutaml::Model::Serializable
+      attribute :orientation, :string, default: -> { "+" }
+      attribute :nil_reason, :string
+      attribute :remote_schema, :string
+      attribute :owns, :boolean, default: -> { false }
       attribute :topo_solid, TopoSolid
 
       xml do

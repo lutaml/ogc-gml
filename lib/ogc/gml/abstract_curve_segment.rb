@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class AbstractCurveSegment < Shale::Mapper
-      attribute :num_derivatives_at_start, Shale::Type::Integer#, default: -> { "0" }
-      attribute :num_derivatives_at_end, Shale::Type::Integer#, default: -> { "0" }
-      attribute :num_derivative_interior, Shale::Type::Integer#, default: -> { "0" }
+    class AbstractCurveSegment < Lutaml::Model::Serializable
+      attribute :num_derivatives_at_start, :integer #, default: -> { "0" }
+      attribute :num_derivatives_at_end, :integer #, default: -> { "0" }
+      attribute :num_derivative_interior, :integer #, default: -> { "0" }
 
       xml do
         root "AbstractCurveSegment"

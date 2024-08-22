@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "code"
 require_relative "code_with_authority"
@@ -11,11 +11,11 @@ require_relative "value_property"
 
 module Ogc
   module Gml
-    class CompositeValue < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :aggregation_type, Shale::Type::String
+    class CompositeValue < Lutaml::Model::Serializable
+      attribute :id, :string
+      attribute :aggregation_type, :string
       attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
+      attribute :description, :string
       attribute :description_reference, Reference
       attribute :identifier, CodeWithAuthority
       attribute :name, Code, collection: true

@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "oblique_cartesian_cs"
 
 module Ogc
   module Gml
-    class ObliqueCartesianCSProperty < Shale::Mapper
-      attribute :nil_reason, Shale::Type::Value
-      attribute :remote_schema, Shale::Type::Value
+    class ObliqueCartesianCSProperty < Lutaml::Model::Serializable
+      attribute :nil_reason, :string
+      attribute :remote_schema, :string
       attribute :oblique_cartesian_cs, ObliqueCartesianCS
 
       xml do

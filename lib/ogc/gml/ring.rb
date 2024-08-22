@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "composite_curve"
 
 module Ogc
   module Gml
     class Ring < CompositeCurve
-      attribute :aggregation_type, Shale::Type::String
+      attribute :aggregation_type, :string
 
       xml do
         root "Ring"

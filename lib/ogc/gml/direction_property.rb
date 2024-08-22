@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "code"
 require_relative "direction_description"
@@ -9,13 +9,13 @@ require_relative "string_or_ref"
 
 module Ogc
   module Gml
-    class DirectionProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
-      attribute :nil_reason, Shale::Type::Value
-      attribute :remote_schema, Shale::Type::Value
+    class DirectionProperty < Lutaml::Model::Serializable
+      attribute :owns, :boolean, default: -> { false }
+      attribute :nil_reason, :string
+      attribute :remote_schema, :string
       attribute :direction_vector, DirectionVector
       attribute :direction_description, DirectionDescription
-      attribute :compass_point, Shale::Type::String
+      attribute :compass_point, :string
       attribute :direction_keyword, Code
       attribute :direction_string, StringOrRef
 

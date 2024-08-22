@@ -1,19 +1,19 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 # require_relative "face"
 # require_relative "topo_solid"
 
 module Ogc
   module Gml
-    class Face < Shale::Mapper; end
-    class TopoSolid < Shale::Mapper; end
+    class Face < Lutaml::Model::Serializable; end
+    class TopoSolid < Lutaml::Model::Serializable; end
 
-    class FaceOrTopoSolidProperty < Shale::Mapper
-      attribute :nil_reason, Shale::Type::Value
-      attribute :remote_schema, Shale::Type::Value
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+    class FaceOrTopoSolidProperty < Lutaml::Model::Serializable
+      attribute :nil_reason, :string
+      attribute :remote_schema, :string
+      attribute :owns, :boolean, default: -> { false }
       attribute :face, Face
       attribute :topo_solid, TopoSolid
 

@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class ArrayAssociation < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
-      attribute :abstract_object, Shale::Type::Value, collection: true
+    class ArrayAssociation < Lutaml::Model::Serializable
+      attribute :owns, :boolean, default: -> { false }
+      attribute :abstract_object, :string, collection: true
 
       xml do
         root "members"

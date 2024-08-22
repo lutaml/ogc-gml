@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class AssociationRole < Shale::Mapper
-      attribute :nil_reason, Shale::Type::Value
-      attribute :remote_schema, Shale::Type::Value
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+    class AssociationRole < Lutaml::Model::Serializable
+      attribute :nil_reason, :string
+      attribute :remote_schema, :string
+      attribute :owns, :boolean, default: -> { false }
 
       xml do
         root "member"

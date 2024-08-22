@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "measure"
 
 module Ogc
   module Gml
-    class Quantity < Shale::Mapper
+    class Quantity < Lutaml::Model::Serializable
       attribute :content, Measure
-      attribute :nil_reason, Shale::Type::Value
+      attribute :nil_reason, :string
 
       xml do
         root "Quantity"

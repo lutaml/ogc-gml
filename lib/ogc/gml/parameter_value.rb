@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "dms_angle"
 require_relative "measure_list"
@@ -9,15 +9,15 @@ require_relative "operation_parameter_property"
 
 module Ogc
   module Gml
-    class ParameterValue < Shale::Mapper
+    class ParameterValue < Lutaml::Model::Serializable
       attribute :value, Measure
       attribute :dms_angle_value, DMSAngle
-      attribute :string_value, Shale::Type::String
-      attribute :integer_value, Shale::Type::Integer
-      attribute :boolean_value, Shale::Type::Boolean
+      attribute :string_value, :string
+      attribute :integer_value, :integer
+      attribute :boolean_value, :boolean
       attribute :value_list, MeasureList
-      attribute :integer_value_list, Shale::Type::Value
-      attribute :value_file, Shale::Type::Value
+      attribute :integer_value_list, :string
+      attribute :value_file, :string
       attribute :operation_parameter, OperationParameterProperty
 
       xml do

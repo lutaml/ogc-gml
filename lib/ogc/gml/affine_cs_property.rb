@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "affine_cs"
 
 module Ogc
   module Gml
-    class AffineCSProperty < Shale::Mapper
-      attribute :nil_reason, Shale::Type::Value
-      attribute :remote_schema, Shale::Type::Value
+    class AffineCSProperty < Lutaml::Model::Serializable
+      attribute :nil_reason, :string
+      attribute :remote_schema, :string
       attribute :affine_cs, AffineCS
 
       xml do

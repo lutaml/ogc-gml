@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "coordinate_operation_accuracy"
 require_relative "crs_property"
@@ -9,10 +9,10 @@ require_relative "abstract_topology"
 module Ogc
   module Gml
     class AbstractCoordinateOperation < AbstractTopology
-      attribute :remarks, Shale::Type::String
-      attribute :domain_of_validity, Shale::Type::String
-      attribute :scope, Shale::Type::String, collection: true
-      attribute :operation_version, Shale::Type::String
+      attribute :remarks, :string
+      attribute :domain_of_validity, :string
+      attribute :scope, :string, collection: true
+      attribute :operation_version, :string
       attribute :coordinate_operation_accuracy, CoordinateOperationAccuracy, collection: true
       attribute :source_crs, CRSProperty
       attribute :target_crs, CRSProperty

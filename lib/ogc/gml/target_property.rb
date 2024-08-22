@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "abstract_feature"
 require_relative "abstract_geometry"
 
 module Ogc
   module Gml
-    class TargetProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
-      attribute :nil_reason, Shale::Type::Value
-      attribute :remote_schema, Shale::Type::Value
+    class TargetProperty < Lutaml::Model::Serializable
+      attribute :owns, :boolean, default: -> { false }
+      attribute :nil_reason, :string
+      attribute :remote_schema, :string
       attribute :abstract_feature, AbstractFeature
       attribute :abstract_geometry, AbstractGeometry
 

@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "length"
 require_relative "measure"
 
 module Ogc
   module Gml
-    class SecondDefiningParameter2 < Shale::Mapper
+    class SecondDefiningParameter2 < Lutaml::Model::Serializable
       attribute :inverse_flattening, Measure
       attribute :semi_minor_axis, Length
-      attribute :is_sphere, Shale::Type::Boolean, default: -> { "true" }
+      attribute :is_sphere, :boolean, default: -> { true }
 
       xml do
         root "SecondDefiningParameter"

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "reference"
 require_relative "related_time"
 require_relative "time_node_property"
@@ -10,11 +10,11 @@ require_relative "abstract_topology"
 
 module Ogc
   module Gml
-    class TimeOrdinalEraProperty < Shale::Mapper
+    class TimeOrdinalEraProperty < Lutaml::Model::Serializable
     end
 
     class TimeOrdinalEra < AbstractTopology
-      attribute :remarks, Shale::Type::String
+      attribute :remarks, :string
       attribute :related_time, RelatedTime, collection: true
       attribute :start, TimeNodeProperty
       attribute :end, TimeNodeProperty

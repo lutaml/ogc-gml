@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "affine_cs_property"
 require_relative "cartesian_cs_property"
 require_relative "coordinate_system_property"

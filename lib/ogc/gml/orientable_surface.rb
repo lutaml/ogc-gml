@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "code"
 require_relative "code_with_authority"
@@ -10,15 +10,15 @@ require_relative "surface_property"
 
 module Ogc
   module Gml
-    class OrientableSurface < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :srs_name, Shale::Type::Value
-      attribute :srs_dimension, Shale::Type::Integer
-      attribute :axis_labels, Shale::Type::Value
-      attribute :uom_labels, Shale::Type::Value
-      attribute :orientation, Shale::Type::String, default: -> { "+" }
+    class OrientableSurface < Lutaml::Model::Serializable
+      attribute :id, :string
+      attribute :srs_name, :string
+      attribute :srs_dimension, :integer
+      attribute :axis_labels, :string
+      attribute :uom_labels, :string
+      attribute :orientation, :string, default: -> { "+" }
       attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
+      attribute :description, :string
       attribute :description_reference, Reference
       attribute :identifier, CodeWithAuthority
       attribute :name, Code, collection: true

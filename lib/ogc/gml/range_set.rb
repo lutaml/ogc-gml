@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "data_block"
 require_relative "file"
@@ -8,9 +8,9 @@ require_relative "value_array"
 
 module Ogc
   module Gml
-    class RangeSet < Shale::Mapper
+    class RangeSet < Lutaml::Model::Serializable
       attribute :value_array, ValueArray, collection: true
-      attribute :abstract_scalar_value_list, Shale::Type::Value, collection: true
+      attribute :abstract_scalar_value_list, :string, collection: true
       attribute :data_block, DataBlock
       attribute :file, File
 

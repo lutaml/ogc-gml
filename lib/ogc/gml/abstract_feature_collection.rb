@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "bounding_shape"
 require_relative "feature_array_property"
 require_relative "feature_property"

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "abstract_time_geometric_primitive"
 require_relative "time_position"
 

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "vertical_cs_property"
 require_relative "vertical_datum_property"
 require_relative "abstract_crs"

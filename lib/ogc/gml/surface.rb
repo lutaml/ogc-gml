@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "abstract_surface"
 require_relative "surface_patch_array_property"
 

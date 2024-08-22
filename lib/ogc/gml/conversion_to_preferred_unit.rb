@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "formula"
 
 module Ogc
   module Gml
-    class ConversionToPreferredUnit < Shale::Mapper
-      attribute :uom, Shale::Type::Value
-      attribute :factor, Shale::Type::Float
+    class ConversionToPreferredUnit < Lutaml::Model::Serializable
+      attribute :uom, :string
+      attribute :factor, :float
       attribute :formula, Formula
 
       xml do

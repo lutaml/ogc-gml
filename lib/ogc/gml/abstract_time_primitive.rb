@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 # require_relative "related_time"
 
 module Ogc
   module Gml
-    class RelatedTime < Shale::Mapper
+    class RelatedTime < Lutaml::Model::Serializable
     end
 
     class AbstractTimePrimitive < AbstractTopology

@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "point"
 
 module Ogc
   module Gml
-    class PointArrayProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+    class PointArrayProperty < Lutaml::Model::Serializable
+      attribute :owns, :boolean, default: -> { false }
       attribute :point, Point, collection: true
 
       xml do

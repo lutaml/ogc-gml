@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "abstract_general_operation_parameter"
 
 module Ogc
   module Gml
-    class AbstractGeneralOperationParameterProperty < Shale::Mapper
-      attribute :nil_reason, Shale::Type::Value
-      attribute :remote_schema, Shale::Type::Value
+    class AbstractGeneralOperationParameterProperty < Lutaml::Model::Serializable
+      attribute :nil_reason, :string
+      attribute :remote_schema, :string
       attribute :abstract_general_operation_parameter, AbstractGeneralOperationParameter
 
       xml do

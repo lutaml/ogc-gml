@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "code"
 require_relative "code_with_authority"
@@ -14,7 +14,7 @@ require_relative "concatenated_operation"
 module Ogc
   module Gml
     class PassThroughOperation < ConcatenatedOperation
-      attribute :modified_coordinate, Shale::Type::Integer, collection: true
+      attribute :modified_coordinate, :integer, collection: true
 
       xml do
         root "PassThroughOperation"

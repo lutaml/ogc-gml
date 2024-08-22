@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "abstract_gridded_surface"
 
 module Ogc
   module Gml
     class Cylinder < AbstractGriddedSurface
-      attribute :horizontal_curve_type, Shale::Type::String
-      attribute :vertical_curve_type, Shale::Type::String
+      attribute :horizontal_curve_type, :string
+      attribute :vertical_curve_type, :string
 
       xml do
         root "Cylinder"

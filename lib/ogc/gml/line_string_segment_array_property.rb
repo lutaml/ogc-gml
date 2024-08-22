@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "line_string_segment"
 
 module Ogc
   module Gml
-    class LineStringSegmentArrayProperty < Shale::Mapper
+    class LineStringSegmentArrayProperty < Lutaml::Model::Serializable
       attribute :line_string_segment, LineStringSegment, collection: true
 
       xml do

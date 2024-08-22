@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class DirectPosition < Shale::Mapper
-      attribute :content, Shale::Type::Value
-      attribute :srs_name, Shale::Type::Value
-      attribute :srs_dimension, Shale::Type::Integer
-      attribute :axis_labels, Shale::Type::Value
-      attribute :uom_labels, Shale::Type::Value
+    class DirectPosition < Lutaml::Model::Serializable
+      attribute :content, :string
+      attribute :srs_name, :string
+      attribute :srs_dimension, :integer
+      attribute :axis_labels, :string
+      attribute :uom_labels, :string
 
       xml do
         root "pos"

@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "code"
 
 module Ogc
   module Gml
-    class CodeWithAuthority < Shale::Mapper
+    class CodeWithAuthority < Lutaml::Model::Serializable
       attribute :content, Code
-      attribute :code_space, Shale::Type::Value
+      attribute :code_space, :string
 
       xml do
         root "derivedCRSType"

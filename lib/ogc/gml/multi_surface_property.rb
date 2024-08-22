@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "multi_surface"
 
 module Ogc
   module Gml
-    class MultiSurfaceProperty < Shale::Mapper
-      attribute :nil_reason, Shale::Type::Value
-      attribute :remote_schema, Shale::Type::Value
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+    class MultiSurfaceProperty < Lutaml::Model::Serializable
+      attribute :nil_reason, :string
+      attribute :remote_schema, :string
+      attribute :owns, :boolean, default: -> { false }
       attribute :multi_surface, MultiSurface
 
       xml do

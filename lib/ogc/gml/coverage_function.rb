@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "grid_function"
 require_relative "mapping_rule"
@@ -8,7 +8,7 @@ require_relative "string_or_ref"
 
 module Ogc
   module Gml
-    class CoverageFunction < Shale::Mapper
+    class CoverageFunction < Lutaml::Model::Serializable
       attribute :mapping_rule, StringOrRef
       attribute :coverage_mapping_rule, MappingRule
       attribute :grid_function, GridFunction

@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "grid_envelope"
 
 module Ogc
   module Gml
-    class GridLimits < Shale::Mapper
+    class GridLimits < Lutaml::Model::Serializable
       attribute :grid_envelope, GridEnvelope
 
       xml do

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "cartesian_cs_property"
 require_relative "geodetic_crs_property"
 require_relative "geographic_crs_property"

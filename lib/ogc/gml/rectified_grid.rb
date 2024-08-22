@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "code"
 require_relative "code_with_authority"
@@ -12,20 +12,20 @@ require_relative "vector"
 
 module Ogc
   module Gml
-    class RectifiedGrid < Shale::Mapper
-      attribute :id, Shale::Type::Value
-      attribute :srs_name, Shale::Type::Value
-      attribute :srs_dimension, Shale::Type::Integer
-      attribute :axis_labels, Shale::Type::Value
-      attribute :uom_labels, Shale::Type::Value
-      attribute :dimension, Shale::Type::Integer
+    class RectifiedGrid < Lutaml::Model::Serializable
+      attribute :id, :string
+      attribute :srs_name, :string
+      attribute :srs_dimension, :integer
+      attribute :axis_labels, :string
+      attribute :uom_labels, :string
+      attribute :dimension, :integer
       attribute :meta_data_property, MetaDataProperty, collection: true
-      attribute :description, Shale::Type::String
+      attribute :description, :string
       attribute :description_reference, Reference
       attribute :identifier, CodeWithAuthority
       attribute :name, Code, collection: true
       attribute :limits, GridLimits
-      attribute :axis_name, Shale::Type::String, collection: true
+      attribute :axis_name, :string, collection: true
       attribute :origin, PointProperty
       attribute :offset_vector, Vector, collection: true
 

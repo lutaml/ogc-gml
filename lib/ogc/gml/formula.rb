@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class Formula < Shale::Mapper
-      attribute :a, Shale::Type::Float
-      attribute :b, Shale::Type::Float
-      attribute :c, Shale::Type::Float
-      attribute :d, Shale::Type::Float
+    class Formula < Lutaml::Model::Serializable
+      attribute :a, :float
+      attribute :b, :float
+      attribute :c, :float
+      attribute :d, :float
 
       xml do
         root "FormulaType"

@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class TimePosition < Shale::Mapper
-      attribute :content, Shale::Type::Value
-      attribute :frame, Shale::Type::Value, default: -> { "#ISO-8601" }
-      attribute :calendar_era_name, Shale::Type::String
-      attribute :indeterminate_position, Shale::Type::String
+    class TimePosition < Lutaml::Model::Serializable
+      attribute :content, :string
+      attribute :frame, :string, default: -> { "#ISO-8601" }
+      attribute :calendar_era_name, :string
+      attribute :indeterminate_position, :string
 
       xml do
         root "timePosition"

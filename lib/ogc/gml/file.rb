@@ -1,19 +1,19 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "association_role"
 require_relative "code"
 
 module Ogc
   module Gml
-    class File < Shale::Mapper
+    class File < Lutaml::Model::Serializable
       attribute :range_parameters, AssociationRole
-      attribute :file_name, Shale::Type::Value
-      attribute :file_reference, Shale::Type::Value
+      attribute :file_name, :string
+      attribute :file_reference, :string
       attribute :file_structure, Code
-      attribute :mime_type, Shale::Type::Value
-      attribute :compression, Shale::Type::Value
+      attribute :mime_type, :string
+      attribute :compression, :string
 
       xml do
         root "File"

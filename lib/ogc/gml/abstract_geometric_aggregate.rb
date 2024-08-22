@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "abstract_geometric_primitive"
 
 module Ogc
   module Gml
     class AbstractGeometricAggregate < AbstractGeometricPrimitive
-      attribute :aggregation_type, Shale::Type::String
+      attribute :aggregation_type, :string
 
       xml do
         root "AbstractGeometricAggregate"

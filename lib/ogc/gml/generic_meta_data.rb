@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class GenericMetaData < Shale::Mapper
-      attribute :content, Shale::Type::String
-      attribute :id, Shale::Type::Value
+    class GenericMetaData < Lutaml::Model::Serializable
+      attribute :content, :string
+      attribute :id, :string
 
       xml do
         root "GenericMetaData"

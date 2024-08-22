@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "shell_property"
 
 module Ogc
   module Gml
-    class Triangle < Shale::Mapper
-      attribute :interpolation, Shale::Type::String
+    class Triangle < Lutaml::Model::Serializable
+      attribute :interpolation, :string
       attribute :exterior, ShellProperty
 
       xml do

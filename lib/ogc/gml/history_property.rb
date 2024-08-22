@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "abstract_time_slice"
 
 module Ogc
   module Gml
-    class HistoryProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+    class HistoryProperty < Lutaml::Model::Serializable
+      attribute :owns, :boolean, default: -> { false }
       attribute :abstract_time_slice, AbstractTimeSlice, collection: true
 
       xml do

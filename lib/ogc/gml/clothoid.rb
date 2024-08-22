@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "ref_location"
 require_relative "abstract_curve_segment"
@@ -8,11 +8,11 @@ require_relative "abstract_curve_segment"
 module Ogc
   module Gml
     class Clothoid < AbstractCurveSegment
-      attribute :interpolation, Shale::Type::String
+      attribute :interpolation, :string
       attribute :ref_location, RefLocation
-      attribute :scale_factor, Shale::Type::Float
-      attribute :start_parameter, Shale::Type::Float
-      attribute :end_parameter, Shale::Type::Float
+      attribute :scale_factor, :float
+      attribute :start_parameter, :float
+      attribute :end_parameter, :float
 
       xml do
         root "Clothoid"

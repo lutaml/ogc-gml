@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "coordinates"
 require_relative "direct_position_list"
@@ -11,15 +11,15 @@ require_relative "abstract_curve_segment"
 module Ogc
   module Gml
     class Bezier < AbstractCurveSegment
-      attribute :interpolation, Shale::Type::String, default: -> { "polynomialSpline" }
-      attribute :is_polynomial, Shale::Type::Boolean
-      attribute :knot_type, Shale::Type::String
+      attribute :interpolation, :string, default: -> { "polynomialSpline" }
+      attribute :is_polynomial, :boolean
+      attribute :knot_type, :string
       attribute :pos, DirectPosition, collection: true
       attribute :point_property, PointProperty, collection: true
       attribute :point_rep, PointProperty, collection: true
       attribute :pos_list, DirectPositionList
       attribute :coordinates, Coordinates
-      attribute :degree, Shale::Type::Integer
+      attribute :degree, :integer
       attribute :knot, KnotProperty, collection: true
 
       xml do

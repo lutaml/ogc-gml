@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "abstract_general_operation_parameter_property"
 require_relative "abstract_general_operation_parameter"
 
 module Ogc
   module Gml
     class OperationParameterGroup < AbstractGeneralOperationParameter
-      attribute :maximum_occurs, Shale::Type::Integer
+      attribute :maximum_occurs, :integer
       attribute :parameter, AbstractGeneralOperationParameterProperty, collection: true
 
       xml do

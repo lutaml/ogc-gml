@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "abstract_geometric_aggregate"
 require_relative "solid_array_property"
 require_relative "solid_property"

@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class InlineProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+    class InlineProperty < Lutaml::Model::Serializable
+      attribute :owns, :boolean, default: -> { false }
 
       xml do
         root "abstractInlineProperty"

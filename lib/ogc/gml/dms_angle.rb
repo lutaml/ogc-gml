@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "degrees"
 
 module Ogc
   module Gml
-    class DMSAngle < Shale::Mapper
+    class DMSAngle < Lutaml::Model::Serializable
       attribute :degrees, Degrees
-      attribute :decimal_minutes, Shale::Type::Float
-      attribute :minutes, Shale::Type::Integer
-      attribute :seconds, Shale::Type::Float
+      attribute :decimal_minutes, :float
+      attribute :minutes, :integer
+      attribute :seconds, :float
 
       xml do
         root "dmsAngle"

@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "abstract_topology"
 
 module Ogc
   module Gml
     class AbstractGeneralOperationParameter < AbstractTopology
-      attribute :remarks, Shale::Type::String
-      attribute :minimum_occurs, Shale::Type::Integer
+      attribute :remarks, :string
+      attribute :minimum_occurs, :integer
 
       xml do
         root "AbstractGeneralOperationParameter"

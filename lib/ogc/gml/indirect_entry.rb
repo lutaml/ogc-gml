@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "definition_proxy"
 
 module Ogc
   module Gml
-    class IndirectEntry < Shale::Mapper
+    class IndirectEntry < Lutaml::Model::Serializable
       attribute :definition_proxy, DefinitionProxy
 
       xml do

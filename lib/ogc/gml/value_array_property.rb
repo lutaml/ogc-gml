@@ -1,18 +1,18 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "abstract_geometry"
 require_relative "abstract_time_object"
 
 module Ogc
   module Gml
-    class ValueArrayProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
-      attribute :abstract_value, Shale::Type::Value, collection: true
+    class ValueArrayProperty < Lutaml::Model::Serializable
+      attribute :owns, :boolean, default: -> { false }
+      attribute :abstract_value, :string, collection: true
       attribute :abstract_geometry, AbstractGeometry, collection: true
       attribute :abstract_time_object, AbstractTimeObject, collection: true
-      attribute :null, Shale::Type::Value, collection: true
+      attribute :null, :string, collection: true
 
       xml do
         root "valueComponents"

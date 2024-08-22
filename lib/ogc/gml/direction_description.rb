@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "code"
 require_relative "reference"
 
 module Ogc
   module Gml
-    class DirectionDescription < Shale::Mapper
-      attribute :compass_point, Shale::Type::String
+    class DirectionDescription < Lutaml::Model::Serializable
+      attribute :compass_point, :string
       attribute :keyword, Code
-      attribute :description, Shale::Type::String
+      attribute :description, :string
       attribute :reference, Reference
 
       xml do

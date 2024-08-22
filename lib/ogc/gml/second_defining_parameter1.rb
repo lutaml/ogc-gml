@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "second_defining_parameter2"
 
 module Ogc
   module Gml
-    class SecondDefiningParameter1 < Shale::Mapper
+    class SecondDefiningParameter1 < Lutaml::Model::Serializable
       attribute :second_defining_parameter, SecondDefiningParameter2
 
       xml do

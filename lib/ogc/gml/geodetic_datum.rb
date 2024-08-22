@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "ellipsoid_property"
 require_relative "prime_meridian_property"
 require_relative "abstract_datum"

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "abstract_curve"
 require_relative "curve"
@@ -9,10 +9,10 @@ require_relative "line_string"
 
 module Ogc
   module Gml
-    class CurveProperty < Shale::Mapper
-      attribute :nil_reason, Shale::Type::Value
-      attribute :remote_schema, Shale::Type::Value
-      attribute :owns, Shale::Type::Boolean
+    class CurveProperty < Lutaml::Model::Serializable
+      attribute :nil_reason, :string
+      attribute :remote_schema, :string
+      attribute :owns, :boolean
       attribute :abstract_curve, AbstractCurve
       attribute :curve, Curve
       attribute :orientable_curve, OrientableCurve

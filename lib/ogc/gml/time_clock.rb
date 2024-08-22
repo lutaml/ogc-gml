@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "code"
 require_relative "code_with_authority"
@@ -13,11 +13,11 @@ require_relative "abstract_topology"
 module Ogc
   module Gml
     class TimeClock < AbstractTopology
-      attribute :remarks, Shale::Type::String
-      attribute :domain_of_validity, Shale::Type::String
+      attribute :remarks, :string
+      attribute :domain_of_validity, :string
       attribute :reference_event, StringOrRef
-      attribute :reference_time, Shale::Type::Value
-      attribute :utc_reference, Shale::Type::Value
+      attribute :reference_time, :string
+      attribute :utc_reference, :string
       attribute :date_basis, TimeCalendarProperty, collection: true
 
       xml do

@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class DerivationUnitTerm < Shale::Mapper
-      attribute :uom, Shale::Type::Value
-      attribute :exponent, Shale::Type::Integer
+    class DerivationUnitTerm < Lutaml::Model::Serializable
+      attribute :uom, :string
+      attribute :exponent, :integer
 
       xml do
         root "derivationUnitTerm"

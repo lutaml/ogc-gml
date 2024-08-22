@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "topo_curve"
 
 module Ogc
   module Gml
-    class TopoCurveProperty < Shale::Mapper
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+    class TopoCurveProperty < Lutaml::Model::Serializable
+      attribute :owns, :boolean, default: -> { false }
       attribute :topo_curve, TopoCurve
 
       xml do

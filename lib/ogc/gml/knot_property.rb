@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "knot"
 
 module Ogc
   module Gml
-    class KnotProperty < Shale::Mapper
+    class KnotProperty < Lutaml::Model::Serializable
       attribute :knot, Knot
 
       xml do

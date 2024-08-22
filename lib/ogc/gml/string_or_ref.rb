@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class StringOrRef < Shale::Mapper
-      attribute :content, Shale::Type::String
-      attribute :nil_reason, Shale::Type::Value
-      attribute :remote_schema, Shale::Type::Value
+    class StringOrRef < Lutaml::Model::Serializable
+      attribute :content, :string
+      attribute :nil_reason, :string
+      attribute :remote_schema, :string
 
       xml do
         root "status"

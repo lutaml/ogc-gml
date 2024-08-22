@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "abstract_general_parameter_value_property"
 require_relative "reference"
 
 module Ogc
   module Gml
-    class ParameterValueGroup < Shale::Mapper
+    class ParameterValueGroup < Lutaml::Model::Serializable
       attribute :parameter_value, AbstractGeneralParameterValueProperty, collection: true
       attribute :group, Reference
 

@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "abstract_ring"
 
 module Ogc
   module Gml
-    class AbstractRingProperty < Shale::Mapper
+    class AbstractRingProperty < Lutaml::Model::Serializable
       attribute :abstract_ring, AbstractRing
 
       xml do

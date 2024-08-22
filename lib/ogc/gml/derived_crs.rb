@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 require_relative "code_with_authority"
 require_relative "coordinate_system_property"
 require_relative "single_crs_property"

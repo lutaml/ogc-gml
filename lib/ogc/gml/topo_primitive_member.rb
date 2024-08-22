@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "abstract_topo_primitive"
 
 module Ogc
   module Gml
-    class TopoPrimitiveMember < Shale::Mapper
-      attribute :nil_reason, Shale::Type::Value
-      attribute :remote_schema, Shale::Type::Value
-      attribute :owns, Shale::Type::Boolean, default: -> { "false" }
+    class TopoPrimitiveMember < Lutaml::Model::Serializable
+      attribute :nil_reason, :string
+      attribute :remote_schema, :string
+      attribute :owns, :boolean, default: -> { false }
       attribute :abstract_topo_primitive, AbstractTopoPrimitive
 
       xml do

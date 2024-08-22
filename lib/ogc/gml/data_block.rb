@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "association_role"
 require_relative "coordinates"
 
 module Ogc
   module Gml
-    class DataBlock < Shale::Mapper
+    class DataBlock < Lutaml::Model::Serializable
       attribute :range_parameters, AssociationRole
       attribute :tuple_list, Coordinates
-      attribute :double_or_nil_reason_tuple_list, Shale::Type::Value
+      attribute :double_or_nil_reason_tuple_list, :string
 
       xml do
         root "DataBlock"

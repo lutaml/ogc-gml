@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 module Ogc
   module Gml
-    class Knot < Shale::Mapper
-      attribute :value, Shale::Type::Float
-      attribute :multiplicity, Shale::Type::Integer
-      attribute :weight, Shale::Type::Float
+    class Knot < Lutaml::Model::Serializable
+      attribute :value, :float
+      attribute :multiplicity, :integer
+      attribute :weight, :float
 
       xml do
         root "KnotType"

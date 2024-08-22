@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "angle"
 require_relative "vector"
 
 module Ogc
   module Gml
-    class DirectionVector < Shale::Mapper
+    class DirectionVector < Lutaml::Model::Serializable
       attribute :vector, Vector
       attribute :horizontal_angle, Angle
       attribute :vertical_angle, Angle

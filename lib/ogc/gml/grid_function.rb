@@ -1,14 +1,14 @@
 # frozen_string_literal: true
 
-require "shale"
+require "lutaml/model"
 
 require_relative "sequence_rule"
 
 module Ogc
   module Gml
-    class GridFunction < Shale::Mapper
+    class GridFunction < Lutaml::Model::Serializable
       attribute :sequence_rule, SequenceRule
-      attribute :start_point, Shale::Type::Value
+      attribute :start_point, :string
 
       xml do
         root "GridFunction"
