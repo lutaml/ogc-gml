@@ -21,13 +21,11 @@ module Ogc
       attribute :remarks, :string
       attribute :dictionary_entry, DictionaryEntry, collection: true
       attribute :indirect_entry, IndirectEntry, collection: true
-      attribute :schema_location, :string
 
       xml do
         root "Dictionary"
         namespace "http://www.opengis.net/gml/3.2", "gml"
 
-        map_attribute "schemaLocation", to: :schema_location, prefix: "xsi", namespace: "http://www.w3.org/2001/XMLSchema-instance"
         map_attribute "id", to: :id, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
         map_attribute "aggregationType", to: :aggregation_type, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
 
