@@ -12,7 +12,7 @@ RSpec.describe Ogc::Gml::CompositeCurve do
     output = Ogc::Gml::CompositeCurve.from_xml(input).to_xml(
       pretty: true,
       declaration: true,
-      encoding: "utf-8",
+      encoding: "utf-8"
     )
 
     expect(output).to be_equivalent_to(input)
