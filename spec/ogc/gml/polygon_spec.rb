@@ -18,7 +18,7 @@ RSpec.describe Ogc::Gml::Polygon do
   ].each do |filename|
     it "round-trips #{filename}" do
       input = file_contents(filename)
-      output = Ogc::Gml::Polygon.from_xml(input).to_xml(
+      output = described_class.from_xml(input).to_xml(
         pretty: true,
         declaration: true,
         encoding: "utf-8"
@@ -36,7 +36,7 @@ RSpec.describe Ogc::Gml::Polygon do
         "xsi:schemaLocation=\"http://www.opengis.net/gml/3.2\n                                  http://schemas.opengis.net/gml/3.2.1/gml.xsd\"",
         " "
       )
-      output = Ogc::Gml::Polygon.from_xml(input).to_xml(
+      output = described_class.from_xml(input).to_xml(
         pretty: true,
         declaration: true,
         encoding: "utf-8"

@@ -17,7 +17,7 @@ RSpec.describe Ogc::Gml::Envelope do
   ].each do |filename|
     it "round-trips #{filename}" do
       input = file_contents(filename)
-      output = Ogc::Gml::Envelope.from_xml(input).to_xml(
+      output = described_class.from_xml(input).to_xml(
         pretty: true,
         declaration: true,
         encoding: "utf-8"

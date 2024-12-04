@@ -28,7 +28,7 @@ RSpec.describe Ogc::Gml::Dictionary do
     fn = Pathname.new(filename).basename
     it "round-trips #{fn} with xml-c14" do
       input = file_contents(Pathname.new(filename).basename)
-      output = Ogc::Gml::Dictionary.from_xml(input).to_xml(
+      output = described_class.from_xml(input).to_xml(
         pretty: true,
         declaration: true,
         encoding: "utf-8"

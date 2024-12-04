@@ -2,6 +2,6 @@
 
 RSpec.describe Ogc::Gml do
   it "has a version number" do
-    expect(Ogc::Gml::VERSION).not_to be nil
+    expect(Ogc::Gml::VERSION).not_to be_nil
   end
 end
