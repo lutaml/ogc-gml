@@ -10,4 +10,5 @@ gem "pry"
 gem "rake"
 gem "rspec"
 gem "rubocop"
+gem "rubocop-performance", require: false
 gem "xml-c14n"
