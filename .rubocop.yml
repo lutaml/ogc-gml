@@ -5,6 +5,7 @@ AllCops:
   NewCops: enable
   Exclude:
     - 'vendor/**/*'
+    - 'Gemfile'
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
