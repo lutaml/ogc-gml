@@ -33,4 +33,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "lutaml-model", "~> 0.7"
   spec.add_dependency "nokogiri"
+  spec.metadata["rubygems_mfa_required"] = "true"
 end
