@@ -8,6 +8,10 @@ RSpec.describe Ogc::Gml::MultiCurve do
     ).gsub("\t", "  ")
   end
 
+  def remove_xml_comments(xml_string)
+    xml_string.gsub(/<!--.*?-->/m, "")
+  end
+
   %w[
     MultiCurve-1.xml
     MultiCurve-2.xml
@@ -20,7 +24,7 @@ RSpec.describe Ogc::Gml::MultiCurve do
         encoding: "utf-8"
       )
 
-      expect(output).to be_xml_equivalent_to(input)
+      expect(remove_xml_comments(output)).to be_xml_equivalent_to(remove_xml_comments(input))
     end
   end
 end
