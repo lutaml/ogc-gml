@@ -11,9 +11,9 @@ module Ogc
 
       xml do
         root "TimeInstant"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
-        map_attribute "id", to: :id, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
+        map_attribute "id", to: :id
         map_attribute "frame", to: :frame
         map_element "metaDataProperty", to: :meta_data_property
         map_element "description", to: :description

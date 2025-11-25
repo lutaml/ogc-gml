@@ -8,7 +8,7 @@ module Ogc
     class Cone < Cylinder
       xml do
         root "Cone"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_attribute "aggregationType", to: :aggregation_type
         map_attribute "rows", to: :rows

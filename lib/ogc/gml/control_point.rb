@@ -15,7 +15,7 @@ module Ogc
 
       xml do
         root "controlPoint"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "posList", to: :pos_list
         map_element "pos", to: :pos

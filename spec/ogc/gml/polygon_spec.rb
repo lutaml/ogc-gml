@@ -24,7 +24,7 @@ RSpec.describe Ogc::Gml::Polygon do
         encoding: "utf-8"
       )
 
-      expect(output).to be_equivalent_to(input)
+      expect(output).to be_xml_equivalent_to(input)
     end
   end
 
@@ -42,7 +42,7 @@ RSpec.describe Ogc::Gml::Polygon do
         encoding: "utf-8"
       )
 
-      expect(output).to be_equivalent_to(input)
+      expect(output).to be_xml_equivalent_to(input)
     end
   end
 end

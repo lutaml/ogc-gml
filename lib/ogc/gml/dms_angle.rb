@@ -14,7 +14,7 @@ module Ogc
 
       xml do
         root "dmsAngle"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "degrees", to: :degrees
         map_element "decimalMinutes", to: :decimal_minutes

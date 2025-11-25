@@ -23,10 +23,10 @@ RSpec.describe Ogc::Gml::Dictionary do
     #     encoding: "utf-8"
     #   )
 
-    #   expect(output).to be_equivalent_to(input)
+    #   expect(output).to be_xml_equivalent_to(input)
     # end
     fn = Pathname.new(filename).basename
-    it "round-trips #{fn} with xml-c14" do
+    it "round-trips #{fn}" do
       input = file_contents(Pathname.new(filename).basename)
       output = described_class.from_xml(input).to_xml(
         pretty: true,
@@ -34,7 +34,7 @@ RSpec.describe Ogc::Gml::Dictionary do
         encoding: "utf-8"
       )
 
-      expect(output).to be_analogous_with(input)
+      expect(output).to be_xml_equivalent_to(input)
     end
   end
 end

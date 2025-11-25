@@ -6,11 +6,12 @@ require_relative "code"
 require_relative "code_with_authority"
 require_relative "meta_data_property"
 require_relative "reference"
+require_relative "identifier"
 
 module Ogc
   module Gml
     class CoordinateSystemAxis < Lutaml::Model::Serializable
-      attribute :id, :string
+      attribute :id, Identifier
       attribute :uom, :string
       attribute :meta_data_property, MetaDataProperty, collection: true
       attribute :description, :string
@@ -26,9 +27,9 @@ module Ogc
 
       xml do
         root "CoordinateSystemAxis"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
-        map_attribute "id", to: :id, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
+        map_attribute "id", to: :id
         map_attribute "uom", to: :uom
         map_element "metaDataProperty", to: :meta_data_property
         map_element "description", to: :description

@@ -10,11 +10,12 @@ require_relative "meta_data_property"
 require_relative "node_property"
 require_relative "reference"
 require_relative "surface_property"
+require_relative "identifier"
 
 module Ogc
   module Gml
     class Face < Lutaml::Model::Serializable
-      attribute :id, :string
+      attribute :id, Identifier
       attribute :aggregation_type, :string
       attribute :universal, :boolean, default: -> { false }
       attribute :meta_data_property, MetaDataProperty, collection: true
@@ -29,9 +30,9 @@ module Ogc
 
       xml do
         root "Face"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
-        map_attribute "id", to: :id, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
+        map_attribute "id", to: :id
         map_attribute "aggregationType", to: :aggregation_type
         map_attribute "universal", to: :universal
         map_element "metaDataProperty", to: :meta_data_property

@@ -12,7 +12,7 @@ module Ogc
 
       xml do
         root "geometryMembers"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_attribute "owns", to: :owns
         map_element "AbstractGeometry", to: :abstract_geometry

@@ -15,7 +15,7 @@ module Ogc
 
       xml do
         root "AffinePlacement"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "location", to: :location
         map_element "refDirection", to: :ref_direction

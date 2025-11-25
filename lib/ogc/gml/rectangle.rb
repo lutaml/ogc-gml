@@ -12,7 +12,7 @@ module Ogc
 
       xml do
         root "Rectangle"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_attribute "interpolation", to: :interpolation
         map_element "exterior", to: :exterior

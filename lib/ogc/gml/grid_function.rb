@@ -12,7 +12,7 @@ module Ogc
 
       xml do
         root "GridFunction"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "sequenceRule", to: :sequence_rule
         map_element "startPoint", to: :start_point

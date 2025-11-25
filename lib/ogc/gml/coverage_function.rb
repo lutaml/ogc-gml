@@ -15,7 +15,7 @@ module Ogc
 
       xml do
         root "coverageFunction"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "MappingRule", to: :mapping_rule
         map_element "CoverageMappingRule", to: :coverage_mapping_rule

@@ -9,7 +9,7 @@ module Ogc
 
       xml do
         root "unitOfMeasure"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_attribute "uom", to: :uom
       end

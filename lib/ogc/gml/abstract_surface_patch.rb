@@ -7,7 +7,7 @@ module Ogc
     class AbstractSurfacePatch < Lutaml::Model::Serializable
       xml do
         root "AbstractSurfacePatch"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
       end
     end
   end

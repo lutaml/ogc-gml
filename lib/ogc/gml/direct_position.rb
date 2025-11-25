@@ -13,7 +13,7 @@ module Ogc
 
       xml do
         root "pos"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_content to: :content
         map_attribute "srsName", to: :srs_name

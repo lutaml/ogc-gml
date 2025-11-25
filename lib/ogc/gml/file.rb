@@ -17,7 +17,7 @@ module Ogc
 
       xml do
         root "File"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "rangeParameters", to: :range_parameters
         map_element "fileName", to: :file_name

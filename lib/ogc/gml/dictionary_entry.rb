@@ -3,29 +3,30 @@
 require "lutaml/model"
 
 require_relative "definition"
+require_relative "identifier"
 
 module Ogc
   module Gml
     class DictionaryEntry < Lutaml::Model::Serializable
-      attribute :id, :string
+      attribute :id, Identifier
       attribute :owns, :boolean # , default: -> { "false" }
       attribute :nil_reason, :string
-      attribute :remote_schema, :string
+      attribute :remote_schema, RemoteSchema
       attribute :definition, Definition
       attribute :name, :string
       attribute :description, :string
 
       xml do
         root "dictionaryEntry"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
-        map_attribute "id", to: :id, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
+        map_attribute "id", to: :id
         map_attribute "owns", to: :owns
         map_attribute "nilReason", to: :nil_reason
-        map_attribute "remoteSchema", to: :remote_schema, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
-        map_element "Definition", to: :definition, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
-        map_element "description", to: :description, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
-        map_element "name", to: :name, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
+        map_attribute "remoteSchema", to: :remote_schema
+        map_element "Definition", to: :definition, prefix: "gml"
+        map_element "description", to: :description, prefix: "gml"
+        map_element "name", to: :name, prefix: "gml"
       end
     end
   end

@@ -11,7 +11,7 @@ module Ogc
 
       xml do
         root "interior"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "AbstractRing", to: :abstract_ring
       end

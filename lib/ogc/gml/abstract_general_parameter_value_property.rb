@@ -11,7 +11,7 @@ module Ogc
 
       xml do
         root "includesValue"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "AbstractGeneralParameterValue", to: :abstract_general_parameter_value
       end

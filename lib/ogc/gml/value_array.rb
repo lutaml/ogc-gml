@@ -8,11 +8,12 @@ require_relative "meta_data_property"
 require_relative "reference"
 require_relative "value_array_property"
 require_relative "value_property"
+require_relative "identifier"
 
 module Ogc
   module Gml
     class ValueArray < Lutaml::Model::Serializable
-      attribute :id, :string
+      attribute :id, Identifier
       attribute :aggregation_type, :string
       attribute :code_space, :string
       attribute :uom, :string
@@ -26,9 +27,9 @@ module Ogc
 
       xml do
         root "ValueArray"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
-        map_attribute "id", to: :id, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
+        map_attribute "id", to: :id
         map_attribute "aggregationType", to: :aggregation_type
         map_attribute "codeSpace", to: :code_space
         map_attribute "uom", to: :uom

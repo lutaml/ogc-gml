@@ -12,7 +12,7 @@ module Ogc
     class DirectionProperty < Lutaml::Model::Serializable
       attribute :owns, :boolean, default: -> { false }
       attribute :nil_reason, :string
-      attribute :remote_schema, :string
+      attribute :remote_schema, RemoteSchema
       attribute :direction_vector, DirectionVector
       attribute :direction_description, DirectionDescription
       attribute :compass_point, :string
@@ -21,11 +21,11 @@ module Ogc
 
       xml do
         root "direction"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_attribute "owns", to: :owns
         map_attribute "nilReason", to: :nil_reason
-        map_attribute "remoteSchema", to: :remote_schema, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
+        map_attribute "remoteSchema", to: :remote_schema
         map_element "DirectionVector", to: :direction_vector
         map_element "DirectionDescription", to: :direction_description
         map_element "CompassPoint", to: :compass_point

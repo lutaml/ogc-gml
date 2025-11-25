@@ -8,9 +8,9 @@ module Ogc
     class TemporalCS < AbstractCoordinateSystem
       xml do
         root "TemporalCS"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
-        map_attribute "id", to: :id, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
+        map_attribute "id", to: :id
         map_attribute "aggregationType", to: :aggregation_type
         map_element "metaDataProperty", to: :meta_data_property
         map_element "description", to: :description
