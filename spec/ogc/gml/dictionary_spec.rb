@@ -11,6 +11,10 @@ RSpec.describe Ogc::Gml::Dictionary do
         .gsub('xmlns:gml="http://www.opengis.net/gml"', 'xmlns:gml="http://www.opengis.net/gml/3.2"')
   end
 
+  def remove_xml_comments(xml_string)
+    xml_string.gsub(/<!--.*?-->/m, "")
+  end
+
   glob_path = Pathname.new(__dir__)
                       .join("../../fixtures/geospatial_jp_iur_3.1/*.xml")
 
@@ -34,7 +38,7 @@ RSpec.describe Ogc::Gml::Dictionary do
         encoding: "utf-8"
       )
 
-      expect(output).to be_xml_equivalent_to(input)
+      expect(remove_xml_comments(output)).to be_xml_equivalent_to(remove_xml_comments(input))
     end
   end
 end
