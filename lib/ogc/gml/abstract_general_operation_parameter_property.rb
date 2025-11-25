@@ -6,7 +6,6 @@ require_relative "abstract_general_operation_parameter"
 
 module Ogc
   module Gml
-
     class RemoteSchema < Lutaml::Model::Type::String
       xml_namespace Namespace
     end
