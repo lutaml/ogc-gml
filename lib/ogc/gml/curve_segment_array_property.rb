@@ -19,7 +19,8 @@ module Ogc
 
       xml do
         root "segments"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
+        ordered
 
         map_element "AbstractCurveSegment", to: :abstract_curve_segment
         map_element "GeodesicString", to: :geodesic_string

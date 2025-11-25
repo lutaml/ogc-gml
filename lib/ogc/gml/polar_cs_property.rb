@@ -8,15 +8,15 @@ module Ogc
   module Gml
     class PolarCSProperty < Lutaml::Model::Serializable
       attribute :nil_reason, :string
-      attribute :remote_schema, :string
+      attribute :remote_schema, RemoteSchema
       attribute :polar_cs, PolarCS
 
       xml do
         root "polarCSRef"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason
-        map_attribute "remoteSchema", to: :remote_schema, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
+        map_attribute "remoteSchema", to: :remote_schema
         map_element "PolarCS", to: :polar_cs
       end
     end

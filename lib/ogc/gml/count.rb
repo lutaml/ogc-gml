@@ -10,7 +10,7 @@ module Ogc
 
       xml do
         root "Count"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_content to: :content
         map_attribute "nilReason", to: :nil_reason

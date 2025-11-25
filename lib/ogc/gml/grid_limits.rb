@@ -11,7 +11,7 @@ module Ogc
 
       xml do
         root "GridLimitsType"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "GridEnvelope", to: :grid_envelope
       end

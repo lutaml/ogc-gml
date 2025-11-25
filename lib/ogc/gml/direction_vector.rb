@@ -14,7 +14,7 @@ module Ogc
 
       xml do
         root "DirectionVectorType"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "vector", to: :vector
         map_element "horizontalAngle", to: :horizontal_angle

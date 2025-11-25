@@ -11,7 +11,7 @@ module Ogc
 
       xml do
         root "featureMembers"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "AbstractFeature", to: :abstract_feature
       end

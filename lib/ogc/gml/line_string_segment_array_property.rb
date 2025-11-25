@@ -11,7 +11,7 @@ module Ogc
 
       xml do
         root "LineStringSegmentArrayPropertyType"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "LineStringSegment", to: :line_string_segment
       end

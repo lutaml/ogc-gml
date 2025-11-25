@@ -13,7 +13,7 @@ module Ogc
 
       xml do
         root "boundedBy"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason
         map_element "Envelope", to: :envelope

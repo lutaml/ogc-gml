@@ -14,7 +14,7 @@ module Ogc
 
       xml do
         root "SecondDefiningParameter"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "inverseFlattening", to: :inverse_flattening
         map_element "semiMinorAxis", to: :semi_minor_axis

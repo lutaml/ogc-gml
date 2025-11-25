@@ -12,7 +12,7 @@ module Ogc
 
       xml do
         root "timeInterval"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_content to: :content
         map_attribute "unit", to: :unit

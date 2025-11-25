@@ -9,6 +9,7 @@ require_relative "reference"
 # require_relative "topo_complex_property"
 require_relative "topo_primitive_array_association"
 require_relative "topo_primitive_member"
+require_relative "identifier"
 
 module Ogc
   module Gml
@@ -16,7 +17,7 @@ module Ogc
     end
 
     class TopoComplex < Lutaml::Model::Serializable
-      attribute :id, :string
+      attribute :id, Identifier
       attribute :is_maximal, :boolean, default: -> { false }
       attribute :aggregation_type, :string
       attribute :meta_data_property, MetaDataProperty, collection: true
@@ -32,9 +33,9 @@ module Ogc
 
       xml do
         root "TopoComplex"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
-        map_attribute "id", to: :id, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
+        map_attribute "id", to: :id
         map_attribute "isMaximal", to: :is_maximal
         map_attribute "aggregationType", to: :aggregation_type
         map_element "metaDataProperty", to: :meta_data_property

@@ -13,7 +13,7 @@ module Ogc
 
       xml do
         root "roughConversionToPreferredUnit"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_attribute "uom", to: :uom
         map_element "factor", to: :factor

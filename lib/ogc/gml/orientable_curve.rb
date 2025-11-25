@@ -7,6 +7,7 @@ require_relative "code_with_authority"
 # require_relative "curve_property"
 require_relative "meta_data_property"
 require_relative "reference"
+require_relative "identifier"
 
 module Ogc
   module Gml
@@ -14,7 +15,7 @@ module Ogc
     end
 
     class OrientableCurve < Lutaml::Model::Serializable
-      attribute :id, :string
+      attribute :id, Identifier
       attribute :srs_name, :string
       attribute :srs_dimension, :integer
       attribute :axis_labels, :string
@@ -29,9 +30,9 @@ module Ogc
 
       xml do
         root "OrientableCurve"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
-        map_attribute "id", to: :id, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
+        map_attribute "id", to: :id
         map_attribute "srsName", to: :srs_name
         map_attribute "srsDimension", to: :srs_dimension
         map_attribute "axisLabels", to: :axis_labels

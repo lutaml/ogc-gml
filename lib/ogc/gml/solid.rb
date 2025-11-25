@@ -12,9 +12,9 @@ module Ogc
 
       xml do
         root "Solid"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
-        map_attribute "id", to: :id, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
+        map_attribute "id", to: :id
         map_attribute "srsName", to: :srs_name
         map_attribute "srsDimension", to: :srs_dimension
         map_attribute "axisLabels", to: :axis_labels

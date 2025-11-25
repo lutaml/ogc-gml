@@ -10,7 +10,7 @@ module Ogc
 
       xml do
         root "CategoryList"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_content to: :content
         map_attribute "codeSpace", to: :code_space

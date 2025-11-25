@@ -11,7 +11,7 @@ module Ogc
 
       xml do
         root "indirectEntry"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "DefinitionProxy", to: :definition_proxy
       end

@@ -11,7 +11,7 @@ module Ogc
 
       xml do
         root "secondDefiningParameter"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "SecondDefiningParameter", to: :second_defining_parameter
       end

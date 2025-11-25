@@ -16,7 +16,7 @@ module Ogc
 
       xml do
         root "rangeSet"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "ValueArray", to: :value_array
         map_element "AbstractScalarValueList", to: :abstract_scalar_value_list

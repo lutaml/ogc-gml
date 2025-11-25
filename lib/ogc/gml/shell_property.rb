@@ -15,7 +15,7 @@ module Ogc
 
       xml do
         root "ShellPropertyType"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "Shell", to: :shell
         map_element "Ring", to: :ring

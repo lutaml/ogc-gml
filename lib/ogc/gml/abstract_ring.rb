@@ -7,7 +7,7 @@ module Ogc
     class AbstractRing < Lutaml::Model::Serializable
       xml do
         root "AbstractRing"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
       end
     end
   end

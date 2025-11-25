@@ -11,7 +11,7 @@ module Ogc
 
       xml do
         root "KnotType"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "value", to: :value
         map_element "multiplicity", to: :multiplicity

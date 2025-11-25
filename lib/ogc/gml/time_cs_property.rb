@@ -8,15 +8,15 @@ module Ogc
   module Gml
     class TimeCSProperty < Lutaml::Model::Serializable
       attribute :nil_reason, :string
-      attribute :remote_schema, :string
+      attribute :remote_schema, RemoteSchema
       attribute :time_cs, TimeCS
 
       xml do
         root "usesTimeCS"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason
-        map_attribute "remoteSchema", to: :remote_schema, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
+        map_attribute "remoteSchema", to: :remote_schema
         map_element "TimeCS", to: :time_cs
       end
     end

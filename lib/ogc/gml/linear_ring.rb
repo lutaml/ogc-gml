@@ -18,7 +18,7 @@ module Ogc
 
       xml do
         root "LinearRing"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "pos", to: :pos
         map_element "pointProperty", to: :point_property

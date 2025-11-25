@@ -20,7 +20,7 @@ RSpec.describe Ogc::Gml::MultiCurve do
         encoding: "utf-8"
       )
 
-      expect(output).to be_equivalent_to(input)
+      expect(output).to be_xml_equivalent_to(input)
     end
   end
 end

@@ -17,6 +17,7 @@ module Ogc
   end
 end
 
+require_relative "gml/namespace"
 require_relative "gml/abstract_continuous_coverage"
 require_relative "gml/abstract_coordinate_operation"
 require_relative "gml/abstract_coordinate_system"

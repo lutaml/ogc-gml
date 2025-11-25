@@ -22,7 +22,7 @@ module Ogc
 
       xml do
         root "ParameterValue"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "value", to: :value
         map_element "dmsAngleValue", to: :dms_angle_value

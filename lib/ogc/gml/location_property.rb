@@ -10,7 +10,7 @@ module Ogc
   module Gml
     class LocationProperty < Lutaml::Model::Serializable
       attribute :nil_reason, :string
-      attribute :remote_schema, :string
+      attribute :remote_schema, RemoteSchema
       attribute :abstract_geometry, AbstractGeometry
       attribute :location_key_word, Code
       attribute :location_string, StringOrRef
@@ -18,10 +18,10 @@ module Ogc
 
       xml do
         root "location"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason
-        map_attribute "remoteSchema", to: :remote_schema, prefix: "gml", namespace: "http://www.opengis.net/gml/3.2"
+        map_attribute "remoteSchema", to: :remote_schema
         map_element "AbstractGeometry", to: :abstract_geometry
         map_element "LocationKeyWord", to: :location_key_word
         map_element "LocationString", to: :location_string

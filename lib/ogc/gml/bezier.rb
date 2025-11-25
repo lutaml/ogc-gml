@@ -24,7 +24,7 @@ module Ogc
 
       xml do
         root "Bezier"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_attribute "numDerivativesAtStart", to: :num_derivatives_at_start
         map_attribute "numDerivativesAtEnd", to: :num_derivatives_at_end

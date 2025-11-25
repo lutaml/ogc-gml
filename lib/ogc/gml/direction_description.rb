@@ -15,7 +15,7 @@ module Ogc
 
       xml do
         root "DirectionDescriptionType"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "compassPoint", to: :compass_point
         map_element "keyword", to: :keyword

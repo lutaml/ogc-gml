@@ -13,7 +13,7 @@ module Ogc
 
       xml do
         root "ParameterValueGroup"
-        namespace "http://www.opengis.net/gml/3.2", "gml"
+        namespace Namespace
 
         map_element "parameterValue", to: :parameter_value
         map_element "group", to: :group
