@@ -12,7 +12,9 @@ RSpec.describe Ogc::Gml::Dictionary do
   end
 
   def remove_xml_comments(xml_string)
-    xml_string.gsub(/<!--.*?-->/m, "")
+    doc = Nokogiri::XML(xml_string)
+    doc.xpath("//comment()").remove
+    doc.to_xml
   end
 
   glob_path = Pathname.new(__dir__)
