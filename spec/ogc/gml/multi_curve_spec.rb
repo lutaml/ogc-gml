@@ -9,7 +9,9 @@ RSpec.describe Ogc::Gml::MultiCurve do
   end
 
   def remove_xml_comments(xml_string)
-    xml_string.gsub(/<!--.*?-->/m, "")
+    doc = Nokogiri::XML(xml_string)
+    doc.xpath("//comment()").remove
+    doc.to_xml
   end
 
   %w[
