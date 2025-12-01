@@ -25,7 +25,8 @@ module Ogc
       attribute :name, Code, collection: true
       attribute :isolated, NodeProperty, collection: true
       attribute :directed_edge, DirectedEdgeProperty, collection: true
-      attribute :directed_topo_solid, DirectedTopoSolidProperty, collection: true
+      attribute :directed_topo_solid, DirectedTopoSolidProperty,
+                collection: true
       attribute :surface_property, SurfaceProperty
 
       xml do

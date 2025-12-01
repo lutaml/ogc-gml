@@ -8,7 +8,8 @@ module Ogc
   module Gml
     class TopoPrimitiveArrayAssociation < Lutaml::Model::Serializable
       attribute :owns, :boolean, default: -> { false }
-      attribute :abstract_topo_primitive, AbstractTopoPrimitive, collection: true
+      attribute :abstract_topo_primitive, AbstractTopoPrimitive,
+                collection: true
 
       xml do
         root "topoPrimitiveMembers"

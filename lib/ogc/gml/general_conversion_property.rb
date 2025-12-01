@@ -17,7 +17,8 @@ module Ogc
 
         map_attribute "nilReason", to: :nil_reason
         map_attribute "remoteSchema", to: :remote_schema
-        map_element "AbstractGeneralConversion", to: :abstract_general_conversion
+        map_element "AbstractGeneralConversion",
+                    to: :abstract_general_conversion
       end
     end
   end

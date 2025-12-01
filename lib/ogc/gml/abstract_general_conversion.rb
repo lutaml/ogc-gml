@@ -15,7 +15,8 @@ module Ogc
       attribute :remarks, :string
       attribute :domain_of_validity, :string
       attribute :scope, :string, collection: true
-      attribute :coordinate_operation_accuracy, CoordinateOperationAccuracy, collection: true
+      attribute :coordinate_operation_accuracy, CoordinateOperationAccuracy,
+                collection: true
 
       xml do
         root "AbstractGeneralConversion"
@@ -30,7 +31,8 @@ module Ogc
         map_element "remarks", to: :remarks
         map_element "domainOfValidity", to: :domain_of_validity
         map_element "scope", to: :scope
-        map_element "coordinateOperationAccuracy", to: :coordinate_operation_accuracy
+        map_element "coordinateOperationAccuracy",
+                    to: :coordinate_operation_accuracy
       end
     end
   end

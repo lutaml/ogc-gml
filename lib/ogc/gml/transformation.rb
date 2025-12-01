@@ -15,8 +15,9 @@ require_relative "abstract_general_transformation"
 module Ogc
   module Gml
     class Transformation < AbstractGeneralTransformation
-      attribute :method, OperationMethodProperty
-      attribute :parameter_value, AbstractGeneralParameterValueProperty, collection: true
+      attribute :operation_method, OperationMethodProperty
+      attribute :parameter_value, AbstractGeneralParameterValueProperty,
+                collection: true
 
       xml do
         root "Transformation"
@@ -32,10 +33,11 @@ module Ogc
         map_element "domainOfValidity", to: :domain_of_validity
         map_element "scope", to: :scope
         map_element "operationVersion", to: :operation_version
-        map_element "coordinateOperationAccuracy", to: :coordinate_operation_accuracy
+        map_element "coordinateOperationAccuracy",
+                    to: :coordinate_operation_accuracy
         map_element "sourceCRS", to: :source_crs
         map_element "targetCRS", to: :target_crs
-        map_element "method", to: :method
+        map_element "method", to: :operation_method
         map_element "parameterValue", to: :parameter_value
       end
     end

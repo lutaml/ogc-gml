@@ -36,8 +36,10 @@ module Ogc
         map_element "quantityType", to: :quantity_type
         map_element "quantityTypeReference", to: :quantity_type_reference
         map_element "catalogSymbol", to: :catalog_symbol
-        map_element "conversionToPreferredUnit", to: :conversion_to_preferred_unit
-        map_element "roughConversionToPreferredUnit", to: :rough_conversion_to_preferred_unit
+        map_element "conversionToPreferredUnit",
+                    to: :conversion_to_preferred_unit
+        map_element "roughConversionToPreferredUnit",
+                    to: :rough_conversion_to_preferred_unit
         map_element "derivationUnitTerm", to: :derivation_unit_term
       end
     end

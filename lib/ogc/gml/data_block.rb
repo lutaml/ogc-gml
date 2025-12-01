@@ -18,7 +18,8 @@ module Ogc
 
         map_element "rangeParameters", to: :range_parameters
         map_element "tupleList", to: :tuple_list
-        map_element "doubleOrNilReasonTupleList", to: :double_or_nil_reason_tuple_list
+        map_element "doubleOrNilReasonTupleList",
+                    to: :double_or_nil_reason_tuple_list
       end
     end
   end
