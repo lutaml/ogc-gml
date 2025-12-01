@@ -5,10 +5,10 @@ RSpec.describe Ogc::Gml::Dictionary do
   def file_contents(filename)
     File.read(
       Pathname.new(__dir__)
-        .join("../../fixtures/geospatial_jp_iur_3.1/#{filename}")
+        .join("../../fixtures/geospatial_jp_iur_3.1/#{filename}"),
     )
-        .gsub("\t", "  ")
-        .gsub('xmlns:gml="http://www.opengis.net/gml"', 'xmlns:gml="http://www.opengis.net/gml/3.2"')
+      .gsub("\t", "  ")
+      .gsub('xmlns:gml="http://www.opengis.net/gml"', 'xmlns:gml="http://www.opengis.net/gml/3.2"')
   end
 
   def remove_xml_comments(xml_string)
@@ -18,7 +18,7 @@ RSpec.describe Ogc::Gml::Dictionary do
   end
 
   glob_path = Pathname.new(__dir__)
-                      .join("../../fixtures/geospatial_jp_iur_3.1/*.xml")
+    .join("../../fixtures/geospatial_jp_iur_3.1/*.xml")
 
   Dir.glob(glob_path).each do |filename|
     # it "round-trips #{filename} with equivalent-xml" do
@@ -37,7 +37,7 @@ RSpec.describe Ogc::Gml::Dictionary do
       output = described_class.from_xml(input).to_xml(
         pretty: true,
         declaration: true,
-        encoding: "utf-8"
+        encoding: "utf-8",
       )
 
       expect(remove_xml_comments(output)).to be_xml_equivalent_to(remove_xml_comments(input))

@@ -8,7 +8,8 @@ module Ogc
   module Gml
     class OperationParameterGroup < AbstractGeneralOperationParameter
       attribute :maximum_occurs, :integer
-      attribute :parameter, AbstractGeneralOperationParameterProperty, collection: true
+      attribute :parameter, AbstractGeneralOperationParameterProperty,
+                collection: true
 
       xml do
         root "OperationParameterGroup"

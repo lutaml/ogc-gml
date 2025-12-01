@@ -17,7 +17,8 @@ module Ogc
 
         map_attribute "nilReason", to: :nil_reason
         map_attribute "remoteSchema", to: :remote_schema
-        map_element "AbstractCoordinateOperation", to: :abstract_coordinate_operation
+        map_element "AbstractCoordinateOperation",
+                    to: :abstract_coordinate_operation
       end
     end
   end

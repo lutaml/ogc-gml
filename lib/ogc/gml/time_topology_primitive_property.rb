@@ -19,7 +19,8 @@ module Ogc
         map_attribute "nilReason", to: :nil_reason
         map_attribute "remoteSchema", to: :remote_schema
         map_attribute "owns", to: :owns
-        map_element "AbstractTimeTopologyPrimitive", to: :abstract_time_topology_primitive
+        map_element "AbstractTimeTopologyPrimitive",
+                    to: :abstract_time_topology_primitive
       end
     end
   end

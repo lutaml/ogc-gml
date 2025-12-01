@@ -16,8 +16,8 @@ RSpec.configure do |config|
 end
 
 require "lutaml/model"
-require "lutaml/model/xml_adapter/nokogiri_adapter"
+require "lutaml/model/xml/nokogiri_adapter"
 
 Lutaml::Model::Config.configure do |config|
-  config.xml_adapter = Lutaml::Model::XmlAdapter::NokogiriAdapter
+  config.xml_adapter = Lutaml::Model::Xml::NokogiriAdapter
 end

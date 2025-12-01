@@ -13,7 +13,8 @@ module Ogc
         root "includesValue"
         namespace Namespace
 
-        map_element "AbstractGeneralParameterValue", to: :abstract_general_parameter_value
+        map_element "AbstractGeneralParameterValue",
+                    to: :abstract_general_parameter_value
       end
     end
   end

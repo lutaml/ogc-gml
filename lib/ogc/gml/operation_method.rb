@@ -18,7 +18,8 @@ module Ogc
       attribute :formula, Code
       attribute :source_dimensions, :integer
       attribute :target_dimensions, :integer
-      attribute :parameter, AbstractGeneralOperationParameterProperty, collection: true
+      attribute :parameter, AbstractGeneralOperationParameterProperty,
+                collection: true
 
       xml do
         root "OperationMethod"

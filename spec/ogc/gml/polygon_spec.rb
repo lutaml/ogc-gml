@@ -4,7 +4,7 @@ RSpec.describe Ogc::Gml::Polygon do
   def file_contents(filename)
     File.read(
       Pathname.new(__dir__)
-        .join("../../../spec/fixtures/ets-gml32/src/test/resources/#{filename}")
+        .join("../../../spec/fixtures/ets-gml32/src/test/resources/#{filename}"),
     ).gsub("\t", "  ")
   end
 
@@ -21,7 +21,7 @@ RSpec.describe Ogc::Gml::Polygon do
       output = described_class.from_xml(input).to_xml(
         pretty: true,
         declaration: true,
-        encoding: "utf-8"
+        encoding: "utf-8",
       )
 
       expect(output).to be_xml_equivalent_to(input)
@@ -34,12 +34,12 @@ RSpec.describe Ogc::Gml::Polygon do
     it "round-trips #{filename}" do
       input = file_contents(filename).sub(
         "xsi:schemaLocation=\"http://www.opengis.net/gml/3.2\n                                  http://schemas.opengis.net/gml/3.2.1/gml.xsd\"",
-        " "
+        " ",
       )
       output = described_class.from_xml(input).to_xml(
         pretty: true,
         declaration: true,
-        encoding: "utf-8"
+        encoding: "utf-8",
       )
 
       expect(output).to be_xml_equivalent_to(input)

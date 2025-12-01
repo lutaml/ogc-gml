@@ -19,7 +19,8 @@ module Ogc
       attribute :description_reference, Reference
       attribute :identifier, CodeWithAuthority
       attribute :name, Code, collection: true
-      attribute :directed_topo_solid, DirectedTopoSolidProperty, collection: true
+      attribute :directed_topo_solid, DirectedTopoSolidProperty,
+                collection: true
 
       xml do
         root "TopoVolume"

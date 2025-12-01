@@ -8,7 +8,8 @@ require_relative "reference"
 module Ogc
   module Gml
     class ParameterValueGroup < Lutaml::Model::Serializable
-      attribute :parameter_value, AbstractGeneralParameterValueProperty, collection: true
+      attribute :parameter_value, AbstractGeneralParameterValueProperty,
+                collection: true
       attribute :group, Reference
 
       xml do
