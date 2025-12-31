@@ -5,7 +5,7 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in ogc-gml.gemspec
 gemspec
 
-gem "canon"
+gem "canon", "=0.1.3"
 gem "lutaml-model", github: "lutaml/lutaml-model", branch: "main"
 gem "rake"
 gem "rspec"
