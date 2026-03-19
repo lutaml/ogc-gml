@@ -1,7 +1,12 @@
 # frozen_string_literal: true
 
 require "ogc/gml"
-require "canon"
+require "canon/rspec_matchers"
+
+# Configure Canon to ignore XML comments (lutaml-model doesn't preserve them)
+Canon::Config.configure do |config|
+  config.xml.match.options = { comments: :ignore }
+end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -15,9 +20,6 @@ RSpec.configure do |config|
   end
 end
 
-require "lutaml/model"
-require "lutaml/model/xml/nokogiri_adapter"
-
 Lutaml::Model::Config.configure do |config|
-  config.xml_adapter = Lutaml::Model::Xml::NokogiriAdapter
+  config.xml_adapter_type = :nokogiri
 end

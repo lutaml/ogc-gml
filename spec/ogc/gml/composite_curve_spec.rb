@@ -10,10 +10,13 @@ RSpec.describe Ogc::Gml::CompositeCurve do
 
   it "round-trips CompositeCurve.xml" do
     output = described_class.from_xml(input).to_xml(
+      prefix: true,
       pretty: true,
       declaration: true,
       encoding: "utf-8",
     )
+
+    puts output
 
     expect(output).to be_xml_equivalent_to(input)
   end
