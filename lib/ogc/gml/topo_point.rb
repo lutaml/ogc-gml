@@ -15,10 +15,10 @@ module Ogc
       attribute :directed_node, DirectedNodeProperty
 
       xml do
-        root "TopoPoint"
+        element "TopoPoint"
         namespace Namespace
 
-        map_attribute "id", to: :id
+        map_attribute "id", to: :id, form: :qualified
         map_element "metaDataProperty", to: :meta_data_property
         map_element "description", to: :description
         map_element "descriptionReference", to: :description_reference

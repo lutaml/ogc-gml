@@ -11,7 +11,7 @@ module Ogc
       attribute :code_space, :string
 
       xml do
-        root "derivedCRSType"
+        element "derivedCRSType"
         namespace Namespace
 
         map_content to: :content

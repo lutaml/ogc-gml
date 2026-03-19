@@ -14,7 +14,7 @@ module Ogc
       attribute :linear_ring, LinearRing
 
       xml do
-        root "ShellPropertyType"
+        element "ShellPropertyType"
         namespace Namespace
 
         map_element "Shell", to: :shell

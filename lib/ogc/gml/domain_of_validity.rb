@@ -12,7 +12,7 @@ module Ogc
       attribute :ex_extent, StringOrRef
 
       xml do
-        root "domainOfValidity"
+        element "domainOfValidity"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

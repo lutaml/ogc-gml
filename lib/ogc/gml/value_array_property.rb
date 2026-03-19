@@ -15,7 +15,7 @@ module Ogc
       attribute :null, :string, collection: true
 
       xml do
-        root "valueComponents"
+        element "valueComponents"
         namespace Namespace
 
         map_attribute "owns", to: :owns

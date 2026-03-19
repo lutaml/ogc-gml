@@ -13,7 +13,7 @@ module Ogc
       attribute :double_or_nil_reason_tuple_list, :string
 
       xml do
-        root "DataBlock"
+        element "DataBlock"
         namespace Namespace
 
         map_element "rangeParameters", to: :range_parameters

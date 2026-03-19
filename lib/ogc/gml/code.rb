@@ -9,7 +9,7 @@ module Ogc
       attribute :code_space, :string
 
       xml do
-        root "LocationKeyWord"
+        element "LocationKeyWord"
         namespace Namespace
 
         map_content to: :content

@@ -12,7 +12,7 @@ module Ogc
       attribute :abstract_datum, AbstractDatum
 
       xml do
-        root "datumRef"
+        element "datumRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

@@ -11,7 +11,7 @@ module Ogc
       attribute :abstract_time_slice, AbstractTimeSlice, collection: true
 
       xml do
-        root "track"
+        element "track"
         namespace Namespace
 
         map_attribute "owns", to: :owns

@@ -13,7 +13,7 @@ module Ogc
       attribute :abstract_meta_data, AbstractMetaData
 
       xml do
-        root "metaDataProperty"
+        element "metaDataProperty"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

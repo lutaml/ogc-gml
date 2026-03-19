@@ -12,7 +12,7 @@ module Ogc
       attribute :pass_through_operation, PassThroughOperation
 
       xml do
-        root "passThroughOperationRef"
+        element "passThroughOperationRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

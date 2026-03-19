@@ -12,7 +12,7 @@ module Ogc
       attribute :uom_labels, :string
 
       xml do
-        root "pos"
+        element "pos"
         namespace Namespace
 
         map_content to: :content

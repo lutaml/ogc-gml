@@ -11,7 +11,7 @@ module Ogc
       attribute :abstract_surface, AbstractSurface, collection: true
 
       xml do
-        root "surfaceArrayProperty"
+        element "surfaceArrayProperty"
         namespace Namespace
 
         map_attribute "owns", to: :owns

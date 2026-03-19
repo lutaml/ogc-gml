@@ -12,7 +12,7 @@ module Ogc
       attribute :engineering_datum, EngineeringDatum
 
       xml do
-        root "usesEngineeringDatum"
+        element "usesEngineeringDatum"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

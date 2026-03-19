@@ -10,7 +10,7 @@ module Ogc
       attribute :content, CodeOrNilReasonList
 
       xml do
-        root "CategoryExtent"
+        element "CategoryExtent"
         namespace Namespace
 
         map_content to: :content

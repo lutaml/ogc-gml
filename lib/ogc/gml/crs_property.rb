@@ -12,7 +12,7 @@ module Ogc
       attribute :abstract_crs, AbstractCRS
 
       xml do
-        root "crsRef"
+        element "crsRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

@@ -18,7 +18,7 @@ module Ogc
       attribute :edge, Edge
 
       xml do
-        root "NodeOrEdgePropertyType"
+        element "NodeOrEdgePropertyType"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

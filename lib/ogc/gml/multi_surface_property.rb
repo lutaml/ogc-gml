@@ -13,7 +13,7 @@ module Ogc
       attribute :multi_surface, MultiSurface
 
       xml do
-        root "multiSurfaceProperty"
+        element "multiSurfaceProperty"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

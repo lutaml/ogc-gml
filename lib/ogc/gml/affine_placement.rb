@@ -14,7 +14,7 @@ module Ogc
       attribute :out_dimension, :integer
 
       xml do
-        root "AffinePlacement"
+        element "AffinePlacement"
         namespace Namespace
 
         map_element "location", to: :location

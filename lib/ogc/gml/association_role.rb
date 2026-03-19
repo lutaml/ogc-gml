@@ -10,7 +10,7 @@ module Ogc
       attribute :owns, :boolean, default: -> { false }
 
       xml do
-        root "member"
+        element "member"
         namespace Namespace
 
         map_attribute "owns", to: :owns

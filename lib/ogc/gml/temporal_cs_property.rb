@@ -12,7 +12,7 @@ module Ogc
       attribute :temporal_cs, TemporalCS
 
       xml do
-        root "usesTemporalCS"
+        element "usesTemporalCS"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

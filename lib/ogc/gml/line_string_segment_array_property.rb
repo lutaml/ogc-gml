@@ -10,7 +10,7 @@ module Ogc
       attribute :line_string_segment, LineStringSegment, collection: true
 
       xml do
-        root "LineStringSegmentArrayPropertyType"
+        element "LineStringSegmentArrayPropertyType"
         namespace Namespace
 
         map_element "LineStringSegment", to: :line_string_segment

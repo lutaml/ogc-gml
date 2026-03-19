@@ -10,7 +10,7 @@ module Ogc
       attribute :second_defining_parameter, SecondDefiningParameter2
 
       xml do
-        root "secondDefiningParameter"
+        element "secondDefiningParameter"
         namespace Namespace
 
         map_element "SecondDefiningParameter", to: :second_defining_parameter

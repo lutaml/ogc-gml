@@ -13,7 +13,7 @@ module Ogc
       attribute :point, Point
 
       xml do
-        root "position"
+        element "position"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

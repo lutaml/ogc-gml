@@ -11,7 +11,7 @@ module Ogc
       attribute :ts, :string, default: -> { " " }
 
       xml do
-        root "coordinates"
+        element "coordinates"
         namespace Namespace
 
         map_content to: :content

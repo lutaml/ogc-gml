@@ -15,7 +15,7 @@ module Ogc
       attribute :abstract_time_object, AbstractTimeObject
 
       xml do
-        root "rectifiedGridDomain"
+        element "rectifiedGridDomain"
         namespace Namespace
 
         map_attribute "owns", to: :owns

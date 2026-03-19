@@ -12,7 +12,7 @@ module Ogc
       attribute :affine_cs, AffineCS
 
       xml do
-        root "usesAffineCS"
+        element "usesAffineCS"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

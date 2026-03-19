@@ -12,7 +12,7 @@ module Ogc
       attribute :oblique_cartesian_cs, ObliqueCartesianCS
 
       xml do
-        root "usesObliqueCartesianCS"
+        element "usesObliqueCartesianCS"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

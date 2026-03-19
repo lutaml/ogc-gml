@@ -12,7 +12,7 @@ module Ogc
       attribute :vertical_crs, VerticalCRS
 
       xml do
-        root "verticalCRSRef"
+        element "verticalCRSRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

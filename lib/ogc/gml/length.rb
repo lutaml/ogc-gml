@@ -11,7 +11,7 @@ module Ogc
       attribute :content, Measure
 
       xml do
-        root "LengthType"
+        element "LengthType"
         namespace Namespace
 
         map_attribute "uom", to: :uom

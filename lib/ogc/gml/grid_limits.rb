@@ -10,7 +10,7 @@ module Ogc
       attribute :grid_envelope, GridEnvelope
 
       xml do
-        root "GridLimitsType"
+        element "GridLimitsType"
         namespace Namespace
 
         map_element "GridEnvelope", to: :grid_envelope

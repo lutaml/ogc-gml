@@ -13,7 +13,7 @@ module Ogc
       attribute :abstract_time_primitive, AbstractTimePrimitive
 
       xml do
-        root "validTime"
+        element "validTime"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

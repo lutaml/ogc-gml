@@ -9,7 +9,7 @@ module Ogc
       attribute :uom, :string
 
       xml do
-        root "valueList"
+        element "valueList"
         namespace Namespace
 
         map_content to: :content

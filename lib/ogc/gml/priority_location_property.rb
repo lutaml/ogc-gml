@@ -18,7 +18,7 @@ module Ogc
       attribute :null, :string
 
       xml do
-        root "priorityLocation"
+        element "priorityLocation"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

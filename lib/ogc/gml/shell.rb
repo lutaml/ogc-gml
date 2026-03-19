@@ -13,7 +13,7 @@ module Ogc
       attribute :surface_member, SurfaceProperty, collection: true
 
       xml do
-        root "Shell"
+        element "Shell"
         namespace Namespace
 
         map_attribute "aggregationType", to: :aggregation_type

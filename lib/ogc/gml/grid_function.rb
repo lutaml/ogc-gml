@@ -11,7 +11,7 @@ module Ogc
       attribute :start_point, :string
 
       xml do
-        root "GridFunction"
+        element "GridFunction"
         namespace Namespace
 
         map_element "sequenceRule", to: :sequence_rule

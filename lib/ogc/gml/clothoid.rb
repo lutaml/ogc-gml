@@ -15,7 +15,7 @@ module Ogc
       attribute :end_parameter, :float
 
       xml do
-        root "Clothoid"
+        element "Clothoid"
         namespace Namespace
 
         map_attribute "numDerivativesAtStart", to: :num_derivatives_at_start

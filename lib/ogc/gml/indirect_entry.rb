@@ -10,7 +10,7 @@ module Ogc
       attribute :definition_proxy, DefinitionProxy
 
       xml do
-        root "indirectEntry"
+        element "indirectEntry"
         namespace Namespace
 
         map_element "DefinitionProxy", to: :definition_proxy

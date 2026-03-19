@@ -12,7 +12,7 @@ module Ogc
       attribute :geodetic_datum, GeodeticDatum
 
       xml do
-        root "usesGeodeticDatum"
+        element "usesGeodeticDatum"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

@@ -12,7 +12,7 @@ module Ogc
       attribute :abstract_general_conversion, AbstractGeneralConversion
 
       xml do
-        root "definedByConversion"
+        element "definedByConversion"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

@@ -6,7 +6,7 @@ module Ogc
   module Gml
     class AbstractSurfacePatch < Lutaml::Model::Serializable
       xml do
-        root "AbstractSurfacePatch"
+        element "AbstractSurfacePatch"
         namespace Namespace
       end
     end

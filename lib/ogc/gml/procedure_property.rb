@@ -13,7 +13,7 @@ module Ogc
       attribute :abstract_feature, AbstractFeature
 
       xml do
-        root "using"
+        element "using"
         namespace Namespace
 
         map_attribute "owns", to: :owns

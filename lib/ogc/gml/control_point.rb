@@ -14,7 +14,7 @@ module Ogc
       attribute :point_property, PointProperty, collection: true
 
       xml do
-        root "controlPoint"
+        element "controlPoint"
         namespace Namespace
 
         map_element "posList", to: :pos_list

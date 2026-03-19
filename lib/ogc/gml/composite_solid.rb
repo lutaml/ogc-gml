@@ -10,10 +10,10 @@ module Ogc
       attribute :solid_member, SolidProperty, collection: true
 
       xml do
-        root "CompositeSolid"
+        element "CompositeSolid"
         namespace Namespace
 
-        map_attribute "id", to: :id
+        map_attribute "id", to: :id, form: :qualified
         map_attribute "srsName", to: :srs_name
         map_attribute "srsDimension", to: :srs_dimension
         map_attribute "axisLabels", to: :axis_labels

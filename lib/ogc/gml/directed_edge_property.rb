@@ -14,7 +14,7 @@ module Ogc
       attribute :edge, Edge
 
       xml do
-        root "directedEdge"
+        element "directedEdge"
         namespace Namespace
 
         map_attribute "orientation", to: :orientation

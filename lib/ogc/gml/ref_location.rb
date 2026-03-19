@@ -10,7 +10,7 @@ module Ogc
       attribute :affine_placement, AffinePlacement
 
       xml do
-        root "refLocation"
+        element "refLocation"
         namespace Namespace
 
         map_element "AffinePlacement", to: :affine_placement

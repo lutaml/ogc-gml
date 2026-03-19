@@ -14,7 +14,7 @@ module Ogc
       attribute :triangle, Triangle, collection: true
 
       xml do
-        root "patches"
+        element "patches"
         namespace Namespace
 
         map_element "AbstractSurfacePatch", to: :abstract_surface_patch

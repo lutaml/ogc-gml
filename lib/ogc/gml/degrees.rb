@@ -9,7 +9,7 @@ module Ogc
       attribute :direction, :string
 
       xml do
-        root "degrees"
+        element "degrees"
         namespace Namespace
 
         map_content to: :content

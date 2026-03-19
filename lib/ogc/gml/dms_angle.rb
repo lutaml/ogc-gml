@@ -13,7 +13,7 @@ module Ogc
       attribute :seconds, :float
 
       xml do
-        root "dmsAngle"
+        element "dmsAngle"
         namespace Namespace
 
         map_element "degrees", to: :degrees

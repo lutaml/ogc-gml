@@ -16,7 +16,7 @@ module Ogc
       attribute :point_property, PointProperty, collection: true
 
       xml do
-        root "GeodesicString"
+        element "GeodesicString"
         namespace Namespace
 
         map_attribute "numDerivativesAtStart", to: :num_derivatives_at_start

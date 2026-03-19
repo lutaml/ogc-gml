@@ -13,7 +13,7 @@ module Ogc
       attribute :time_ordinal_era, TimeOrdinalEra
 
       xml do
-        root "TimeOrdinalEraPropertyType"
+        element "TimeOrdinalEraPropertyType"
         namespace Namespace
 
         map_attribute "owns", to: :owns

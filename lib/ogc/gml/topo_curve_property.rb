@@ -11,7 +11,7 @@ module Ogc
       attribute :topo_curve, TopoCurve
 
       xml do
-        root "topoCurveProperty"
+        element "topoCurveProperty"
         namespace Namespace
 
         map_attribute "owns", to: :owns

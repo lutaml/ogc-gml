@@ -13,7 +13,7 @@ module Ogc
       attribute :abstract_geometric_aggregate, AbstractGeometricAggregate
 
       xml do
-        root "multiGeometryProperty"
+        element "multiGeometryProperty"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

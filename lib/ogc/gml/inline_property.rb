@@ -8,7 +8,7 @@ module Ogc
       attribute :owns, :boolean, default: -> { false }
 
       xml do
-        root "abstractInlineProperty"
+        element "abstractInlineProperty"
         namespace Namespace
 
         map_attribute "owns", to: :owns

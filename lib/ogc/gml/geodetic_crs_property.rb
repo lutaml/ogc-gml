@@ -12,7 +12,7 @@ module Ogc
       attribute :geodetic_crs, GeodeticCRS
 
       xml do
-        root "baseGeodeticCRS"
+        element "baseGeodeticCRS"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

@@ -13,7 +13,7 @@ module Ogc
       attribute :time_edge, TimeEdge
 
       xml do
-        root "TimeEdgePropertyType"
+        element "TimeEdgePropertyType"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

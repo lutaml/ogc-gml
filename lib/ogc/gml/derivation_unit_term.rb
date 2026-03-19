@@ -9,7 +9,7 @@ module Ogc
       attribute :exponent, :integer
 
       xml do
-        root "derivationUnitTerm"
+        element "derivationUnitTerm"
         namespace Namespace
 
         map_attribute "uom", to: :uom

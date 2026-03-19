@@ -12,7 +12,7 @@ module Ogc
       attribute :ellipsoid, Ellipsoid
 
       xml do
-        root "ellipsoidRef"
+        element "ellipsoidRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

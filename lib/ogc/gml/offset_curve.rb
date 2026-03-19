@@ -15,7 +15,7 @@ module Ogc
       attribute :ref_direction, Vector
 
       xml do
-        root "OffsetCurve"
+        element "OffsetCurve"
         namespace Namespace
 
         map_attribute "numDerivativesAtStart", to: :num_derivatives_at_start

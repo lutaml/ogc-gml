@@ -9,7 +9,7 @@ module Ogc
       attribute :high, :string
 
       xml do
-        root "GridEnvelopeType"
+        element "GridEnvelopeType"
         namespace Namespace
 
         map_element "low", to: :low

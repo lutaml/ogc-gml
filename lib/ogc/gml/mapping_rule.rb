@@ -11,7 +11,7 @@ module Ogc
       attribute :rule_reference, Reference
 
       xml do
-        root "CoverageMappingRule"
+        element "CoverageMappingRule"
         namespace Namespace
 
         map_element "ruleDefinition", to: :rule_definition

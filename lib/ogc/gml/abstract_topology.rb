@@ -18,10 +18,10 @@ module Ogc
       attribute :name, Code, collection: true
 
       xml do
-        root "AbstractTopology"
+        element "AbstractTopology"
         namespace Namespace
 
-        map_attribute "id", to: :id
+        map_attribute "id", to: :id, form: :qualified
         map_element "metaDataProperty", to: :meta_data_property
         map_element "description", to: :description
         map_element "descriptionReference", to: :description_reference

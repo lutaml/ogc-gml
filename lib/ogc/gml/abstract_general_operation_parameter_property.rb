@@ -7,7 +7,9 @@ require_relative "abstract_general_operation_parameter"
 module Ogc
   module Gml
     class RemoteSchema < Lutaml::Model::Type::String
-      xml_namespace Namespace
+      xml do
+        namespace Namespace
+      end
     end
 
     class AbstractGeneralOperationParameterProperty < Lutaml::Model::Serializable
@@ -17,7 +19,7 @@ module Ogc
                 AbstractGeneralOperationParameter
 
       xml do
-        root "generalOperationParameter"
+        element "generalOperationParameter"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

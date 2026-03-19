@@ -14,7 +14,7 @@ module Ogc
       attribute :reference, Reference
 
       xml do
-        root "DirectionDescriptionType"
+        element "DirectionDescriptionType"
         namespace Namespace
 
         map_element "compassPoint", to: :compass_point

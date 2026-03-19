@@ -14,7 +14,7 @@ module Ogc
       attribute :grid_function, GridFunction
 
       xml do
-        root "coverageFunction"
+        element "coverageFunction"
         namespace Namespace
 
         map_element "MappingRule", to: :mapping_rule

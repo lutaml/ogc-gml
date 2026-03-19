@@ -30,10 +30,10 @@ module Ogc
       attribute :status_reference, Reference
 
       xml do
-        root "MovingObjectStatus"
+        element "MovingObjectStatus"
         namespace Namespace
 
-        map_attribute "id", to: :id
+        map_attribute "id", to: :id, form: :qualified
         map_element "metaDataProperty", to: :meta_data_property
         map_element "description", to: :description
         map_element "descriptionReference", to: :description_reference

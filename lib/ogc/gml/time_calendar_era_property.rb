@@ -13,7 +13,7 @@ module Ogc
       attribute :time_calendar_era, TimeCalendarEra
 
       xml do
-        root "TimeCalendarEraPropertyType"
+        element "TimeCalendarEraPropertyType"
         namespace Namespace
 
         map_attribute "owns", to: :owns

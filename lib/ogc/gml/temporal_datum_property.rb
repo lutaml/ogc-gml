@@ -12,7 +12,7 @@ module Ogc
       attribute :temporal_datum, TemporalDatum
 
       xml do
-        root "usesTemporalDatum"
+        element "usesTemporalDatum"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

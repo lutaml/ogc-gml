@@ -12,7 +12,7 @@ module Ogc
       attribute :abstract_coordinate_system, AbstractCoordinateSystem
 
       xml do
-        root "usesCS"
+        element "usesCS"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

@@ -11,7 +11,7 @@ module Ogc
       attribute :content, Measure
 
       xml do
-        root "greenwichLongitude"
+        element "greenwichLongitude"
         namespace Namespace
 
         map_attribute "uom", to: :uom

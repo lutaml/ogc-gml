@@ -12,7 +12,7 @@ module Ogc
       attribute :abstract_single_crs, AbstractCRS
 
       xml do
-        root "includesSingleCRS"
+        element "includesSingleCRS"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

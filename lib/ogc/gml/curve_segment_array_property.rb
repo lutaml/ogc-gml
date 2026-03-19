@@ -18,7 +18,7 @@ module Ogc
       attribute :geodesic_string, GeodesicString, collection: true
 
       xml do
-        root "segments"
+        element "segments"
         namespace Namespace
         ordered
 

@@ -12,7 +12,7 @@ module Ogc
       attribute :abstract_coordinate_operation, AbstractCoordinateOperation
 
       xml do
-        root "usesOperation"
+        element "usesOperation"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

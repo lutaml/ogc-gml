@@ -26,10 +26,10 @@ module Ogc
       attribute :value_components, ValueArrayProperty
 
       xml do
-        root "ValueArray"
+        element "ValueArray"
         namespace Namespace
 
-        map_attribute "id", to: :id
+        map_attribute "id", to: :id, form: :qualified
         map_attribute "aggregationType", to: :aggregation_type
         map_attribute "codeSpace", to: :code_space
         map_attribute "uom", to: :uom

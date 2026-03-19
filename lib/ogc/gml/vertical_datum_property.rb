@@ -12,7 +12,7 @@ module Ogc
       attribute :vertical_datum, VerticalDatum
 
       xml do
-        root "usesVerticalDatum"
+        element "usesVerticalDatum"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

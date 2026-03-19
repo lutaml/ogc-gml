@@ -21,7 +21,7 @@ module Ogc
       attribute :operation_parameter, OperationParameterProperty
 
       xml do
-        root "ParameterValue"
+        element "ParameterValue"
         namespace Namespace
 
         map_element "value", to: :value

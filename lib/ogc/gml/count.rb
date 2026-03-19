@@ -9,7 +9,7 @@ module Ogc
       attribute :nil_reason, :string
 
       xml do
-        root "Count"
+        element "Count"
         namespace Namespace
 
         map_content to: :content

@@ -12,7 +12,7 @@ module Ogc
       attribute :interior, ShellProperty, collection: true
 
       xml do
-        root "PolygonPatch"
+        element "PolygonPatch"
         namespace Namespace
 
         map_attribute "interpolation", to: :interpolation

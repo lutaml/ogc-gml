@@ -12,7 +12,7 @@ module Ogc
       attribute :conversion, Conversion
 
       xml do
-        root "conversionRef"
+        element "conversionRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

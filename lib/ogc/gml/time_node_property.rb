@@ -13,7 +13,7 @@ module Ogc
       attribute :time_node, TimeNode
 
       xml do
-        root "TimeNodePropertyType"
+        element "TimeNodePropertyType"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

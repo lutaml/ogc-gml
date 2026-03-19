@@ -30,10 +30,10 @@ module Ogc
       attribute :solid_property, SolidProperty
 
       xml do
-        root "TopoSolid"
+        element "TopoSolid"
         namespace Namespace
 
-        map_attribute "id", to: :id
+        map_attribute "id", to: :id, form: :qualified
         map_attribute "aggregationType", to: :aggregation_type
         map_attribute "universal", to: :universal
         map_element "metaDataProperty", to: :meta_data_property

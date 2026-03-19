@@ -10,7 +10,7 @@ module Ogc
       attribute :remote_schema, RemoteSchema
 
       xml do
-        root "resultOf"
+        element "resultOf"
         namespace Namespace
 
         map_attribute "owns", to: :owns

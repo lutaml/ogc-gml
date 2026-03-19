@@ -10,11 +10,11 @@ module Ogc
       attribute :id, Identifier
 
       xml do
-        root "AbstractMetaData"
+        element "AbstractMetaData"
         namespace Namespace
 
         map_content to: :content
-        map_attribute "id", to: :id
+        map_attribute "id", to: :id, form: :qualified
       end
     end
   end

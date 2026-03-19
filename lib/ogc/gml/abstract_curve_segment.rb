@@ -10,7 +10,7 @@ module Ogc
       attribute :num_derivative_interior, :integer # , default: -> { "0" }
 
       xml do
-        root "AbstractCurveSegment"
+        element "AbstractCurveSegment"
         namespace Namespace
 
         map_attribute "numDerivativesAtStart", to: :num_derivatives_at_start

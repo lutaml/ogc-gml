@@ -11,7 +11,7 @@ module Ogc
       attribute :abstract_solid, AbstractSolid, collection: true
 
       xml do
-        root "solidArrayProperty"
+        element "solidArrayProperty"
         namespace Namespace
 
         map_attribute "owns", to: :owns

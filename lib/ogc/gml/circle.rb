@@ -7,7 +7,7 @@ module Ogc
   module Gml
     class Circle < Arc
       xml do
-        root "Circle"
+        element "Circle"
         namespace Namespace
 
         map_attribute "numDerivativesAtStart", to: :num_derivatives_at_start

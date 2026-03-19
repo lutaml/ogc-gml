@@ -5,7 +5,9 @@ require "lutaml/model"
 module Ogc
   module Gml
     class RemoteSchema < Lutaml::Model::Type::String
-      xml_namespace Namespace
+      xml do
+        namespace Namespace
+      end
     end
 
     class Reference < Lutaml::Model::Serializable
@@ -14,7 +16,7 @@ module Ogc
       attribute :remote_schema, RemoteSchema
 
       xml do
-        root "statusReference"
+        element "statusReference"
         namespace Namespace
 
         map_attribute "owns", to: :owns

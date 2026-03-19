@@ -12,7 +12,7 @@ module Ogc
       attribute :operation_method, OperationMethod
 
       xml do
-        root "operationMethodRef"
+        element "operationMethodRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

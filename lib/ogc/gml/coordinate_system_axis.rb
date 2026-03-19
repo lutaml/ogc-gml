@@ -26,10 +26,10 @@ module Ogc
       attribute :range_meaning, CodeWithAuthority
 
       xml do
-        root "CoordinateSystemAxis"
+        element "CoordinateSystemAxis"
         namespace Namespace
 
-        map_attribute "id", to: :id
+        map_attribute "id", to: :id, form: :qualified
         map_attribute "uom", to: :uom
         map_element "metaDataProperty", to: :meta_data_property
         map_element "description", to: :description

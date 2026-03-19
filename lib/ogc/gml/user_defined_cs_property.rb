@@ -12,7 +12,7 @@ module Ogc
       attribute :user_defined_cs, UserDefinedCS
 
       xml do
-        root "userDefinedCSRef"
+        element "userDefinedCSRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason
