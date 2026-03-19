@@ -20,7 +20,7 @@ module Ogc
       attribute :end_angle, Angle
 
       xml do
-        root "ArcByCenterPoint"
+        element "ArcByCenterPoint"
         namespace Namespace
 
         map_attribute "numDerivativesAtStart", to: :num_derivatives_at_start

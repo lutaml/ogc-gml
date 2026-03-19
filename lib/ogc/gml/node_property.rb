@@ -13,7 +13,7 @@ module Ogc
       attribute :node, Node
 
       xml do
-        root "NodePropertyType"
+        element "NodePropertyType"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

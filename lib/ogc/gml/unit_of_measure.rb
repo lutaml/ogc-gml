@@ -8,7 +8,7 @@ module Ogc
       attribute :uom, :string
 
       xml do
-        root "unitOfMeasure"
+        element "unitOfMeasure"
         namespace Namespace
 
         map_attribute "uom", to: :uom

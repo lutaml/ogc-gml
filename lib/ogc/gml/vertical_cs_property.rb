@@ -12,7 +12,7 @@ module Ogc
       attribute :vertical_cs, VerticalCS
 
       xml do
-        root "usesVerticalCS"
+        element "usesVerticalCS"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

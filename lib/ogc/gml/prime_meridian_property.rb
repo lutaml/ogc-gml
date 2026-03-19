@@ -12,7 +12,7 @@ module Ogc
       attribute :prime_meridian, PrimeMeridian
 
       xml do
-        root "primeMeridianRef"
+        element "primeMeridianRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

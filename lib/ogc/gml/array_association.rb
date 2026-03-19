@@ -9,7 +9,7 @@ module Ogc
       attribute :abstract_object, :string, collection: true
 
       xml do
-        root "members"
+        element "members"
         namespace Namespace
 
         map_attribute "owns", to: :owns

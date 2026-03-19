@@ -32,10 +32,10 @@ module Ogc
       attribute :topo_primitive_members, TopoPrimitiveArrayAssociation
 
       xml do
-        root "TopoComplex"
+        element "TopoComplex"
         namespace Namespace
 
-        map_attribute "id", to: :id
+        map_attribute "id", to: :id, form: :qualified
         map_attribute "isMaximal", to: :is_maximal
         map_attribute "aggregationType", to: :aggregation_type
         map_element "metaDataProperty", to: :meta_data_property

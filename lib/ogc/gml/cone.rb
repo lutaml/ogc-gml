@@ -7,7 +7,7 @@ module Ogc
   module Gml
     class Cone < Cylinder
       xml do
-        root "Cone"
+        element "Cone"
         namespace Namespace
 
         map_attribute "aggregationType", to: :aggregation_type

@@ -13,7 +13,7 @@ module Ogc
       attribute :time_instant, TimeInstant
 
       xml do
-        root "TimeInstantPropertyType"
+        element "TimeInstantPropertyType"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

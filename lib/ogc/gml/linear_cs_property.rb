@@ -12,7 +12,7 @@ module Ogc
       attribute :linear_cs, LinearCS
 
       xml do
-        root "linearCSRef"
+        element "linearCSRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

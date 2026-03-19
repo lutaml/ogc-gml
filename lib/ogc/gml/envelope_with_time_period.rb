@@ -22,7 +22,7 @@ module Ogc
       attribute :end_position, TimePosition
 
       xml do
-        root "EnvelopeWithTimePeriod"
+        element "EnvelopeWithTimePeriod"
         namespace Namespace
 
         map_attribute "srsName", to: :srs_name

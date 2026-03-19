@@ -10,7 +10,7 @@ module Ogc
       attribute :vertical_curve_type, :string
 
       xml do
-        root "Cylinder"
+        element "Cylinder"
         namespace Namespace
 
         map_attribute "aggregationType", to: :aggregation_type

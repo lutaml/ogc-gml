@@ -10,7 +10,7 @@ module Ogc
       attribute :abstract_feature, AbstractFeature, collection: true
 
       xml do
-        root "featureMembers"
+        element "featureMembers"
         namespace Namespace
 
         map_element "AbstractFeature", to: :abstract_feature

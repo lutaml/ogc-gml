@@ -11,7 +11,7 @@ module Ogc
       attribute :nil_reason, :string
 
       xml do
-        root "Quantity"
+        element "Quantity"
         namespace Namespace
 
         map_content to: :content

@@ -11,7 +11,7 @@ module Ogc
       attribute :exterior, ShellProperty
 
       xml do
-        root "Rectangle"
+        element "Rectangle"
         namespace Namespace
 
         map_attribute "interpolation", to: :interpolation

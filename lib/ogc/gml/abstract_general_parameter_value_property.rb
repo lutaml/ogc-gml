@@ -10,7 +10,7 @@ module Ogc
       attribute :abstract_general_parameter_value, AbstractGeneralParameterValue
 
       xml do
-        root "includesValue"
+        element "includesValue"
         namespace Namespace
 
         map_element "AbstractGeneralParameterValue",

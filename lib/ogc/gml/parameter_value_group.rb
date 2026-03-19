@@ -13,7 +13,7 @@ module Ogc
       attribute :group, Reference
 
       xml do
-        root "ParameterValueGroup"
+        element "ParameterValueGroup"
         namespace Namespace
 
         map_element "parameterValue", to: :parameter_value

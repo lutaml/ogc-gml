@@ -12,7 +12,7 @@ module Ogc
       attribute :polar_cs, PolarCS
 
       xml do
-        root "polarCSRef"
+        element "polarCSRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

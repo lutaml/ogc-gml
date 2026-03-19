@@ -11,7 +11,7 @@ module Ogc
       attribute :indeterminate_position, :string
 
       xml do
-        root "timePosition"
+        element "timePosition"
         namespace Namespace
 
         map_content to: :content

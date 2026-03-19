@@ -7,7 +7,7 @@ module Ogc
   module Gml
     class BSpline < Bezier
       xml do
-        root "BSpline"
+        element "BSpline"
         namespace Namespace
 
         map_attribute "numDerivativesAtStart", to: :num_derivatives_at_start

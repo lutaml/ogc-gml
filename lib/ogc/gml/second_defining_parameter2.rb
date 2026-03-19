@@ -13,7 +13,7 @@ module Ogc
       attribute :is_sphere, :boolean, default: -> { true }
 
       xml do
-        root "SecondDefiningParameter"
+        element "SecondDefiningParameter"
         namespace Namespace
 
         map_element "inverseFlattening", to: :inverse_flattening

@@ -11,7 +11,7 @@ module Ogc
       attribute :factor, :integer
 
       xml do
-        root "timeInterval"
+        element "timeInterval"
         namespace Namespace
 
         map_content to: :content

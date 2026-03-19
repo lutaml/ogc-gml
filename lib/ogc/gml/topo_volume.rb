@@ -23,10 +23,10 @@ module Ogc
                 collection: true
 
       xml do
-        root "TopoVolume"
+        element "TopoVolume"
         namespace Namespace
 
-        map_attribute "id", to: :id
+        map_attribute "id", to: :id, form: :qualified
         map_attribute "aggregationType", to: :aggregation_type
         map_element "metaDataProperty", to: :meta_data_property
         map_element "description", to: :description

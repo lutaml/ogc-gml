@@ -12,7 +12,7 @@ module Ogc
       attribute :image_crs, ImageCRS
 
       xml do
-        root "imageCRSRef"
+        element "imageCRSRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

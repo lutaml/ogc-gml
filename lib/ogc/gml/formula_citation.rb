@@ -12,7 +12,7 @@ module Ogc
       attribute :reference_event, StringOrRef
 
       xml do
-        root "formulaCitation"
+        element "formulaCitation"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

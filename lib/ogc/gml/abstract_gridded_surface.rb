@@ -10,7 +10,7 @@ module Ogc
       attribute :columns, :integer
 
       xml do
-        root "AbstractGriddedSurface"
+        element "AbstractGriddedSurface"
         namespace Namespace
 
         map_attribute "aggregationType", to: :aggregation_type

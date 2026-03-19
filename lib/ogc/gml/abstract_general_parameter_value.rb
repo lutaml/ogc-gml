@@ -6,7 +6,7 @@ module Ogc
   module Gml
     class AbstractGeneralParameterValue < Lutaml::Model::Serializable
       xml do
-        root "AbstractGeneralParameterValue"
+        element "AbstractGeneralParameterValue"
         namespace Namespace
       end
     end

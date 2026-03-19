@@ -12,7 +12,7 @@ module Ogc
       attribute :abstract_general_transformation, AbstractGeneralTransformation
 
       xml do
-        root "generalTransformationRef"
+        element "generalTransformationRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

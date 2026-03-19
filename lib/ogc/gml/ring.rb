@@ -9,7 +9,7 @@ module Ogc
       attribute :aggregation_type, :string
 
       xml do
-        root "Ring"
+        element "Ring"
         namespace Namespace
 
         map_attribute "aggregationType", to: :aggregation_type

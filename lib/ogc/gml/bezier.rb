@@ -23,7 +23,7 @@ module Ogc
       attribute :knot, KnotProperty, collection: true
 
       xml do
-        root "Bezier"
+        element "Bezier"
         namespace Namespace
 
         map_attribute "numDerivativesAtStart", to: :num_derivatives_at_start

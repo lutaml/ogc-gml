@@ -13,7 +13,7 @@ module Ogc
       attribute :time_calendar, TimeCalendar
 
       xml do
-        root "TimeCalendarPropertyType"
+        element "TimeCalendarPropertyType"
         namespace Namespace
 
         map_attribute "owns", to: :owns

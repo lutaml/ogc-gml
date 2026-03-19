@@ -10,7 +10,7 @@ module Ogc
       attribute :remote_schema, RemoteSchema
 
       xml do
-        root "status"
+        element "status"
         namespace Namespace
 
         map_content to: :content

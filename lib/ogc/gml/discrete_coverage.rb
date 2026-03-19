@@ -7,10 +7,10 @@ module Ogc
   module Gml
     class DiscreteCoverage < AbstractContinuousCoverage
       xml do
-        root "RectifiedGridCoverage"
+        element "RectifiedGridCoverage"
         namespace Namespace
 
-        map_attribute "id", to: :id
+        map_attribute "id", to: :id, form: :qualified
         map_element "metaDataProperty", to: :meta_data_property
         map_element "description", to: :description
         map_element "descriptionReference", to: :description_reference

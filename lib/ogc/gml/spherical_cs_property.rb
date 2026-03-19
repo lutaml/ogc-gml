@@ -12,7 +12,7 @@ module Ogc
       attribute :spherical_cs, SphericalCS
 
       xml do
-        root "usesSphericalCS"
+        element "usesSphericalCS"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

@@ -7,7 +7,7 @@ module Ogc
   module Gml
     class Sphere < Cylinder
       xml do
-        root "Sphere"
+        element "Sphere"
         namespace Namespace
 
         map_attribute "aggregationType", to: :aggregation_type

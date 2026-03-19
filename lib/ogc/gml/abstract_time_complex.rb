@@ -12,10 +12,10 @@ module Ogc
   module Gml
     class AbstractTimeComplex < AbstractTopology
       xml do
-        root "AbstractTimeComplex"
+        element "AbstractTimeComplex"
         namespace Namespace
 
-        map_attribute "id", to: :id
+        map_attribute "id", to: :id, form: :qualified
         map_element "metaDataProperty", to: :meta_data_property
         map_element "description", to: :description
         map_element "descriptionReference", to: :description_reference

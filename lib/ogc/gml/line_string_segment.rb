@@ -19,7 +19,7 @@ module Ogc
       attribute :coordinates, Coordinates
 
       xml do
-        root "LineStringSegment"
+        element "LineStringSegment"
         namespace Namespace
 
         map_attribute "numDerivativesAtStart", to: :num_derivatives_at_start

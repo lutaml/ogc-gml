@@ -17,10 +17,10 @@ module Ogc
       attribute :description, :string
 
       xml do
-        root "dictionaryEntry"
+        element "dictionaryEntry"
         namespace Namespace
 
-        map_attribute "id", to: :id
+        map_attribute "id", to: :id, form: :qualified
         map_attribute "owns", to: :owns
         map_attribute "nilReason", to: :nil_reason
         map_attribute "remoteSchema", to: :remote_schema

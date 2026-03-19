@@ -13,7 +13,7 @@ module Ogc
       attribute :abstract_solid, AbstractSolid
 
       xml do
-        root "solidMember"
+        element "solidMember"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

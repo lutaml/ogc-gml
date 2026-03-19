@@ -18,7 +18,7 @@ module Ogc
       attribute :coordinates, Coordinates
 
       xml do
-        root "Envelope"
+        element "Envelope"
         namespace Namespace
 
         map_attribute "srsName", to: :srs_name

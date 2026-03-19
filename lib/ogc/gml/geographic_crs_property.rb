@@ -12,7 +12,7 @@ module Ogc
       attribute :geographic_crs, GeographicCRS
 
       xml do
-        root "geographicCRSRef"
+        element "geographicCRSRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

@@ -22,10 +22,10 @@ module Ogc
       attribute :related_time, RelatedTime, collection: true
 
       xml do
-        root "AbstractTimeGeometricPrimitive"
+        element "AbstractTimeGeometricPrimitive"
         namespace Namespace
 
-        map_attribute "id", to: :id
+        map_attribute "id", to: :id, form: :qualified
         map_attribute "frame", to: :frame
         map_element "metaDataProperty", to: :meta_data_property
         map_element "description", to: :description

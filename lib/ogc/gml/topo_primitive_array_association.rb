@@ -12,7 +12,7 @@ module Ogc
                 collection: true
 
       xml do
-        root "topoPrimitiveMembers"
+        element "topoPrimitiveMembers"
         namespace Namespace
 
         map_attribute "owns", to: :owns

@@ -13,7 +13,7 @@ module Ogc
       attribute :multi_solid, MultiSolid
 
       xml do
-        root "multiSolidProperty"
+        element "multiSolidProperty"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

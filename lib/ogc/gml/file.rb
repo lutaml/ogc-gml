@@ -16,7 +16,7 @@ module Ogc
       attribute :compression, :string
 
       xml do
-        root "File"
+        element "File"
         namespace Namespace
 
         map_element "rangeParameters", to: :range_parameters

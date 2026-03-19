@@ -15,7 +15,7 @@ module Ogc
       attribute :abstract_geometry, AbstractGeometry
 
       xml do
-        root "subject"
+        element "subject"
         namespace Namespace
 
         map_attribute "owns", to: :owns

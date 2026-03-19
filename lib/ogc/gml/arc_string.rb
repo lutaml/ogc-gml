@@ -20,7 +20,7 @@ module Ogc
       attribute :coordinates, Coordinates
 
       xml do
-        root "ArcString"
+        element "ArcString"
         namespace Namespace
 
         map_attribute "numDerivativesAtStart", to: :num_derivatives_at_start

@@ -13,7 +13,7 @@ module Ogc
       attribute :vertical_angle, Angle
 
       xml do
-        root "DirectionVectorType"
+        element "DirectionVectorType"
         namespace Namespace
 
         map_element "vector", to: :vector

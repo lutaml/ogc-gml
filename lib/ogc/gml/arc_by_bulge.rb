@@ -11,7 +11,7 @@ module Ogc
       attribute :normal, Vector
 
       xml do
-        root "ArcByBulge"
+        element "ArcByBulge"
         namespace Namespace
 
         map_attribute "numDerivativesAtStart", to: :num_derivatives_at_start

@@ -13,7 +13,7 @@ module Ogc
       attribute :time_period, TimePeriod
 
       xml do
-        root "TimePeriodPropertyType"
+        element "TimePeriodPropertyType"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

@@ -10,7 +10,7 @@ module Ogc
       attribute :axis_order, :string
 
       xml do
-        root "SequenceRuleType"
+        element "SequenceRuleType"
         namespace Namespace
 
         map_content to: :content

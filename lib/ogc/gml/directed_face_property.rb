@@ -14,7 +14,7 @@ module Ogc
       attribute :face, Face
 
       xml do
-        root "directedFace"
+        element "directedFace"
         namespace Namespace
 
         map_attribute "orientation", to: :orientation

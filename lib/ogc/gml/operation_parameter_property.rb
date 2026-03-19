@@ -12,7 +12,7 @@ module Ogc
       attribute :operation_parameter, OperationParameter
 
       xml do
-        root "operationParameterGroupRef"
+        element "operationParameterGroupRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

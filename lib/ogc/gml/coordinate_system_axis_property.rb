@@ -12,7 +12,7 @@ module Ogc
       attribute :coordinate_system_axis, CoordinateSystemAxis
 
       xml do
-        root "usesAxis"
+        element "usesAxis"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

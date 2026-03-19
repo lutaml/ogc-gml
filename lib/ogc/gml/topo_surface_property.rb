@@ -11,7 +11,7 @@ module Ogc
       attribute :topo_surface, TopoSurface
 
       xml do
-        root "topoSurfaceProperty"
+        element "topoSurfaceProperty"
         namespace Namespace
 
         map_attribute "owns", to: :owns

@@ -12,7 +12,7 @@ module Ogc
       attribute :image_datum, ImageDatum
 
       xml do
-        root "usesImageDatum"
+        element "usesImageDatum"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

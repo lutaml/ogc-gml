@@ -17,10 +17,10 @@ module Ogc
       attribute :time_interval, TimeIntervalLength
 
       xml do
-        root "TimePeriod"
+        element "TimePeriod"
         namespace Namespace
 
-        map_attribute "id", to: :id
+        map_attribute "id", to: :id, form: :qualified
         map_attribute "frame", to: :frame
         map_element "metaDataProperty", to: :meta_data_property
         map_element "description", to: :description

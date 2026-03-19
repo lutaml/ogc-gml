@@ -13,7 +13,7 @@ module Ogc
       attribute :abstract_time_topology_primitive, AbstractTimeTopologyPrimitive
 
       xml do
-        root "TimeTopologyPrimitivePropertyType"
+        element "TimeTopologyPrimitivePropertyType"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

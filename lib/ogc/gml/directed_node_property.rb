@@ -14,7 +14,7 @@ module Ogc
       attribute :node, Node
 
       xml do
-        root "directedNode"
+        element "directedNode"
         namespace Namespace
 
         map_attribute "orientation", to: :orientation

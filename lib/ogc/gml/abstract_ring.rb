@@ -6,7 +6,7 @@ module Ogc
   module Gml
     class AbstractRing < Lutaml::Model::Serializable
       xml do
-        root "AbstractRing"
+        element "AbstractRing"
         namespace Namespace
       end
     end

@@ -11,7 +11,7 @@ module Ogc
       attribute :topo_point, TopoPoint
 
       xml do
-        root "topoPointProperty"
+        element "topoPointProperty"
         namespace Namespace
 
         map_attribute "owns", to: :owns

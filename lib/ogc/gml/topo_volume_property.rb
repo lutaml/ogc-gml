@@ -11,7 +11,7 @@ module Ogc
       attribute :topo_volume, TopoVolume
 
       xml do
-        root "topoVolumeProperty"
+        element "topoVolumeProperty"
         namespace Namespace
 
         map_attribute "owns", to: :owns

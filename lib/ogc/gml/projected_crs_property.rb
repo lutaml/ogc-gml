@@ -12,7 +12,7 @@ module Ogc
       attribute :projected_crs, ProjectedCRS
 
       xml do
-        root "projectedCRSRef"
+        element "projectedCRSRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

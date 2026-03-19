@@ -7,7 +7,7 @@ module Ogc
   module Gml
     class Arc < ArcString
       xml do
-        root "Arc"
+        element "Arc"
         namespace Namespace
 
         map_attribute "numDerivativesAtStart", to: :num_derivatives_at_start

@@ -22,7 +22,7 @@ module Ogc
       attribute :radius, Length
 
       xml do
-        root "CircleByCenterPoint"
+        element "CircleByCenterPoint"
         namespace Namespace
 
         map_attribute "numDerivativesAtStart", to: :num_derivatives_at_start

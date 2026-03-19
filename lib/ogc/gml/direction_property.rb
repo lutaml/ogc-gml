@@ -20,7 +20,7 @@ module Ogc
       attribute :direction_string, StringOrRef
 
       xml do
-        root "direction"
+        element "direction"
         namespace Namespace
 
         map_attribute "owns", to: :owns

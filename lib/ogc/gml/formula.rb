@@ -11,7 +11,7 @@ module Ogc
       attribute :d, :float
 
       xml do
-        root "FormulaType"
+        element "FormulaType"
         namespace Namespace
 
         map_element "a", to: :a

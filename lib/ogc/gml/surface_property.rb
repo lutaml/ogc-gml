@@ -15,7 +15,7 @@ module Ogc
       attribute :polygon, Polygon
 
       xml do
-        root "extentOf"
+        element "extentOf"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

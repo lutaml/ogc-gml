@@ -5,7 +5,9 @@ require "lutaml/model"
 module Ogc
   module Gml
     class Identifier < Lutaml::Model::Type::String
-      xml_namespace Namespace
+      xml do
+        namespace Namespace
+      end
     end
   end
 end

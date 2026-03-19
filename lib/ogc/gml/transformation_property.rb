@@ -12,7 +12,7 @@ module Ogc
       attribute :transformation, Transformation
 
       xml do
-        root "transformationRef"
+        element "transformationRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

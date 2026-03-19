@@ -12,7 +12,7 @@ module Ogc
       attribute :temporal_crs, TemporalCRS
 
       xml do
-        root "temporalCRSRef"
+        element "temporalCRSRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

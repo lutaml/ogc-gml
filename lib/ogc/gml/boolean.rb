@@ -9,7 +9,7 @@ module Ogc
       attribute :nil_reason, :string
 
       xml do
-        root "Boolean"
+        element "Boolean"
         namespace Namespace
 
         map_content to: :content

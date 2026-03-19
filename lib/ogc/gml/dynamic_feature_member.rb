@@ -13,7 +13,7 @@ module Ogc
       attribute :dynamic_feature, DynamicFeature, collection: true
 
       xml do
-        root "dynamicMembers"
+        element "dynamicMembers"
         namespace Namespace
 
         map_attribute "owns", to: :owns

@@ -13,7 +13,7 @@ module Ogc
       attribute :abstract_geometric_primitive, AbstractGeometricPrimitive
 
       xml do
-        root "GeometricPrimitivePropertyType"
+        element "GeometricPrimitivePropertyType"
         namespace Namespace
 
         map_attribute "owns", to: :owns

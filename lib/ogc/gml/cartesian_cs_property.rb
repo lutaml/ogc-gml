@@ -12,7 +12,7 @@ module Ogc
       attribute :cartesian_cs, CartesianCS
 
       xml do
-        root "usesCartesianCS"
+        element "usesCartesianCS"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

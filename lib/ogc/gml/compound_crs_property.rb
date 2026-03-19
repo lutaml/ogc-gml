@@ -12,7 +12,7 @@ module Ogc
       attribute :compound_crs, CompoundCRS
 
       xml do
-        root "compoundCRSRef"
+        element "compoundCRSRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

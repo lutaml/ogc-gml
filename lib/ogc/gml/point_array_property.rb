@@ -11,7 +11,7 @@ module Ogc
       attribute :point, Point, collection: true
 
       xml do
-        root "pointArrayProperty"
+        element "pointArrayProperty"
         namespace Namespace
 
         map_attribute "owns", to: :owns

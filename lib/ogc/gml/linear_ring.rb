@@ -17,7 +17,7 @@ module Ogc
       attribute :coordinates, Coordinates
 
       xml do
-        root "LinearRing"
+        element "LinearRing"
         namespace Namespace
 
         map_element "pos", to: :pos

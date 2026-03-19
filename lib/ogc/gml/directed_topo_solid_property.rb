@@ -14,7 +14,7 @@ module Ogc
       attribute :topo_solid, TopoSolid
 
       xml do
-        root "directedTopoSolid"
+        element "directedTopoSolid"
         namespace Namespace
 
         map_attribute "orientation", to: :orientation

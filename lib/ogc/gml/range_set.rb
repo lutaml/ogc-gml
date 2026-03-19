@@ -15,7 +15,7 @@ module Ogc
       attribute :file, File
 
       xml do
-        root "rangeSet"
+        element "rangeSet"
         namespace Namespace
 
         map_element "ValueArray", to: :value_array

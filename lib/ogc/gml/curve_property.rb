@@ -19,7 +19,7 @@ module Ogc
       attribute :line_string, LineString
 
       xml do
-        root "centerLineOf"
+        element "centerLineOf"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

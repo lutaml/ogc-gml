@@ -13,7 +13,7 @@ module Ogc
       attribute :topo_solid, TopoSolid
 
       xml do
-        root "TopoSolidPropertyType"
+        element "TopoSolidPropertyType"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

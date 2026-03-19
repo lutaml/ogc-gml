@@ -10,7 +10,7 @@ module Ogc
       attribute :abstract_ring, AbstractRing
 
       xml do
-        root "interior"
+        element "interior"
         namespace Namespace
 
         map_element "AbstractRing", to: :abstract_ring

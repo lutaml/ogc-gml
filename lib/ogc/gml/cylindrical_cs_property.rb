@@ -12,7 +12,7 @@ module Ogc
       attribute :cylindrical_cs, CylindricalCS
 
       xml do
-        root "cylindricalCSRef"
+        element "cylindricalCSRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

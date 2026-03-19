@@ -10,7 +10,7 @@ module Ogc
       attribute :content, DirectPosition
 
       xml do
-        root "vector"
+        element "vector"
         namespace Namespace
 
         map_content to: :content

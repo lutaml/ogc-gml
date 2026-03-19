@@ -10,7 +10,7 @@ module Ogc
       attribute :weight, :float
 
       xml do
-        root "KnotType"
+        element "KnotType"
         namespace Namespace
 
         map_element "value", to: :value

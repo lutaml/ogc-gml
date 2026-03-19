@@ -14,7 +14,7 @@ module Ogc
       attribute :line_string, LineString, collection: true
 
       xml do
-        root "curveArrayProperty"
+        element "curveArrayProperty"
         namespace Namespace
 
         map_attribute "owns", to: :owns

@@ -12,7 +12,7 @@ module Ogc
       attribute :derived_crs, DerivedCRS
 
       xml do
-        root "derivedCRSRef"
+        element "derivedCRSRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

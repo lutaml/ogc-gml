@@ -12,7 +12,7 @@ module Ogc
       attribute :time_cs, TimeCS
 
       xml do
-        root "usesTimeCS"
+        element "usesTimeCS"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

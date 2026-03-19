@@ -12,7 +12,7 @@ module Ogc
       attribute :concatenated_operation, ConcatenatedOperation
 
       xml do
-        root "concatenatedOperationRef"
+        element "concatenatedOperationRef"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

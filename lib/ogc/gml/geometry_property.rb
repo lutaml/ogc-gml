@@ -13,7 +13,7 @@ module Ogc
       attribute :abstract_geometry, AbstractGeometry
 
       xml do
-        root "geometryMember"
+        element "geometryMember"
         namespace Namespace
 
         map_attribute "nilReason", to: :nil_reason

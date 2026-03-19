@@ -10,7 +10,7 @@ module Ogc
       attribute :content, MeasureOrNilReasonList
 
       xml do
-        root "QuantityExtent"
+        element "QuantityExtent"
         namespace Namespace
 
         map_content to: :content

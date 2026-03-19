@@ -13,7 +13,7 @@ module Ogc
       attribute :count, :integer
 
       xml do
-        root "posList"
+        element "posList"
         namespace Namespace
 
         map_content to: :content

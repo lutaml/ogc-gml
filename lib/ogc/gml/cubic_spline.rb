@@ -23,7 +23,7 @@ module Ogc
       attribute :vector_at_end, Vector
 
       xml do
-        root "CubicSpline"
+        element "CubicSpline"
         namespace Namespace
 
         map_attribute "numDerivativesAtStart", to: :num_derivatives_at_start

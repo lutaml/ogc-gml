@@ -12,7 +12,9 @@ require_relative "identifier"
 module Ogc
   module Gml
     class AggregationType < Lutaml::Model::Type::String
-      xml_namespace Namespace
+      xml do
+        namespace Namespace
+      end
     end
 
     class Dictionary < Lutaml::Model::Serializable
@@ -28,10 +30,10 @@ module Ogc
       attribute :indirect_entry, IndirectEntry, collection: true
 
       xml do
-        root "Dictionary"
+        element "Dictionary"
         namespace Namespace
 
-        map_attribute "id", to: :id
+        map_attribute "id", to: :id, form: :qualified
         map_attribute "aggregationType", to: :aggregation_type
 
         map_element "metaDataProperty", to: :meta_data_property

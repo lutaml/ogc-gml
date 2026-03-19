@@ -10,7 +10,7 @@ module Ogc
       attribute :knot, Knot
 
       xml do
-        root "KnotPropertyType"
+        element "KnotPropertyType"
         namespace Namespace
 
         map_element "Knot", to: :knot

@@ -12,7 +12,7 @@ module Ogc
       attribute :formula, Formula
 
       xml do
-        root "roughConversionToPreferredUnit"
+        element "roughConversionToPreferredUnit"
         namespace Namespace
 
         map_attribute "uom", to: :uom
