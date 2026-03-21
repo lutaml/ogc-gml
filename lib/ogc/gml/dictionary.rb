@@ -8,6 +8,7 @@ require_relative "indirect_entry"
 require_relative "meta_data_property"
 require_relative "reference"
 require_relative "identifier"
+require_relative "versioned_model"
 
 module Ogc
   module Gml
@@ -18,6 +19,8 @@ module Ogc
     end
 
     class Dictionary < Lutaml::Model::Serializable
+      extend VersionedModel::ClassMethods
+
       attribute :id, Identifier
       attribute :aggregation_type, AggregationType
       attribute :meta_data_property, MetaDataProperty, collection: true

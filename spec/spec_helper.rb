@@ -4,8 +4,12 @@ require "ogc/gml"
 require "canon/rspec_matchers"
 
 # Configure Canon to ignore XML comments (lutaml-model doesn't preserve them)
+# and structural whitespace (input/output formatting may differ)
 Canon::Config.configure do |config|
-  config.xml.match.options = { comments: :ignore }
+  config.xml.match.options = {
+    comments: :ignore,
+    structural_whitespace: :ignore
+  }
 end
 
 RSpec.configure do |config|

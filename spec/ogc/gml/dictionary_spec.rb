@@ -35,6 +35,7 @@ RSpec.describe Ogc::Gml::Dictionary do
     it "round-trips #{fn}" do
       input = file_contents(Pathname.new(filename).basename)
       output = described_class.from_xml(input).to_xml(
+        prefix: true,
         pretty: true,
         declaration: true,
         encoding: "utf-8",

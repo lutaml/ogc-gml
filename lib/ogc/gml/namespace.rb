@@ -1,14 +1,11 @@
 # frozen_string_literal: true
 
-require "lutaml/xml/namespace"
+require_relative "namespaces/gml_32_namespace"
 
 module Ogc
   module Gml
-    class Namespace < Lutaml::Xml::Namespace
-      uri "http://www.opengis.net/gml/3.2"
-      prefix_default "gml"
-      element_form_default :qualified
-      attribute_form_default :qualified
-    end
+    # Default namespace for GML 3.2
+    # This is the primary namespace used by this library
+    Namespace = Gml32Namespace
   end
 end
