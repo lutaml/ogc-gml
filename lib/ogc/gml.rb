@@ -7,6 +7,7 @@ Lutaml::Model::Config.configure do |config|
 end
 
 require_relative "gml/version"
+require_relative "gml/namespace_registry"
 
 module Ogc
   module Gml

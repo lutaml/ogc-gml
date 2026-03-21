@@ -15,6 +15,7 @@ RSpec.describe Ogc::Gml::MultiSurface do
     it "round-trips #{filename}" do
       input = file_contents(filename)
       output = described_class.from_xml(input).to_xml(
+        prefix: true,
         pretty: true,
         declaration: true,
         encoding: "utf-8",

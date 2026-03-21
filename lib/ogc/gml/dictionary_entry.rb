@@ -24,9 +24,9 @@ module Ogc
         map_attribute "owns", to: :owns
         map_attribute "nilReason", to: :nil_reason
         map_attribute "remoteSchema", to: :remote_schema
-        map_element "Definition", to: :definition, prefix: "gml"
-        map_element "description", to: :description, prefix: "gml"
-        map_element "name", to: :name, prefix: "gml"
+        map_element "Definition", to: :definition
+        map_element "description", to: :description
+        map_element "name", to: :name
       end
     end
   end

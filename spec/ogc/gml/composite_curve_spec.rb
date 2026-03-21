@@ -16,8 +16,6 @@ RSpec.describe Ogc::Gml::CompositeCurve do
       encoding: "utf-8",
     )
 
-    puts output
-
     expect(output).to be_xml_equivalent_to(input)
   end
 end
