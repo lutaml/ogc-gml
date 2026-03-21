@@ -8,7 +8,7 @@ require "canon/rspec_matchers"
 Canon::Config.configure do |config|
   config.xml.match.options = {
     comments: :ignore,
-    structural_whitespace: :ignore
+    structural_whitespace: :ignore,
   }
 end
 
