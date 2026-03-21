@@ -34,8 +34,8 @@ module Ogc
         end
 
         # Delegate all methods to the wrapped model
-        def method_missing(method, *args, **kwargs, &block)
-          model.send(method, *args, **kwargs, &block)
+        def method_missing(method, ...)
+          model.send(method, ...)
         end
 
         def respond_to_missing?(method, include_private = false)
