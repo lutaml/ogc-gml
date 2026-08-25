@@ -3,10 +3,11 @@
 RSpec.describe Ogc::Gml::Dictionary do
   # These codelists come from https://www.geospatial.jp/iur/codelists/
   #
-  # The fixtures are GML 3.1.1, but the models bind the GML 3.2 namespace
-  # and Canon compares element namespace URIs, so the fixtures are
-  # normalized to the 3.2 namespace before round-tripping. Real 3.1.1
-  # support needs version-preserving serialization (see issue #22).
+  # The fixtures are GML 3.1.1. The models bind the GML 3.2 namespace, and
+  # lenient parsing of out-of-namespace documents currently drops
+  # gml:description content (lutaml-model#754), so the two fixtures that
+  # carry descriptions fail to round-trip. Rewrite the fixtures to the
+  # bound 3.2 namespace until that is fixed.
   def file_contents(filename)
     File.read(Pathname.new(__dir__)
       .join("../../fixtures/geospatial_jp_iur_3.1/#{filename}"))
@@ -31,7 +32,7 @@ RSpec.describe Ogc::Gml::Dictionary do
     end
   end
 
-  describe "GML 3.1.1 input (documented limitation)" do
+  describe "GML 3.1.1 input" do
     let(:input) do
       <<~XML
         <?xml version="1.0" encoding="UTF-8"?>
@@ -52,10 +53,20 @@ RSpec.describe Ogc::Gml::Dictionary do
       expect(dictionary.dictionary_entry.count).to eq(1)
     end
 
-    it "re-emits with the GML 3.2 namespace" do
+    it "re-emits with the source namespace" do
       output = described_class.from_xml(input).to_xml(prefix: true)
-      expect(output)
-        .to include('xmlns:gml="http://www.opengis.net/gml/3.2"')
+      expect(output).to include('xmlns:gml="http://www.opengis.net/gml"')
+    end
+
+    it "does not rewrite the source namespace to GML 3.2" do
+      output = described_class.from_xml(input).to_xml(prefix: true)
+      expect(output).not_to include("gml/3.2")
+    end
+
+    it "preserves gml:description content" do
+      pending "lenient parsing drops out-of-namespace elements (lutaml-model#754)"
+      output = described_class.from_xml(input).to_xml(prefix: true)
+      expect(output).to include("<gml:description>first</gml:description>")
     end
   end
 end
