@@ -24,6 +24,16 @@ RSpec.configure do |config|
   end
 end
 
+module SpecHelpers
+  module_function
+
+  def remove_xml_comments(xml_string)
+    doc = Nokogiri::XML(xml_string)
+    doc.xpath("//comment()").remove
+    doc.to_xml
+  end
+end
+
 Lutaml::Model::Config.configure do |config|
   config.xml_adapter_type = :nokogiri
 end
