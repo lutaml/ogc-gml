@@ -1,13 +1,9 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-require_relative "surface_property"
 
 module Ogc
   module Gml
-    class SurfaceProperty < Lutaml::Model::Serializable
-    end
-
     class Shell < Lutaml::Model::Serializable
       attribute :aggregation_type, :string
       attribute :surface_member, SurfaceProperty, collection: true

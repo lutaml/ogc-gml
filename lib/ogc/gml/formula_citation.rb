@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "string_or_ref"
-
 module Ogc
   module Gml
     class FormulaCitation < Lutaml::Model::Serializable

@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_feature"
-
 module Ogc
   module Gml
     class FeatureProperty < Lutaml::Model::Serializable

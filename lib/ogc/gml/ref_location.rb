@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "affine_placement"
-
 module Ogc
   module Gml
     class RefLocation < Lutaml::Model::Serializable

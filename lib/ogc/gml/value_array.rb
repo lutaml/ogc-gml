@@ -2,14 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "meta_data_property"
-require_relative "reference"
-require_relative "value_array_property"
-require_relative "value_property"
-require_relative "identifier"
-
 module Ogc
   module Gml
     class ValueArray < Lutaml::Model::Serializable

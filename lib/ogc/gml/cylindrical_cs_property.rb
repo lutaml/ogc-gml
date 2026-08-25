@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "cylindrical_cs"
-
 module Ogc
   module Gml
     class CylindricalCSProperty < Lutaml::Model::Serializable

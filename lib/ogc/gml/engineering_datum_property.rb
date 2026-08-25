@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "engineering_datum"
-
 module Ogc
   module Gml
     class EngineeringDatumProperty < Lutaml::Model::Serializable

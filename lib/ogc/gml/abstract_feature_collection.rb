@@ -1,11 +1,6 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-require_relative "bounding_shape"
-require_relative "feature_array_property"
-require_relative "feature_property"
-require_relative "location_property"
-require_relative "abstract_topology"
 
 module Ogc
   module Gml

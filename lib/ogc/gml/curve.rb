@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-require_relative "curve_segment_array_property"
-require_relative "abstract_curve"
 
 module Ogc
   module Gml

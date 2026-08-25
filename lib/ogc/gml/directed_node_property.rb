@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "node"
-
 module Ogc
   module Gml
     class DirectedNodeProperty < Lutaml::Model::Serializable

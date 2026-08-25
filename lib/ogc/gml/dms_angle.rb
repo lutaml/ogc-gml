@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "degrees"
-
 module Ogc
   module Gml
     class DMSAngle < Lutaml::Model::Serializable

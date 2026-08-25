@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "spherical_cs"
-
 module Ogc
   module Gml
     class SphericalCSProperty < Lutaml::Model::Serializable

@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "multi_solid"
-
 module Ogc
   module Gml
     class MultiSolidProperty < Lutaml::Model::Serializable

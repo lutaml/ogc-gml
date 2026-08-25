@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_datum"
-
 module Ogc
   module Gml
     class DatumProperty < Lutaml::Model::Serializable

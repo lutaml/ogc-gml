@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "operation_parameter"
-
 module Ogc
   module Gml
     class OperationParameterProperty < Lutaml::Model::Serializable

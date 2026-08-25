@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "temporal_cs"
-
 module Ogc
   module Gml
     class TemporalCSProperty < Lutaml::Model::Serializable

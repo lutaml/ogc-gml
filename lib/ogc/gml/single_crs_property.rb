@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_crs"
-
 module Ogc
   module Gml
     class SingleCRSProperty < Lutaml::Model::Serializable

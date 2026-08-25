@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "time_edge"
-
 module Ogc
   module Gml
     class TimeEdgeProperty < Lutaml::Model::Serializable

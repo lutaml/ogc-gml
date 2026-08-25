@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "derived_crs"
-
 module Ogc
   module Gml
     class DerivedCRSProperty < Lutaml::Model::Serializable

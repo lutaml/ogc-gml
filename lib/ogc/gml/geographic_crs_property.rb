@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "geographic_crs"
-
 module Ogc
   module Gml
     class GeographicCRSProperty < Lutaml::Model::Serializable

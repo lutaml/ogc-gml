@@ -2,11 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "angle"
-require_relative "direct_position"
-require_relative "length"
-require_relative "arc"
-
 module Ogc
   module Gml
     class ArcByCenterPoint < Arc

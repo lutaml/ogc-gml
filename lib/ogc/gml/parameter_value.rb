@@ -2,11 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "dms_angle"
-require_relative "measure_list"
-require_relative "measure"
-require_relative "operation_parameter_property"
-
 module Ogc
   module Gml
     class ParameterValue < Lutaml::Model::Serializable

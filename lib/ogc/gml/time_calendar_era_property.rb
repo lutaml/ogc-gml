@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "time_calendar_era"
-
 module Ogc
   module Gml
     class TimeCalendarEraProperty < Lutaml::Model::Serializable

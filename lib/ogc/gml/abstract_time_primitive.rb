@@ -1,13 +1,9 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-# require_relative "related_time"
 
 module Ogc
   module Gml
-    class RelatedTime < Lutaml::Model::Serializable
-    end
-
     class AbstractTimePrimitive < AbstractTopology
       attribute :related_time, RelatedTime, collection: true
 

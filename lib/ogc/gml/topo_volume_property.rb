@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "topo_volume"
-
 module Ogc
   module Gml
     class TopoVolumeProperty < Lutaml::Model::Serializable

@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_geometric_primitive"
-
 module Ogc
   module Gml
     class GeometricPrimitiveProperty < Lutaml::Model::Serializable

@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "measure"
-
 module Ogc
   module Gml
     class Quantity < Lutaml::Model::Serializable

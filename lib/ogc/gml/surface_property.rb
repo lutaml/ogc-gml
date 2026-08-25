@@ -2,9 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_surface"
-require_relative "polygon"
-
 module Ogc
   module Gml
     class SurfaceProperty < Lutaml::Model::Serializable

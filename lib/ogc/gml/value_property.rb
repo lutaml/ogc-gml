@@ -2,9 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_geometry"
-require_relative "abstract_time_object"
-
 module Ogc
   module Gml
     class ValueProperty < Lutaml::Model::Serializable

@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "envelope"
-
 module Ogc
   module Gml
     class BoundingShape < Lutaml::Model::Serializable

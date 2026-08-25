@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "image_crs"
-
 module Ogc
   module Gml
     class ImageCRSProperty < Lutaml::Model::Serializable

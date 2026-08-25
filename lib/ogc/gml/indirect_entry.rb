@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "definition_proxy"
-
 module Ogc
   module Gml
     class IndirectEntry < Lutaml::Model::Serializable

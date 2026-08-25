@@ -2,9 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "direct_position"
-require_relative "vector"
-
 module Ogc
   module Gml
     class AffinePlacement < Lutaml::Model::Serializable

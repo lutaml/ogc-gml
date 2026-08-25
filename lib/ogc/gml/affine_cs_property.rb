@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "affine_cs"
-
 module Ogc
   module Gml
     class AffineCSProperty < Lutaml::Model::Serializable

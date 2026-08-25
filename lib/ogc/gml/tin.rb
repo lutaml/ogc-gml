@@ -2,12 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "control_point"
-require_relative "length"
-require_relative "line_string_segment_array_property"
-require_relative "surface_patch_array_property"
-require_relative "abstract_geometry"
-
 module Ogc
   module Gml
     class Tin < AbstractGeometry

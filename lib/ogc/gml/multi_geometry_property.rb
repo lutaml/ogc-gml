@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_geometric_aggregate"
-
 module Ogc
   module Gml
     class MultiGeometryProperty < Lutaml::Model::Serializable

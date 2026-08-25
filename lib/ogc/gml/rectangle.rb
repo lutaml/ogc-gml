@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "shell_property"
-
 module Ogc
   module Gml
     class Rectangle < Lutaml::Model::Serializable

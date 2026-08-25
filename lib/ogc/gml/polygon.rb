@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-require_relative "reference"
-require_relative "shell_property"
-require_relative "abstract_geometry"
 
 module Ogc
   module Gml

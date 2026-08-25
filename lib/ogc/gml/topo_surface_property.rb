@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "topo_surface"
-
 module Ogc
   module Gml
     class TopoSurfaceProperty < Lutaml::Model::Serializable

@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "geodetic_crs"
-
 module Ogc
   module Gml
     class GeodeticCRSProperty < Lutaml::Model::Serializable

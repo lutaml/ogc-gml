@@ -2,11 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_curve"
-require_relative "curve"
-require_relative "orientable_curve"
-require_relative "line_string"
-
 module Ogc
   module Gml
     class CurveProperty < Lutaml::Model::Serializable

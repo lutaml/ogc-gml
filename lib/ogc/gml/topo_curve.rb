@@ -2,13 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "directed_edge_property"
-require_relative "meta_data_property"
-require_relative "reference"
-require_relative "identifier"
-
 module Ogc
   module Gml
     class TopoCurve < Lutaml::Model::Serializable

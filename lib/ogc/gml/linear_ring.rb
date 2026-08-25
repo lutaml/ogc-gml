@@ -2,11 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "coordinates"
-require_relative "direct_position_list"
-require_relative "direct_position"
-require_relative "point_property"
-
 module Ogc
   module Gml
     class LinearRing < Lutaml::Model::Serializable

@@ -2,10 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "grid_function"
-require_relative "mapping_rule"
-require_relative "string_or_ref"
-
 module Ogc
   module Gml
     class CoverageFunction < Lutaml::Model::Serializable

@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "projected_crs"
-
 module Ogc
   module Gml
     class ProjectedCRSProperty < Lutaml::Model::Serializable

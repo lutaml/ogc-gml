@@ -2,10 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_geometry"
-require_relative "code"
-require_relative "string_or_ref"
-
 module Ogc
   module Gml
     class PriorityLocationProperty < Lutaml::Model::Serializable

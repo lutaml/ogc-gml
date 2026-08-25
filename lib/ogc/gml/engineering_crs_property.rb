@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "engineering_crs"
-
 module Ogc
   module Gml
     class EngineeringCRSProperty < Lutaml::Model::Serializable

@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_solid"
-
 module Ogc
   module Gml
     class SolidProperty < Lutaml::Model::Serializable

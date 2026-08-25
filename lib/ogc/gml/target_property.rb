@@ -2,9 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_feature"
-require_relative "abstract_geometry"
-
 module Ogc
   module Gml
     class TargetProperty < Lutaml::Model::Serializable

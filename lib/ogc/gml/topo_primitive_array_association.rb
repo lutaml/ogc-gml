@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_topo_primitive"
-
 module Ogc
   module Gml
     class TopoPrimitiveArrayAssociation < Lutaml::Model::Serializable

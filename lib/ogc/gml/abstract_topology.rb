@@ -1,11 +1,6 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "meta_data_property"
-require_relative "reference"
-require_relative "identifier"
 
 module Ogc
   module Gml

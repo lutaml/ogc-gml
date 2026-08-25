@@ -2,10 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "data_block"
-require_relative "file"
-require_relative "value_array"
-
 module Ogc
   module Gml
     class RangeSet < Lutaml::Model::Serializable
