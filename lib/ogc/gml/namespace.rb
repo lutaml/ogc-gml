@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "namespaces/gml_32_namespace"
+require_relative "namespaces/gml_31_namespace"
 
 module Ogc
   module Gml

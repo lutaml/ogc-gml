@@ -8,12 +8,6 @@ RSpec.describe Ogc::Gml::MultiCurve do
     ).gsub("\t", "  ")
   end
 
-  def remove_xml_comments(xml_string)
-    doc = Nokogiri::XML(xml_string)
-    doc.xpath("//comment()").remove
-    doc.to_xml
-  end
-
   %w[
     MultiCurve-1.xml
     MultiCurve-2.xml
@@ -27,7 +21,8 @@ RSpec.describe Ogc::Gml::MultiCurve do
         encoding: "utf-8",
       )
 
-      expect(remove_xml_comments(output)).to be_xml_equivalent_to(remove_xml_comments(input))
+      expect(SpecHelpers.remove_xml_comments(output))
+        .to be_xml_equivalent_to(SpecHelpers.remove_xml_comments(input))
     end
   end
 end

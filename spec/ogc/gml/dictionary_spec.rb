@@ -2,38 +2,23 @@
 
 RSpec.describe Ogc::Gml::Dictionary do
   # These codelists come from https://www.geospatial.jp/iur/codelists/
+  #
+  # The fixtures are GML 3.1.1, but the models bind the GML 3.2 namespace
+  # and Canon compares element namespace URIs, so the fixtures are
+  # normalized to the 3.2 namespace before round-tripping. Real 3.1.1
+  # support needs version-preserving serialization (see issue #22).
   def file_contents(filename)
-    File.read(
-      Pathname.new(__dir__)
-        .join("../../fixtures/geospatial_jp_iur_3.1/#{filename}"),
-    )
+    File.read(Pathname.new(__dir__)
+      .join("../../fixtures/geospatial_jp_iur_3.1/#{filename}"))
       .gsub("\t", "  ")
-      .gsub('xmlns:gml="http://www.opengis.net/gml"', 'xmlns:gml="http://www.opengis.net/gml/3.2"')
+      .gsub('xmlns:gml="http://www.opengis.net/gml"',
+            'xmlns:gml="http://www.opengis.net/gml/3.2"')
   end
 
-  def remove_xml_comments(xml_string)
-    doc = Nokogiri::XML(xml_string)
-    doc.xpath("//comment()").remove
-    doc.to_xml
-  end
-
-  glob_path = Pathname.new(__dir__)
-    .join("../../fixtures/geospatial_jp_iur_3.1/*.xml")
-
-  Dir.glob(glob_path).each do |filename|
-    # it "round-trips #{filename} with equivalent-xml" do
-    #   input = file_contents(Pathname.new(filename).basename)
-    #   output = Ogc::Gml::Dictionary.from_xml(input).to_xml(
-    #     pretty: true,
-    #     declaration: true,
-    #     encoding: "utf-8"
-    #   )
-
-    #   expect(output).to be_xml_equivalent_to(input)
-    # end
-    fn = Pathname.new(filename).basename
-    it "round-trips #{fn}" do
-      input = file_contents(Pathname.new(filename).basename)
+  Dir.glob(Pathname.new(__dir__)
+    .join("../../fixtures/geospatial_jp_iur_3.1/*.xml")).each do |filename|
+    it "round-trips #{File.basename(filename)}" do
+      input = file_contents(File.basename(filename))
       output = described_class.from_xml(input).to_xml(
         prefix: true,
         pretty: true,
@@ -41,7 +26,36 @@ RSpec.describe Ogc::Gml::Dictionary do
         encoding: "utf-8",
       )
 
-      expect(remove_xml_comments(output)).to be_xml_equivalent_to(remove_xml_comments(input))
+      expect(SpecHelpers.remove_xml_comments(output))
+        .to be_xml_equivalent_to(SpecHelpers.remove_xml_comments(input))
+    end
+  end
+
+  describe "GML 3.1.1 input (documented limitation)" do
+    let(:input) do
+      <<~XML
+        <?xml version="1.0" encoding="UTF-8"?>
+        <gml:Dictionary xmlns:gml="http://www.opengis.net/gml" gml:id="d">
+          <gml:name>codes</gml:name>
+          <gml:dictionaryEntry>
+            <gml:Definition gml:id="c1">
+              <gml:description>first</gml:description>
+              <gml:name>ONE</gml:name>
+            </gml:Definition>
+          </gml:dictionaryEntry>
+        </gml:Dictionary>
+      XML
+    end
+
+    it "parses leniently" do
+      dictionary = described_class.from_xml(input)
+      expect(dictionary.dictionary_entry.count).to eq(1)
+    end
+
+    it "re-emits with the GML 3.2 namespace" do
+      output = described_class.from_xml(input).to_xml(prefix: true)
+      expect(output)
+        .to include('xmlns:gml="http://www.opengis.net/gml/3.2"')
     end
   end
 end
