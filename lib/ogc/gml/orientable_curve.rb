@@ -2,18 +2,8 @@
 
 require "lutaml/model"
 
-require_relative "code"
-require_relative "code_with_authority"
-# require_relative "curve_property"
-require_relative "meta_data_property"
-require_relative "reference"
-require_relative "identifier"
-
 module Ogc
   module Gml
-    class CurveProperty < Lutaml::Model::Serializable
-    end
-
     class OrientableCurve < Lutaml::Model::Serializable
       attribute :id, Identifier
       attribute :srs_name, :string

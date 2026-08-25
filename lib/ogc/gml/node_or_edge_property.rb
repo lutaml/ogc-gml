@@ -2,14 +2,8 @@
 
 require "lutaml/model"
 
-# require_relative "edge"
-require_relative "node"
-
 module Ogc
   module Gml
-    class Edge < Lutaml::Model::Serializable
-    end
-
     class NodeOrEdgeProperty < Lutaml::Model::Serializable
       attribute :nil_reason, :string
       attribute :remote_schema, RemoteSchema

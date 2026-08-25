@@ -2,12 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_curve_segment"
-require_relative "arc"
-require_relative "arc_by_center_point"
-require_relative "line_string_segment"
-require_relative "geodesic_string"
-
 module Ogc
   module Gml
     class CurveSegmentArrayProperty < Lutaml::Model::Serializable

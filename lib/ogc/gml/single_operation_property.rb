@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_coordinate_operation"
-
 module Ogc
   module Gml
     class SingleOperationProperty < Lutaml::Model::Serializable

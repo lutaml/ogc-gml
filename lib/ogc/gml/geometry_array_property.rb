@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_geometry"
-
 module Ogc
   module Gml
     class GeometryArrayProperty < Lutaml::Model::Serializable

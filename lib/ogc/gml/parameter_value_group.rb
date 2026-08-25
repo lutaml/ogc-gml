@@ -2,9 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_general_parameter_value_property"
-require_relative "reference"
-
 module Ogc
   module Gml
     class ParameterValueGroup < Lutaml::Model::Serializable

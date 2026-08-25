@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "prime_meridian"
-
 module Ogc
   module Gml
     class PrimeMeridianProperty < Lutaml::Model::Serializable

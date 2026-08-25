@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "point"
-
 module Ogc
   module Gml
     class PointProperty < Lutaml::Model::Serializable

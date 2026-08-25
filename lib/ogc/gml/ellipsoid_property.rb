@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "ellipsoid"
-
 module Ogc
   module Gml
     class EllipsoidProperty < Lutaml::Model::Serializable

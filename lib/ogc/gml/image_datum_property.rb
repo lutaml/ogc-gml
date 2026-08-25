@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "image_datum"
-
 module Ogc
   module Gml
     class ImageDatumProperty < Lutaml::Model::Serializable

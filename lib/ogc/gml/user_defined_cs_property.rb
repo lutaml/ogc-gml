@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "user_defined_cs"
-
 module Ogc
   module Gml
     class UserDefinedCSProperty < Lutaml::Model::Serializable

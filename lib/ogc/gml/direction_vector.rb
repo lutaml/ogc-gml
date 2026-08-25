@@ -2,9 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "angle"
-require_relative "vector"
-
 module Ogc
   module Gml
     class DirectionVector < Lutaml::Model::Serializable

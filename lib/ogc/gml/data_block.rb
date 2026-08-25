@@ -2,9 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "association_role"
-require_relative "coordinates"
-
 module Ogc
   module Gml
     class DataBlock < Lutaml::Model::Serializable

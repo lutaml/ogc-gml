@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "temporal_datum"
-
 module Ogc
   module Gml
     class TemporalDatumProperty < Lutaml::Model::Serializable

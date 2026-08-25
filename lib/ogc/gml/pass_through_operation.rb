@@ -2,15 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "coordinate_operation_accuracy"
-require_relative "coordinate_operation_property"
-require_relative "crs_property"
-require_relative "meta_data_property"
-require_relative "reference"
-require_relative "concatenated_operation"
-
 module Ogc
   module Gml
     class PassThroughOperation < ConcatenatedOperation

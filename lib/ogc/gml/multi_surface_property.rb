@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "multi_surface"
-
 module Ogc
   module Gml
     class MultiSurfaceProperty < Lutaml::Model::Serializable

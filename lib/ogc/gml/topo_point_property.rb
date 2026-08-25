@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "topo_point"
-
 module Ogc
   module Gml
     class TopoPointProperty < Lutaml::Model::Serializable

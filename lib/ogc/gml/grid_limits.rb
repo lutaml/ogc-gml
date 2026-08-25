@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "grid_envelope"
-
 module Ogc
   module Gml
     class GridLimits < Lutaml::Model::Serializable

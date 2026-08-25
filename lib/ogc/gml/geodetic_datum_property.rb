@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "geodetic_datum"
-
 module Ogc
   module Gml
     class GeodeticDatumProperty < Lutaml::Model::Serializable

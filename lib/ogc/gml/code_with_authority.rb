@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "code"
-
 module Ogc
   module Gml
     class CodeWithAuthority < Lutaml::Model::Serializable

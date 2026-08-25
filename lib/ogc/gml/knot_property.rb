@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "knot"
-
 module Ogc
   module Gml
     class KnotProperty < Lutaml::Model::Serializable

@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-require_relative "temporal_cs_property"
-require_relative "temporal_datum_property"
-require_relative "time_cs_property"
-require_relative "abstract_topology"
 
 module Ogc
   module Gml

@@ -2,9 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "measure"
-require_relative "unit_of_measure"
-
 module Ogc
   module Gml
     class Length < UnitOfMeasure

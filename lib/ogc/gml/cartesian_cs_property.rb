@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "cartesian_cs"
-
 module Ogc
   module Gml
     class CartesianCSProperty < Lutaml::Model::Serializable

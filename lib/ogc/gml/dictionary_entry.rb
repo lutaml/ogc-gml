@@ -2,9 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "definition"
-require_relative "identifier"
-
 module Ogc
   module Gml
     class DictionaryEntry < Lutaml::Model::Serializable

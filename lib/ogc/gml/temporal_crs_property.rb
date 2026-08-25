@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "temporal_crs"
-
 module Ogc
   module Gml
     class TemporalCRSProperty < Lutaml::Model::Serializable

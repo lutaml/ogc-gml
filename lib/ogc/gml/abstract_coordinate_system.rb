@@ -2,13 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "coordinate_system_axis_property"
-require_relative "meta_data_property"
-require_relative "reference"
-require_relative "identifier"
-
 module Ogc
   module Gml
     class AbstractCoordinateSystem < Lutaml::Model::Serializable

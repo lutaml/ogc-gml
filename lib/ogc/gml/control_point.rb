@@ -2,10 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "direct_position_list"
-require_relative "direct_position"
-require_relative "point_property"
-
 module Ogc
   module Gml
     class ControlPoint < Lutaml::Model::Serializable

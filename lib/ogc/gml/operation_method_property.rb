@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "operation_method"
-
 module Ogc
   module Gml
     class OperationMethodProperty < Lutaml::Model::Serializable

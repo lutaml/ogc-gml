@@ -2,11 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "curve_property"
-require_relative "length"
-require_relative "vector"
-require_relative "abstract_curve_segment"
-
 module Ogc
   module Gml
     class OffsetCurve < AbstractCurveSegment

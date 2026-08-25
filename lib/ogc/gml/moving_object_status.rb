@@ -2,18 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "direct_position"
-require_relative "direction_property"
-require_relative "geometry_property"
-require_relative "location_property"
-require_relative "measure"
-require_relative "meta_data_property"
-require_relative "reference"
-require_relative "string_or_ref"
-require_relative "abstract_time_complex"
-
 module Ogc
   module Gml
     class MovingObjectStatus < AbstractTimeComplex

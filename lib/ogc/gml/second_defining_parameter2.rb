@@ -2,9 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "length"
-require_relative "measure"
-
 module Ogc
   module Gml
     class SecondDefiningParameter2 < Lutaml::Model::Serializable

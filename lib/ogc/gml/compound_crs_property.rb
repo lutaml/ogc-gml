@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "compound_crs"
-
 module Ogc
   module Gml
     class CompoundCRSProperty < Lutaml::Model::Serializable

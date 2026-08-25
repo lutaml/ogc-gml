@@ -2,16 +2,8 @@
 
 require "lutaml/model"
 
-require_relative "abstract_general_operation_parameter"
-
 module Ogc
   module Gml
-    class RemoteSchema < Lutaml::Model::Type::String
-      xml do
-        namespace Namespace
-      end
-    end
-
     class AbstractGeneralOperationParameterProperty < Lutaml::Model::Serializable
       attribute :nil_reason, :string
       attribute :remote_schema, RemoteSchema

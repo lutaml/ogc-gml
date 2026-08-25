@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "topo_curve"
-
 module Ogc
   module Gml
     class TopoCurveProperty < Lutaml::Model::Serializable

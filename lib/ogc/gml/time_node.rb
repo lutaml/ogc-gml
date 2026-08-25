@@ -1,15 +1,9 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-# require_relative "time_edge_property"
-require_relative "time_instant_property"
-require_relative "abstract_time_topology_primitive"
 
 module Ogc
   module Gml
-    class TimeEdgeProperty < Lutaml::Model::Serializable
-    end
-
     class TimeNode < AbstractTimeTopologyPrimitive
       attribute :previous_edge, TimeEdgeProperty, collection: true
       attribute :next_edge, TimeEdgeProperty, collection: true

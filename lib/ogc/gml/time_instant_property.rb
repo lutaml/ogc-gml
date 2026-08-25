@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "time_instant"
-
 module Ogc
   module Gml
     class TimeInstantProperty < Lutaml::Model::Serializable

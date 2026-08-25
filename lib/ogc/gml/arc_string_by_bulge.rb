@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-require_relative "vector"
-require_relative "arc_string"
 
 module Ogc
   module Gml

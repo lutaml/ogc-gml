@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "dynamic_feature"
-
 module Ogc
   module Gml
     class DynamicFeatureMember < Lutaml::Model::Serializable

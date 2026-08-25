@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "time_node"
-
 module Ogc
   module Gml
     class TimeNodeProperty < Lutaml::Model::Serializable

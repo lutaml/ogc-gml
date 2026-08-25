@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_meta_data"
-
 module Ogc
   module Gml
     class MetaDataProperty < Lutaml::Model::Serializable

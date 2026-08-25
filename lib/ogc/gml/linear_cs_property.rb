@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "linear_cs"
-
 module Ogc
   module Gml
     class LinearCSProperty < Lutaml::Model::Serializable

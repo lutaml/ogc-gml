@@ -2,9 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "ref_location"
-require_relative "abstract_curve_segment"
-
 module Ogc
   module Gml
     class Clothoid < AbstractCurveSegment

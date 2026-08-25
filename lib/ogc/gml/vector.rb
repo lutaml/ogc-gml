@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "direct_position"
-
 module Ogc
   module Gml
     class Vector < Lutaml::Model::Serializable

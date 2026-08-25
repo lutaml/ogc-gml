@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "vertical_crs"
-
 module Ogc
   module Gml
     class VerticalCRSProperty < Lutaml::Model::Serializable

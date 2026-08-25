@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-require_relative "cartesian_cs_property"
-require_relative "geodetic_crs_property"
-require_relative "geographic_crs_property"
-require_relative "abstract_general_derived_crs"
 
 module Ogc
   module Gml

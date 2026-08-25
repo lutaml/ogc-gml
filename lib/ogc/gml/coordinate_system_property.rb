@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_coordinate_system"
-
 module Ogc
   module Gml
     class CoordinateSystemProperty < Lutaml::Model::Serializable

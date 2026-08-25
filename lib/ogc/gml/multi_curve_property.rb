@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "multi_curve"
-
 module Ogc
   module Gml
     class MultiCurveProperty < Lutaml::Model::Serializable

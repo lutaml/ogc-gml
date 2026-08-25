@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-require_relative "composite_curve"
 
 module Ogc
   module Gml
