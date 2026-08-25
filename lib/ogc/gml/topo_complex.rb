@@ -2,20 +2,8 @@
 
 require "lutaml/model"
 
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "meta_data_property"
-require_relative "reference"
-# require_relative "topo_complex_property"
-require_relative "topo_primitive_array_association"
-require_relative "topo_primitive_member"
-require_relative "identifier"
-
 module Ogc
   module Gml
-    class TopoComplexProperty < Lutaml::Model::Serializable
-    end
-
     class TopoComplex < Lutaml::Model::Serializable
       attribute :id, Identifier
       attribute :is_maximal, :boolean, default: -> { false }

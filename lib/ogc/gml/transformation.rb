@@ -2,16 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_general_parameter_value_property"
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "coordinate_operation_accuracy"
-require_relative "crs_property"
-require_relative "meta_data_property"
-require_relative "operation_method_property"
-require_relative "reference"
-require_relative "abstract_general_transformation"
-
 module Ogc
   module Gml
     class Transformation < AbstractGeneralTransformation

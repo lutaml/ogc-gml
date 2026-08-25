@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-require_relative "abstract_coordinate_operation"
 
 module Ogc
   module Gml

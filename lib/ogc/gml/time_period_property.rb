@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "time_period"
-
 module Ogc
   module Gml
     class TimePeriodProperty < Lutaml::Model::Serializable

@@ -2,10 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "coordinates"
-require_relative "direct_position"
-require_relative "time_position"
-
 module Ogc
   module Gml
     class EnvelopeWithTimePeriod < Lutaml::Model::Serializable

@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-require_relative "direct_position"
-require_relative "abstract_geometry"
 
 module Ogc
   module Gml

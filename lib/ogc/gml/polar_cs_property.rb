@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "polar_cs"
-
 module Ogc
   module Gml
     class PolarCSProperty < Lutaml::Model::Serializable

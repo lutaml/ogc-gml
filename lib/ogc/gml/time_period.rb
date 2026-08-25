@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-require_relative "time_instant_property"
-require_relative "time_interval_length"
-require_relative "time_position"
-require_relative "abstract_time_geometric_primitive"
 
 module Ogc
   module Gml

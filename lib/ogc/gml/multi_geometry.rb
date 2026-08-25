@@ -1,9 +1,6 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-require_relative "geometry_array_property"
-require_relative "geometry_property"
-require_relative "abstract_geometric_aggregate"
 
 module Ogc
   module Gml

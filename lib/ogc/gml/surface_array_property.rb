@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_surface"
-
 module Ogc
   module Gml
     class SurfaceArrayProperty < Lutaml::Model::Serializable

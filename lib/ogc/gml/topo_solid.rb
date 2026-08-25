@@ -2,20 +2,8 @@
 
 require "lutaml/model"
 
-require_relative "code"
-require_relative "code_with_authority"
-# require_relative "directed_face_property"
-require_relative "meta_data_property"
-require_relative "node_or_edge_property"
-require_relative "reference"
-require_relative "solid_property"
-require_relative "identifier"
-
 module Ogc
   module Gml
-    class DirectedFaceProperty < Lutaml::Model::Serializable
-    end
-
     class TopoSolid < Lutaml::Model::Serializable
       attribute :id, Identifier
       attribute :aggregation_type, :string

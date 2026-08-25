@@ -2,9 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "code"
-require_relative "reference"
-
 module Ogc
   module Gml
     class DirectionDescription < Lutaml::Model::Serializable

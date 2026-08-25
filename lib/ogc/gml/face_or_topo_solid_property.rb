@@ -2,14 +2,8 @@
 
 require "lutaml/model"
 
-# require_relative "face"
-# require_relative "topo_solid"
-
 module Ogc
   module Gml
-    class Face < Lutaml::Model::Serializable; end
-    class TopoSolid < Lutaml::Model::Serializable; end
-
     class FaceOrTopoSolidProperty < Lutaml::Model::Serializable
       attribute :nil_reason, :string
       attribute :remote_schema, RemoteSchema

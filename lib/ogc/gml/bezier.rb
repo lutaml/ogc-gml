@@ -2,12 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "coordinates"
-require_relative "direct_position_list"
-require_relative "knot_property"
-require_relative "point_property"
-require_relative "abstract_curve_segment"
-
 module Ogc
   module Gml
     class Bezier < AbstractCurveSegment

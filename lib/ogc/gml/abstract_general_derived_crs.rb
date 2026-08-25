@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-require_relative "general_conversion_property"
-require_relative "abstract_crs"
 
 module Ogc
   module Gml

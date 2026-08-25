@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "formula"
-
 module Ogc
   module Gml
     class ConversionToPreferredUnit < Lutaml::Model::Serializable

@@ -11,330 +11,666 @@ require_relative "gml/version"
 module Ogc
   module Gml
     class Error < StandardError; end
+
+    autoload :AbstractCRS,
+             "ogc/gml/abstract_crs"
+    autoload :AbstractContinuousCoverage,
+             "ogc/gml/abstract_continuous_coverage"
+    autoload :AbstractCoordinateOperation,
+             "ogc/gml/abstract_coordinate_operation"
+    autoload :AbstractCoordinateSystem,
+             "ogc/gml/abstract_coordinate_system"
+    autoload :AbstractCoverage,
+             "ogc/gml/abstract_coverage"
+    autoload :AbstractCurve,
+             "ogc/gml/abstract_curve"
+    autoload :AbstractCurveSegment,
+             "ogc/gml/abstract_curve_segment"
+    autoload :AbstractDatum,
+             "ogc/gml/abstract_datum"
+    autoload :AbstractFeature,
+             "ogc/gml/abstract_feature"
+    autoload :AbstractFeatureCollection,
+             "ogc/gml/abstract_feature_collection"
+    autoload :AbstractGML,
+             "ogc/gml/abstract_gml"
+    autoload :AbstractGeneralConversion,
+             "ogc/gml/abstract_general_conversion"
+    autoload :AbstractGeneralDerivedCRS,
+             "ogc/gml/abstract_general_derived_crs"
+    autoload :AbstractGeneralOperationParameter,
+             "ogc/gml/abstract_general_operation_parameter"
+    autoload :AbstractGeneralOperationParameterProperty,
+             "ogc/gml/abstract_general_operation_parameter_property"
+    autoload :AbstractGeneralParameterValue,
+             "ogc/gml/abstract_general_parameter_value"
+    autoload :AbstractGeneralParameterValueProperty,
+             "ogc/gml/abstract_general_parameter_value_property"
+    autoload :AbstractGeneralTransformation,
+             "ogc/gml/abstract_general_transformation"
+    autoload :AbstractGeometricAggregate,
+             "ogc/gml/abstract_geometric_aggregate"
+    autoload :AbstractGeometricPrimitive,
+             "ogc/gml/abstract_geometric_primitive"
+    autoload :AbstractGeometry,
+             "ogc/gml/abstract_geometry"
+    autoload :AbstractGriddedSurface,
+             "ogc/gml/abstract_gridded_surface"
+    autoload :AbstractMetaData,
+             "ogc/gml/abstract_meta_data"
+    autoload :AbstractParametricCurveSurface,
+             "ogc/gml/abstract_parametric_curve_surface"
+    autoload :AbstractRing,
+             "ogc/gml/abstract_ring"
+    autoload :AbstractRingProperty,
+             "ogc/gml/abstract_ring_property"
+    autoload :AbstractSolid,
+             "ogc/gml/abstract_solid"
+    autoload :AbstractSurface,
+             "ogc/gml/abstract_surface"
+    autoload :AbstractSurfacePatch,
+             "ogc/gml/abstract_surface_patch"
+    autoload :AbstractTimeComplex,
+             "ogc/gml/abstract_time_complex"
+    autoload :AbstractTimeGeometricPrimitive,
+             "ogc/gml/abstract_time_geometric_primitive"
+    autoload :AbstractTimeObject,
+             "ogc/gml/abstract_time_object"
+    autoload :AbstractTimePrimitive,
+             "ogc/gml/abstract_time_primitive"
+    autoload :AbstractTimeSlice,
+             "ogc/gml/abstract_time_slice"
+    autoload :AbstractTimeTopologyPrimitive,
+             "ogc/gml/abstract_time_topology_primitive"
+    autoload :AbstractTopoPrimitive,
+             "ogc/gml/abstract_topo_primitive"
+    autoload :AbstractTopology,
+             "ogc/gml/abstract_topology"
+    autoload :AffineCS,
+             "ogc/gml/affine_cs"
+    autoload :AffineCSProperty,
+             "ogc/gml/affine_cs_property"
+    autoload :AffinePlacement,
+             "ogc/gml/affine_placement"
+    autoload :AggregationType,
+             "ogc/gml/dictionary"
+    autoload :Angle,
+             "ogc/gml/angle"
+    autoload :Arc,
+             "ogc/gml/arc"
+    autoload :ArcByBulge,
+             "ogc/gml/arc_by_bulge"
+    autoload :ArcByCenterPoint,
+             "ogc/gml/arc_by_center_point"
+    autoload :ArcString,
+             "ogc/gml/arc_string"
+    autoload :ArcStringByBulge,
+             "ogc/gml/arc_string_by_bulge"
+    autoload :Array,
+             "ogc/gml/array"
+    autoload :ArrayAssociation,
+             "ogc/gml/array_association"
+    autoload :AssociationRole,
+             "ogc/gml/association_role"
+    autoload :BSpline,
+             "ogc/gml/b_spline"
+    autoload :Bag,
+             "ogc/gml/bag"
+    autoload :BaseUnit,
+             "ogc/gml/base_unit"
+    autoload :Bezier,
+             "ogc/gml/bezier"
+    autoload :Boolean,
+             "ogc/gml/boolean"
+    autoload :BoundingShape,
+             "ogc/gml/bounding_shape"
+    autoload :CRSProperty,
+             "ogc/gml/crs_property"
+    autoload :CartesianCS,
+             "ogc/gml/cartesian_cs"
+    autoload :CartesianCSProperty,
+             "ogc/gml/cartesian_cs_property"
+    autoload :Category,
+             "ogc/gml/category"
+    autoload :CategoryExtent,
+             "ogc/gml/category_extent"
+    autoload :Circle,
+             "ogc/gml/circle"
+    autoload :CircleByCenterPoint,
+             "ogc/gml/circle_by_center_point"
+    autoload :Clothoid,
+             "ogc/gml/clothoid"
+    autoload :Code,
+             "ogc/gml/code"
+    autoload :CodeOrNilReasonList,
+             "ogc/gml/code_or_nil_reason_list"
+    autoload :CodeWithAuthority,
+             "ogc/gml/code_with_authority"
+    autoload :CompositeCurve,
+             "ogc/gml/composite_curve"
+    autoload :CompositeSolid,
+             "ogc/gml/composite_solid"
+    autoload :CompositeSurface,
+             "ogc/gml/composite_surface"
+    autoload :CompositeValue,
+             "ogc/gml/composite_value"
+    autoload :CompoundCRS,
+             "ogc/gml/compound_crs"
+    autoload :CompoundCRSProperty,
+             "ogc/gml/compound_crs_property"
+    autoload :ConcatenatedOperation,
+             "ogc/gml/concatenated_operation"
+    autoload :ConcatenatedOperationProperty,
+             "ogc/gml/concatenated_operation_property"
+    autoload :Cone,
+             "ogc/gml/cone"
+    autoload :ControlPoint,
+             "ogc/gml/control_point"
+    autoload :ConventionalUnit,
+             "ogc/gml/conventional_unit"
+    autoload :Conversion,
+             "ogc/gml/conversion"
+    autoload :ConversionProperty,
+             "ogc/gml/conversion_property"
+    autoload :ConversionToPreferredUnit,
+             "ogc/gml/conversion_to_preferred_unit"
+    autoload :CoordinateOperationAccuracy,
+             "ogc/gml/coordinate_operation_accuracy"
+    autoload :CoordinateOperationProperty,
+             "ogc/gml/coordinate_operation_property"
+    autoload :CoordinateSystemAxis,
+             "ogc/gml/coordinate_system_axis"
+    autoload :CoordinateSystemAxisProperty,
+             "ogc/gml/coordinate_system_axis_property"
+    autoload :CoordinateSystemProperty,
+             "ogc/gml/coordinate_system_property"
+    autoload :Coordinates,
+             "ogc/gml/coordinates"
+    autoload :Count,
+             "ogc/gml/count"
+    autoload :CoverageFunction,
+             "ogc/gml/coverage_function"
+    autoload :CubicSpline,
+             "ogc/gml/cubic_spline"
+    autoload :Curve,
+             "ogc/gml/curve"
+    autoload :CurveArrayProperty,
+             "ogc/gml/curve_array_property"
+    autoload :CurveProperty,
+             "ogc/gml/curve_property"
+    autoload :CurveSegmentArrayProperty,
+             "ogc/gml/curve_segment_array_property"
+    autoload :Cylinder,
+             "ogc/gml/cylinder"
+    autoload :CylindricalCS,
+             "ogc/gml/cylindrical_cs"
+    autoload :CylindricalCSProperty,
+             "ogc/gml/cylindrical_cs_property"
+    autoload :DMSAngle,
+             "ogc/gml/dms_angle"
+    autoload :DataBlock,
+             "ogc/gml/data_block"
+    autoload :DatumProperty,
+             "ogc/gml/datum_property"
+    autoload :Definition,
+             "ogc/gml/definition"
+    autoload :DefinitionProxy,
+             "ogc/gml/definition_proxy"
+    autoload :Degrees,
+             "ogc/gml/degrees"
+    autoload :DerivationUnitTerm,
+             "ogc/gml/derivation_unit_term"
+    autoload :DerivedCRS,
+             "ogc/gml/derived_crs"
+    autoload :DerivedCRSProperty,
+             "ogc/gml/derived_crs_property"
+    autoload :DerivedUnit,
+             "ogc/gml/derived_unit"
+    autoload :Dictionary,
+             "ogc/gml/dictionary"
+    autoload :DictionaryEntry,
+             "ogc/gml/dictionary_entry"
+    autoload :DirectPosition,
+             "ogc/gml/direct_position"
+    autoload :DirectPositionList,
+             "ogc/gml/direct_position_list"
+    autoload :DirectedEdgeProperty,
+             "ogc/gml/directed_edge_property"
+    autoload :DirectedFaceProperty,
+             "ogc/gml/directed_face_property"
+    autoload :DirectedNodeProperty,
+             "ogc/gml/directed_node_property"
+    autoload :DirectedObservation,
+             "ogc/gml/directed_observation"
+    autoload :DirectedObservationAtDistance,
+             "ogc/gml/directed_observation_at_distance"
+    autoload :DirectedTopoSolidProperty,
+             "ogc/gml/directed_topo_solid_property"
+    autoload :DirectionDescription,
+             "ogc/gml/direction_description"
+    autoload :DirectionProperty,
+             "ogc/gml/direction_property"
+    autoload :DirectionVector,
+             "ogc/gml/direction_vector"
+    autoload :DiscreteCoverage,
+             "ogc/gml/discrete_coverage"
+    autoload :DomainOfValidity,
+             "ogc/gml/domain_of_validity"
+    autoload :DomainSet,
+             "ogc/gml/domain_set"
+    autoload :DynamicFeature,
+             "ogc/gml/dynamic_feature"
+    autoload :DynamicFeatureCollection,
+             "ogc/gml/dynamic_feature_collection"
+    autoload :DynamicFeatureMember,
+             "ogc/gml/dynamic_feature_member"
+    autoload :Edge,
+             "ogc/gml/edge"
+    autoload :Ellipsoid,
+             "ogc/gml/ellipsoid"
+    autoload :EllipsoidProperty,
+             "ogc/gml/ellipsoid_property"
+    autoload :EllipsoidalCS,
+             "ogc/gml/ellipsoidal_cs"
+    autoload :EllipsoidalCSProperty,
+             "ogc/gml/ellipsoidal_cs_property"
+    autoload :EngineeringCRS,
+             "ogc/gml/engineering_crs"
+    autoload :EngineeringCRSProperty,
+             "ogc/gml/engineering_crs_property"
+    autoload :EngineeringDatum,
+             "ogc/gml/engineering_datum"
+    autoload :EngineeringDatumProperty,
+             "ogc/gml/engineering_datum_property"
+    autoload :Envelope,
+             "ogc/gml/envelope"
+    autoload :EnvelopeWithTimePeriod,
+             "ogc/gml/envelope_with_time_period"
+    autoload :Face,
+             "ogc/gml/face"
+    autoload :FaceOrTopoSolidProperty,
+             "ogc/gml/face_or_topo_solid_property"
+    autoload :FeatureArrayProperty,
+             "ogc/gml/feature_array_property"
+    autoload :FeatureCollection,
+             "ogc/gml/feature_collection"
+    autoload :FeatureProperty,
+             "ogc/gml/feature_property"
+    autoload :File,
+             "ogc/gml/file"
+    autoload :Formula,
+             "ogc/gml/formula"
+    autoload :FormulaCitation,
+             "ogc/gml/formula_citation"
+    autoload :GeneralConversionProperty,
+             "ogc/gml/general_conversion_property"
+    autoload :GeneralTransformationProperty,
+             "ogc/gml/general_transformation_property"
+    autoload :GenericMetaData,
+             "ogc/gml/generic_meta_data"
+    autoload :GeocentricCRS,
+             "ogc/gml/geocentric_crs"
+    autoload :GeocentricCRSProperty,
+             "ogc/gml/geocentric_crs_property"
+    autoload :Geodesic,
+             "ogc/gml/geodesic"
+    autoload :GeodesicString,
+             "ogc/gml/geodesic_string"
+    autoload :GeodeticCRS,
+             "ogc/gml/geodetic_crs"
+    autoload :GeodeticCRSProperty,
+             "ogc/gml/geodetic_crs_property"
+    autoload :GeodeticDatum,
+             "ogc/gml/geodetic_datum"
+    autoload :GeodeticDatumProperty,
+             "ogc/gml/geodetic_datum_property"
+    autoload :GeographicCRS,
+             "ogc/gml/geographic_crs"
+    autoload :GeographicCRSProperty,
+             "ogc/gml/geographic_crs_property"
+    autoload :GeometricComplex,
+             "ogc/gml/geometric_complex"
+    autoload :GeometricPrimitiveProperty,
+             "ogc/gml/geometric_primitive_property"
+    autoload :GeometryArrayProperty,
+             "ogc/gml/geometry_array_property"
+    autoload :GeometryProperty,
+             "ogc/gml/geometry_property"
+    autoload :Gml31Namespace,
+             "ogc/gml/namespaces/gml_31_namespace"
+    autoload :Gml32Namespace,
+             "ogc/gml/namespaces/gml_32_namespace"
+    autoload :Grid,
+             "ogc/gml/grid"
+    autoload :GridEnvelope,
+             "ogc/gml/grid_envelope"
+    autoload :GridFunction,
+             "ogc/gml/grid_function"
+    autoload :GridLimits,
+             "ogc/gml/grid_limits"
+    autoload :HistoryProperty,
+             "ogc/gml/history_property"
+    autoload :Identifier,
+             "ogc/gml/identifier"
+    autoload :ImageCRS,
+             "ogc/gml/image_crs"
+    autoload :ImageCRSProperty,
+             "ogc/gml/image_crs_property"
+    autoload :ImageDatum,
+             "ogc/gml/image_datum"
+    autoload :ImageDatumProperty,
+             "ogc/gml/image_datum_property"
+    autoload :IndirectEntry,
+             "ogc/gml/indirect_entry"
+    autoload :InlineProperty,
+             "ogc/gml/inline_property"
+    autoload :Knot,
+             "ogc/gml/knot"
+    autoload :KnotProperty,
+             "ogc/gml/knot_property"
+    autoload :Length,
+             "ogc/gml/length"
+    autoload :LineString,
+             "ogc/gml/line_string"
+    autoload :LineStringSegment,
+             "ogc/gml/line_string_segment"
+    autoload :LineStringSegmentArrayProperty,
+             "ogc/gml/line_string_segment_array_property"
+    autoload :LinearCS,
+             "ogc/gml/linear_cs"
+    autoload :LinearCSProperty,
+             "ogc/gml/linear_cs_property"
+    autoload :LinearRing,
+             "ogc/gml/linear_ring"
+    autoload :LocationProperty,
+             "ogc/gml/location_property"
+    autoload :MappingRule,
+             "ogc/gml/mapping_rule"
+    autoload :Measure,
+             "ogc/gml/measure"
+    autoload :MeasureList,
+             "ogc/gml/measure_list"
+    autoload :MeasureOrNilReasonList,
+             "ogc/gml/measure_or_nil_reason_list"
+    autoload :MetaDataProperty,
+             "ogc/gml/meta_data_property"
+    autoload :MovingObjectStatus,
+             "ogc/gml/moving_object_status"
+    autoload :MultiCurve,
+             "ogc/gml/multi_curve"
+    autoload :MultiCurveProperty,
+             "ogc/gml/multi_curve_property"
+    autoload :MultiGeometry,
+             "ogc/gml/multi_geometry"
+    autoload :MultiGeometryProperty,
+             "ogc/gml/multi_geometry_property"
+    autoload :MultiPoint,
+             "ogc/gml/multi_point"
+    autoload :MultiPointProperty,
+             "ogc/gml/multi_point_property"
+    autoload :MultiSolid,
+             "ogc/gml/multi_solid"
+    autoload :MultiSolidProperty,
+             "ogc/gml/multi_solid_property"
+    autoload :MultiSurface,
+             "ogc/gml/multi_surface"
+    autoload :MultiSurfaceProperty,
+             "ogc/gml/multi_surface_property"
+    autoload :Namespace,
+             "ogc/gml/namespace"
+    autoload :Node,
+             "ogc/gml/node"
+    autoload :NodeOrEdgeProperty,
+             "ogc/gml/node_or_edge_property"
+    autoload :NodeProperty,
+             "ogc/gml/node_property"
+    autoload :ObliqueCartesianCS,
+             "ogc/gml/oblique_cartesian_cs"
+    autoload :ObliqueCartesianCSProperty,
+             "ogc/gml/oblique_cartesian_cs_property"
+    autoload :Observation,
+             "ogc/gml/observation"
+    autoload :OffsetCurve,
+             "ogc/gml/offset_curve"
+    autoload :OperationMethod,
+             "ogc/gml/operation_method"
+    autoload :OperationMethodProperty,
+             "ogc/gml/operation_method_property"
+    autoload :OperationParameter,
+             "ogc/gml/operation_parameter"
+    autoload :OperationParameterGroup,
+             "ogc/gml/operation_parameter_group"
+    autoload :OperationParameterGroupProperty,
+             "ogc/gml/operation_parameter_group_property"
+    autoload :OperationParameterProperty,
+             "ogc/gml/operation_parameter_property"
+    autoload :OperationProperty,
+             "ogc/gml/operation_property"
+    autoload :OrientableCurve,
+             "ogc/gml/orientable_curve"
+    autoload :OrientableSurface,
+             "ogc/gml/orientable_surface"
+    autoload :ParameterValue,
+             "ogc/gml/parameter_value"
+    autoload :ParameterValueGroup,
+             "ogc/gml/parameter_value_group"
+    autoload :PassThroughOperation,
+             "ogc/gml/pass_through_operation"
+    autoload :PassThroughOperationProperty,
+             "ogc/gml/pass_through_operation_property"
+    autoload :Point,
+             "ogc/gml/point"
+    autoload :PointArrayProperty,
+             "ogc/gml/point_array_property"
+    autoload :PointProperty,
+             "ogc/gml/point_property"
+    autoload :PolarCS,
+             "ogc/gml/polar_cs"
+    autoload :PolarCSProperty,
+             "ogc/gml/polar_cs_property"
+    autoload :Polygon,
+             "ogc/gml/polygon"
+    autoload :PolygonPatch,
+             "ogc/gml/polygon_patch"
+    autoload :PrimeMeridian,
+             "ogc/gml/prime_meridian"
+    autoload :PrimeMeridianProperty,
+             "ogc/gml/prime_meridian_property"
+    autoload :PriorityLocationProperty,
+             "ogc/gml/priority_location_property"
+    autoload :ProcedureProperty,
+             "ogc/gml/procedure_property"
+    autoload :ProjectedCRS,
+             "ogc/gml/projected_crs"
+    autoload :ProjectedCRSProperty,
+             "ogc/gml/projected_crs_property"
+    autoload :Quantity,
+             "ogc/gml/quantity"
+    autoload :QuantityExtent,
+             "ogc/gml/quantity_extent"
+    autoload :RangeSet,
+             "ogc/gml/range_set"
+    autoload :Rectangle,
+             "ogc/gml/rectangle"
+    autoload :RectifiedGrid,
+             "ogc/gml/rectified_grid"
+    autoload :RefLocation,
+             "ogc/gml/ref_location"
+    autoload :Reference,
+             "ogc/gml/reference"
+    autoload :RelatedTime,
+             "ogc/gml/related_time"
+    autoload :RemoteSchema,
+             "ogc/gml/reference"
+    autoload :Result,
+             "ogc/gml/result"
+    autoload :Ring,
+             "ogc/gml/ring"
+    autoload :SecondDefiningParameter1,
+             "ogc/gml/second_defining_parameter1"
+    autoload :SecondDefiningParameter2,
+             "ogc/gml/second_defining_parameter2"
+    autoload :SequenceRule,
+             "ogc/gml/sequence_rule"
+    autoload :Shell,
+             "ogc/gml/shell"
+    autoload :ShellProperty,
+             "ogc/gml/shell_property"
+    autoload :SingleCRSProperty,
+             "ogc/gml/single_crs_property"
+    autoload :SingleOperationProperty,
+             "ogc/gml/single_operation_property"
+    autoload :Solid,
+             "ogc/gml/solid"
+    autoload :SolidArrayProperty,
+             "ogc/gml/solid_array_property"
+    autoload :SolidProperty,
+             "ogc/gml/solid_property"
+    autoload :Sphere,
+             "ogc/gml/sphere"
+    autoload :SphericalCS,
+             "ogc/gml/spherical_cs"
+    autoload :SphericalCSProperty,
+             "ogc/gml/spherical_cs_property"
+    autoload :StringOrRef,
+             "ogc/gml/string_or_ref"
+    autoload :Surface,
+             "ogc/gml/surface"
+    autoload :SurfaceArrayProperty,
+             "ogc/gml/surface_array_property"
+    autoload :SurfacePatchArrayProperty,
+             "ogc/gml/surface_patch_array_property"
+    autoload :SurfaceProperty,
+             "ogc/gml/surface_property"
+    autoload :TargetProperty,
+             "ogc/gml/target_property"
+    autoload :TemporalCRS,
+             "ogc/gml/temporal_crs"
+    autoload :TemporalCRSProperty,
+             "ogc/gml/temporal_crs_property"
+    autoload :TemporalCS,
+             "ogc/gml/temporal_cs"
+    autoload :TemporalCSProperty,
+             "ogc/gml/temporal_cs_property"
+    autoload :TemporalDatum,
+             "ogc/gml/temporal_datum"
+    autoload :TemporalDatumProperty,
+             "ogc/gml/temporal_datum_property"
+    autoload :TimeCS,
+             "ogc/gml/time_cs"
+    autoload :TimeCSProperty,
+             "ogc/gml/time_cs_property"
+    autoload :TimeCalendar,
+             "ogc/gml/time_calendar"
+    autoload :TimeCalendarEra,
+             "ogc/gml/time_calendar_era"
+    autoload :TimeCalendarEraProperty,
+             "ogc/gml/time_calendar_era_property"
+    autoload :TimeCalendarProperty,
+             "ogc/gml/time_calendar_property"
+    autoload :TimeClock,
+             "ogc/gml/time_clock"
+    autoload :TimeCoordinateSystem,
+             "ogc/gml/time_coordinate_system"
+    autoload :TimeEdge,
+             "ogc/gml/time_edge"
+    autoload :TimeEdgeProperty,
+             "ogc/gml/time_edge_property"
+    autoload :TimeInstant,
+             "ogc/gml/time_instant"
+    autoload :TimeInstantProperty,
+             "ogc/gml/time_instant_property"
+    autoload :TimeIntervalLength,
+             "ogc/gml/time_interval_length"
+    autoload :TimeNode,
+             "ogc/gml/time_node"
+    autoload :TimeNodeProperty,
+             "ogc/gml/time_node_property"
+    autoload :TimeOrdinalEra,
+             "ogc/gml/time_ordinal_era"
+    autoload :TimeOrdinalEraProperty,
+             "ogc/gml/time_ordinal_era_property"
+    autoload :TimeOrdinalReferenceSystem,
+             "ogc/gml/time_ordinal_reference_system"
+    autoload :TimePeriod,
+             "ogc/gml/time_period"
+    autoload :TimePeriodProperty,
+             "ogc/gml/time_period_property"
+    autoload :TimePosition,
+             "ogc/gml/time_position"
+    autoload :TimePrimitiveProperty,
+             "ogc/gml/time_primitive_property"
+    autoload :TimeReferenceSystem,
+             "ogc/gml/time_reference_system"
+    autoload :TimeTopologyComplex,
+             "ogc/gml/time_topology_complex"
+    autoload :TimeTopologyPrimitiveProperty,
+             "ogc/gml/time_topology_primitive_property"
+    autoload :Tin,
+             "ogc/gml/tin"
+    autoload :TopoComplex,
+             "ogc/gml/topo_complex"
+    autoload :TopoComplexProperty,
+             "ogc/gml/topo_complex_property"
+    autoload :TopoCurve,
+             "ogc/gml/topo_curve"
+    autoload :TopoCurveProperty,
+             "ogc/gml/topo_curve_property"
+    autoload :TopoPoint,
+             "ogc/gml/topo_point"
+    autoload :TopoPointProperty,
+             "ogc/gml/topo_point_property"
+    autoload :TopoPrimitiveArrayAssociation,
+             "ogc/gml/topo_primitive_array_association"
+    autoload :TopoPrimitiveMember,
+             "ogc/gml/topo_primitive_member"
+    autoload :TopoSolid,
+             "ogc/gml/topo_solid"
+    autoload :TopoSolidProperty,
+             "ogc/gml/topo_solid_property"
+    autoload :TopoSurface,
+             "ogc/gml/topo_surface"
+    autoload :TopoSurfaceProperty,
+             "ogc/gml/topo_surface_property"
+    autoload :TopoVolume,
+             "ogc/gml/topo_volume"
+    autoload :TopoVolumeProperty,
+             "ogc/gml/topo_volume_property"
+    autoload :Transformation,
+             "ogc/gml/transformation"
+    autoload :TransformationProperty,
+             "ogc/gml/transformation_property"
+    autoload :Triangle,
+             "ogc/gml/triangle"
+    autoload :UnitDefinition,
+             "ogc/gml/unit_definition"
+    autoload :UnitOfMeasure,
+             "ogc/gml/unit_of_measure"
+    autoload :UserDefinedCS,
+             "ogc/gml/user_defined_cs"
+    autoload :UserDefinedCSProperty,
+             "ogc/gml/user_defined_cs_property"
+    autoload :VERSION,
+             "ogc/gml/version"
+    autoload :ValueArray,
+             "ogc/gml/value_array"
+    autoload :ValueArrayProperty,
+             "ogc/gml/value_array_property"
+    autoload :ValueProperty,
+             "ogc/gml/value_property"
+    autoload :Vector,
+             "ogc/gml/vector"
+    autoload :VerticalCRS,
+             "ogc/gml/vertical_crs"
+    autoload :VerticalCRSProperty,
+             "ogc/gml/vertical_crs_property"
+    autoload :VerticalCS,
+             "ogc/gml/vertical_cs"
+    autoload :VerticalCSProperty,
+             "ogc/gml/vertical_cs_property"
+    autoload :VerticalDatum,
+             "ogc/gml/vertical_datum"
+    autoload :VerticalDatumProperty,
+             "ogc/gml/vertical_datum_property"
   end
 end
-
-require_relative "gml/namespace"
-require_relative "gml/abstract_continuous_coverage"
-require_relative "gml/abstract_coordinate_operation"
-require_relative "gml/abstract_coordinate_system"
-require_relative "gml/abstract_coverage"
-require_relative "gml/abstract_crs"
-require_relative "gml/abstract_curve_segment"
-require_relative "gml/abstract_curve"
-require_relative "gml/abstract_datum"
-require_relative "gml/abstract_feature_collection"
-require_relative "gml/abstract_feature"
-require_relative "gml/abstract_general_conversion"
-require_relative "gml/abstract_general_derived_crs"
-require_relative "gml/abstract_general_operation_parameter_property"
-require_relative "gml/abstract_general_operation_parameter"
-require_relative "gml/abstract_general_parameter_value_property"
-require_relative "gml/abstract_general_parameter_value"
-require_relative "gml/abstract_general_transformation"
-require_relative "gml/abstract_geometric_aggregate"
-require_relative "gml/abstract_geometric_primitive"
-require_relative "gml/abstract_geometry"
-require_relative "gml/abstract_gml"
-require_relative "gml/abstract_gridded_surface"
-require_relative "gml/abstract_meta_data"
-require_relative "gml/abstract_parametric_curve_surface"
-require_relative "gml/abstract_ring_property"
-require_relative "gml/abstract_ring"
-require_relative "gml/abstract_solid"
-require_relative "gml/abstract_surface_patch"
-require_relative "gml/abstract_surface"
-require_relative "gml/abstract_time_complex"
-require_relative "gml/abstract_time_geometric_primitive"
-require_relative "gml/abstract_time_object"
-require_relative "gml/abstract_time_primitive"
-require_relative "gml/abstract_time_slice"
-require_relative "gml/abstract_time_topology_primitive"
-require_relative "gml/abstract_topo_primitive"
-require_relative "gml/abstract_topology"
-require_relative "gml/affine_cs_property"
-require_relative "gml/affine_cs"
-require_relative "gml/affine_placement"
-require_relative "gml/angle"
-require_relative "gml/arc_by_bulge"
-require_relative "gml/arc_by_center_point"
-require_relative "gml/arc_string_by_bulge"
-require_relative "gml/arc_string"
-require_relative "gml/arc"
-require_relative "gml/array_association"
-require_relative "gml/array"
-require_relative "gml/association_role"
-require_relative "gml/b_spline"
-require_relative "gml/bag"
-require_relative "gml/base_unit"
-require_relative "gml/bezier"
-require_relative "gml/boolean"
-require_relative "gml/bounding_shape"
-require_relative "gml/cartesian_cs_property"
-require_relative "gml/cartesian_cs"
-require_relative "gml/category"
-require_relative "gml/category_extent"
-require_relative "gml/circle_by_center_point"
-require_relative "gml/circle"
-require_relative "gml/clothoid"
-require_relative "gml/code_or_nil_reason_list"
-require_relative "gml/code"
-require_relative "gml/code_with_authority"
-require_relative "gml/composite_curve"
-require_relative "gml/composite_solid"
-require_relative "gml/composite_surface"
-require_relative "gml/composite_value"
-require_relative "gml/compound_crs_property"
-require_relative "gml/compound_crs"
-require_relative "gml/concatenated_operation_property"
-require_relative "gml/concatenated_operation"
-require_relative "gml/cone"
-require_relative "gml/control_point"
-require_relative "gml/conventional_unit"
-require_relative "gml/conversion_property"
-require_relative "gml/conversion_to_preferred_unit"
-require_relative "gml/conversion"
-require_relative "gml/coordinate_operation_accuracy"
-require_relative "gml/coordinate_operation_property"
-require_relative "gml/coordinate_system_axis_property"
-require_relative "gml/coordinate_system_axis"
-require_relative "gml/coordinate_system_property"
-require_relative "gml/coordinates"
-require_relative "gml/count"
-require_relative "gml/coverage_function"
-require_relative "gml/crs_property"
-require_relative "gml/cubic_spline"
-require_relative "gml/curve_array_property"
-require_relative "gml/curve_property"
-require_relative "gml/curve_segment_array_property"
-require_relative "gml/curve"
-require_relative "gml/cylinder"
-require_relative "gml/cylindrical_cs_property"
-require_relative "gml/cylindrical_cs"
-require_relative "gml/data_block"
-require_relative "gml/datum_property"
-require_relative "gml/definition_proxy"
-require_relative "gml/definition"
-require_relative "gml/degrees"
-require_relative "gml/derivation_unit_term"
-require_relative "gml/derived_crs_property"
-require_relative "gml/derived_crs"
-require_relative "gml/derived_unit"
-require_relative "gml/dictionary_entry"
-require_relative "gml/dictionary"
-require_relative "gml/direct_position_list"
-require_relative "gml/direct_position"
-require_relative "gml/directed_edge_property"
-require_relative "gml/directed_face_property"
-require_relative "gml/directed_node_property"
-require_relative "gml/directed_observation_at_distance"
-require_relative "gml/directed_observation"
-require_relative "gml/directed_topo_solid_property"
-require_relative "gml/direction_description"
-require_relative "gml/direction_property"
-require_relative "gml/direction_vector"
-require_relative "gml/discrete_coverage"
-require_relative "gml/dms_angle"
-require_relative "gml/domain_of_validity"
-require_relative "gml/domain_set"
-require_relative "gml/dynamic_feature_collection"
-require_relative "gml/dynamic_feature_member"
-require_relative "gml/dynamic_feature"
-require_relative "gml/edge"
-require_relative "gml/ellipsoid_property"
-require_relative "gml/ellipsoid"
-require_relative "gml/ellipsoidal_cs_property"
-require_relative "gml/ellipsoidal_cs"
-require_relative "gml/engineering_crs_property"
-require_relative "gml/engineering_crs"
-require_relative "gml/engineering_datum_property"
-require_relative "gml/engineering_datum"
-require_relative "gml/envelope"
-require_relative "gml/envelope_with_time_period"
-require_relative "gml/face_or_topo_solid_property"
-require_relative "gml/face"
-require_relative "gml/feature_array_property"
-require_relative "gml/feature_collection"
-require_relative "gml/feature_property"
-require_relative "gml/file"
-require_relative "gml/formula_citation"
-require_relative "gml/formula"
-require_relative "gml/general_conversion_property"
-require_relative "gml/general_transformation_property"
-require_relative "gml/generic_meta_data"
-require_relative "gml/geocentric_crs_property"
-require_relative "gml/geocentric_crs"
-require_relative "gml/geodesic_string"
-require_relative "gml/geodesic"
-require_relative "gml/geodetic_crs_property"
-require_relative "gml/geodetic_crs"
-require_relative "gml/geodetic_datum_property"
-require_relative "gml/geodetic_datum"
-require_relative "gml/geographic_crs_property"
-require_relative "gml/geographic_crs"
-require_relative "gml/geometric_complex"
-require_relative "gml/geometric_primitive_property"
-require_relative "gml/geometry_array_property"
-require_relative "gml/geometry_property"
-require_relative "gml/grid_envelope"
-require_relative "gml/grid_function"
-require_relative "gml/grid_limits"
-require_relative "gml/grid"
-require_relative "gml/history_property"
-require_relative "gml/image_crs_property"
-require_relative "gml/image_crs"
-require_relative "gml/image_datum_property"
-require_relative "gml/image_datum"
-require_relative "gml/indirect_entry"
-require_relative "gml/inline_property"
-require_relative "gml/knot_property"
-require_relative "gml/knot"
-require_relative "gml/length"
-require_relative "gml/line_string_segment_array_property"
-require_relative "gml/line_string_segment"
-require_relative "gml/line_string"
-require_relative "gml/linear_cs_property"
-require_relative "gml/linear_cs"
-require_relative "gml/linear_ring"
-require_relative "gml/location_property"
-require_relative "gml/mapping_rule"
-require_relative "gml/measure_list"
-require_relative "gml/measure_or_nil_reason_list"
-require_relative "gml/measure"
-require_relative "gml/meta_data_property"
-require_relative "gml/moving_object_status"
-require_relative "gml/multi_curve_property"
-require_relative "gml/multi_curve"
-require_relative "gml/multi_geometry_property"
-require_relative "gml/multi_geometry"
-require_relative "gml/multi_point_property"
-require_relative "gml/multi_point"
-require_relative "gml/multi_solid_property"
-require_relative "gml/multi_solid"
-require_relative "gml/multi_surface_property"
-require_relative "gml/multi_surface"
-require_relative "gml/node_or_edge_property"
-require_relative "gml/node_property"
-require_relative "gml/node"
-require_relative "gml/oblique_cartesian_cs_property"
-require_relative "gml/oblique_cartesian_cs"
-require_relative "gml/observation"
-require_relative "gml/offset_curve"
-require_relative "gml/operation_method_property"
-require_relative "gml/operation_method"
-require_relative "gml/operation_parameter_group_property"
-require_relative "gml/operation_parameter_group"
-require_relative "gml/operation_parameter_property"
-require_relative "gml/operation_parameter"
-require_relative "gml/operation_property"
-require_relative "gml/orientable_curve"
-require_relative "gml/orientable_surface"
-require_relative "gml/parameter_value_group"
-require_relative "gml/parameter_value"
-require_relative "gml/pass_through_operation_property"
-require_relative "gml/pass_through_operation"
-require_relative "gml/point_array_property"
-require_relative "gml/point_property"
-require_relative "gml/point"
-require_relative "gml/polar_cs_property"
-require_relative "gml/polar_cs"
-require_relative "gml/polygon_patch"
-require_relative "gml/polygon"
-require_relative "gml/prime_meridian_property"
-require_relative "gml/prime_meridian"
-require_relative "gml/priority_location_property"
-require_relative "gml/procedure_property"
-require_relative "gml/projected_crs_property"
-require_relative "gml/projected_crs"
-require_relative "gml/quantity"
-require_relative "gml/quantity_extent"
-require_relative "gml/range_set"
-require_relative "gml/rectangle"
-require_relative "gml/rectified_grid"
-require_relative "gml/ref_location"
-require_relative "gml/reference"
-require_relative "gml/related_time"
-require_relative "gml/result"
-require_relative "gml/ring"
-require_relative "gml/second_defining_parameter1"
-require_relative "gml/second_defining_parameter2"
-require_relative "gml/sequence_rule"
-require_relative "gml/shell_property"
-require_relative "gml/shell"
-require_relative "gml/single_crs_property"
-require_relative "gml/single_operation_property"
-require_relative "gml/solid_array_property"
-require_relative "gml/solid_property"
-require_relative "gml/solid"
-require_relative "gml/sphere"
-require_relative "gml/spherical_cs_property"
-require_relative "gml/spherical_cs"
-require_relative "gml/string_or_ref"
-require_relative "gml/surface_array_property"
-require_relative "gml/surface_patch_array_property"
-require_relative "gml/surface_property"
-require_relative "gml/surface"
-require_relative "gml/target_property"
-require_relative "gml/temporal_crs_property"
-require_relative "gml/temporal_crs"
-require_relative "gml/temporal_cs_property"
-require_relative "gml/temporal_cs"
-require_relative "gml/temporal_datum_property"
-require_relative "gml/temporal_datum"
-require_relative "gml/time_calendar_era_property"
-require_relative "gml/time_calendar_era"
-require_relative "gml/time_calendar_property"
-require_relative "gml/time_calendar"
-require_relative "gml/time_clock"
-require_relative "gml/time_coordinate_system"
-require_relative "gml/time_cs_property"
-require_relative "gml/time_cs"
-require_relative "gml/time_edge_property"
-require_relative "gml/time_edge"
-require_relative "gml/time_instant_property"
-require_relative "gml/time_instant"
-require_relative "gml/time_interval_length"
-require_relative "gml/time_node_property"
-require_relative "gml/time_node"
-require_relative "gml/time_ordinal_era_property"
-require_relative "gml/time_ordinal_era"
-require_relative "gml/time_ordinal_reference_system"
-require_relative "gml/time_period_property"
-require_relative "gml/time_period"
-require_relative "gml/time_position"
-require_relative "gml/time_primitive_property"
-require_relative "gml/time_reference_system"
-require_relative "gml/time_topology_complex"
-require_relative "gml/time_topology_primitive_property"
-require_relative "gml/tin"
-require_relative "gml/topo_complex_property"
-require_relative "gml/topo_complex"
-require_relative "gml/topo_curve_property"
-require_relative "gml/topo_curve"
-require_relative "gml/topo_point_property"
-require_relative "gml/topo_point"
-require_relative "gml/topo_primitive_array_association"
-require_relative "gml/topo_primitive_member"
-require_relative "gml/topo_solid_property"
-require_relative "gml/topo_solid"
-require_relative "gml/topo_surface_property"
-require_relative "gml/topo_surface"
-require_relative "gml/topo_volume_property"
-require_relative "gml/topo_volume"
-require_relative "gml/transformation_property"
-require_relative "gml/transformation"
-require_relative "gml/triangle"
-require_relative "gml/unit_definition"
-require_relative "gml/unit_of_measure"
-require_relative "gml/user_defined_cs_property"
-require_relative "gml/user_defined_cs"
-require_relative "gml/value_array_property"
-require_relative "gml/value_array"
-require_relative "gml/value_property"
-require_relative "gml/vector"
-require_relative "gml/vertical_crs_property"
-require_relative "gml/vertical_crs"
-require_relative "gml/vertical_cs_property"
-require_relative "gml/vertical_cs"
-require_relative "gml/vertical_datum_property"
-require_relative "gml/vertical_datum"

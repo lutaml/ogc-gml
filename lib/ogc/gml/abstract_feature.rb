@@ -2,14 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "bounding_shape"
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "location_property"
-require_relative "meta_data_property"
-require_relative "reference"
-require_relative "abstract_topology"
-
 module Ogc
   module Gml
     class AbstractFeature < AbstractTopology

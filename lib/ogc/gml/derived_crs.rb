@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-require_relative "code_with_authority"
-require_relative "coordinate_system_property"
-require_relative "single_crs_property"
-require_relative "abstract_general_derived_crs"
 
 module Ogc
   module Gml

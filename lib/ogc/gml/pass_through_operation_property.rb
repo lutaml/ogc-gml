@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "pass_through_operation"
-
 module Ogc
   module Gml
     class PassThroughOperationProperty < Lutaml::Model::Serializable

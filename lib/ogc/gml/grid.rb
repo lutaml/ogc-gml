@@ -2,13 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "grid_limits"
-require_relative "meta_data_property"
-require_relative "reference"
-require_relative "identifier"
-
 module Ogc
   module Gml
     class Grid < Lutaml::Model::Serializable

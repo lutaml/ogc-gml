@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-require_relative "abstract_continuous_coverage"
 
 module Ogc
   module Gml

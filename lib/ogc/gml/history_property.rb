@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_time_slice"
-
 module Ogc
   module Gml
     class HistoryProperty < Lutaml::Model::Serializable

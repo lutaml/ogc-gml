@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "concatenated_operation"
-
 module Ogc
   module Gml
     class ConcatenatedOperationProperty < Lutaml::Model::Serializable

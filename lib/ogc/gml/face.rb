@@ -2,16 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "directed_edge_property"
-require_relative "directed_topo_solid_property"
-require_relative "meta_data_property"
-require_relative "node_property"
-require_relative "reference"
-require_relative "surface_property"
-require_relative "identifier"
-
 module Ogc
   module Gml
     class Face < Lutaml::Model::Serializable

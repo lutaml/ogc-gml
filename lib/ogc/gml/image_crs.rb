@@ -1,11 +1,6 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-require_relative "affine_cs_property"
-require_relative "cartesian_cs_property"
-require_relative "image_datum_property"
-require_relative "oblique_cartesian_cs_property"
-require_relative "abstract_crs"
 
 module Ogc
   module Gml

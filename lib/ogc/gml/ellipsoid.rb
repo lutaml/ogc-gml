@@ -2,14 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "measure"
-require_relative "meta_data_property"
-require_relative "reference"
-require_relative "second_defining_parameter1"
-require_relative "abstract_topology"
-
 module Ogc
   module Gml
     class Ellipsoid < AbstractTopology

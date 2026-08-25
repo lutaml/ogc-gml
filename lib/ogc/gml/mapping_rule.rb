@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "reference"
-
 module Ogc
   module Gml
     class MappingRule < Lutaml::Model::Serializable

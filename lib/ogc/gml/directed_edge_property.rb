@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "edge"
-
 module Ogc
   module Gml
     class DirectedEdgeProperty < Lutaml::Model::Serializable

@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "sequence_rule"
-
 module Ogc
   module Gml
     class GridFunction < Lutaml::Model::Serializable

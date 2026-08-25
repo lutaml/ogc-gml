@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "line_string_segment"
-
 module Ogc
   module Gml
     class LineStringSegmentArrayProperty < Lutaml::Model::Serializable

@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "topo_solid"
-
 module Ogc
   module Gml
     class TopoSolidProperty < Lutaml::Model::Serializable

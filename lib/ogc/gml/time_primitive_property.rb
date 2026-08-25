@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_time_primitive"
-
 module Ogc
   module Gml
     class TimePrimitiveProperty < Lutaml::Model::Serializable

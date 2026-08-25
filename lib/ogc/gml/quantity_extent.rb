@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "measure_or_nil_reason_list"
-
 module Ogc
   module Gml
     class QuantityExtent < Lutaml::Model::Serializable

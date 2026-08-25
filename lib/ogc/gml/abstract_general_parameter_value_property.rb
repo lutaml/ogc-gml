@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_general_parameter_value"
-
 module Ogc
   module Gml
     class AbstractGeneralParameterValueProperty < Lutaml::Model::Serializable

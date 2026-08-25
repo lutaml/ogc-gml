@@ -2,15 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "code"
-require_relative "code_with_authority"
-require_relative "meta_data_property"
-require_relative "reference"
-require_relative "time_instant_property"
-require_relative "time_interval_length"
-require_relative "time_position"
-require_relative "abstract_topology"
-
 module Ogc
   module Gml
     class TimeCoordinateSystem < AbstractTopology

@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "oblique_cartesian_cs"
-
 module Ogc
   module Gml
     class ObliqueCartesianCSProperty < Lutaml::Model::Serializable

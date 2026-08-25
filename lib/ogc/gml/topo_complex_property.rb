@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "topo_complex"
-
 module Ogc
   module Gml
     class TopoComplexProperty < Lutaml::Model::Serializable

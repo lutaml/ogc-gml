@@ -2,10 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "shell"
-require_relative "ring"
-require_relative "linear_ring"
-
 module Ogc
   module Gml
     class ShellProperty < Lutaml::Model::Serializable

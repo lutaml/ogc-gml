@@ -2,13 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "code_with_authority"
-require_relative "dictionary_entry"
-require_relative "indirect_entry"
-require_relative "meta_data_property"
-require_relative "reference"
-require_relative "identifier"
-
 module Ogc
   module Gml
     class AggregationType < Lutaml::Model::Type::String

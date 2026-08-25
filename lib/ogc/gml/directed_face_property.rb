@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "face"
-
 module Ogc
   module Gml
     class DirectedFaceProperty < Lutaml::Model::Serializable

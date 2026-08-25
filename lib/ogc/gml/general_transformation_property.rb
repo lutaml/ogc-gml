@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "abstract_general_transformation"
-
 module Ogc
   module Gml
     class GeneralTransformationProperty < Lutaml::Model::Serializable

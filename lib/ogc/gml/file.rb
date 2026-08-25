@@ -2,9 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "association_role"
-require_relative "code"
-
 module Ogc
   module Gml
     class File < Lutaml::Model::Serializable

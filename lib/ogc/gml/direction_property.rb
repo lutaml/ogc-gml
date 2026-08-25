@@ -2,11 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "code"
-require_relative "direction_description"
-require_relative "direction_vector"
-require_relative "string_or_ref"
-
 module Ogc
   module Gml
     class DirectionProperty < Lutaml::Model::Serializable

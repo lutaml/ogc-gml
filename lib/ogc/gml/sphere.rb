@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "lutaml/model"
-require_relative "cylinder"
 
 module Ogc
   module Gml

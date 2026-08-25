@@ -2,8 +2,6 @@
 
 require "lutaml/model"
 
-require_relative "coordinate_system_axis"
-
 module Ogc
   module Gml
     class CoordinateSystemAxisProperty < Lutaml::Model::Serializable
