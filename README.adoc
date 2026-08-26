@@ -46,10 +46,10 @@ For example:
 gml_data = File.read('spec/fixtures/geospatial_jp_iur_3.1/Bridge_class.xml')
 gml = Ogc::Gml::Dictionary.from_xml(gml_data)
 
-# Access the loaded GML Dictionary
-gml_dictionary = gml.dictionary
-gml_dictionary.features.each do |feature|
-  puts feature.name
+# Access the loaded GML Dictionary entries
+gml.dictionary_entry.each do |entry|
+  definition = entry.definition
+  puts "#{definition.name.first&.content}: #{definition.description}"
 end
 ----
 
