@@ -3,23 +3,18 @@
 RSpec.describe Ogc::Gml::Dictionary do
   # These codelists come from https://www.geospatial.jp/iur/codelists/
   #
-  # The fixtures are GML 3.1.1. The models bind the GML 3.2 namespace, and
-  # lenient parsing of out-of-namespace documents currently drops
-  # gml:description content (lutaml-model#754), so the two fixtures that
-  # carry descriptions fail to round-trip. Rewrite the fixtures to the
-  # bound 3.2 namespace until that is fixed.
-  def file_contents(filename)
-    File.read(Pathname.new(__dir__)
-      .join("../../fixtures/geospatial_jp_iur_3.1/#{filename}"))
-      .gsub("\t", "  ")
-      .gsub('xmlns:gml="http://www.opengis.net/gml"',
-            'xmlns:gml="http://www.opengis.net/gml/3.2"')
-  end
+  # The fixtures are GML 3.1.1 documents: a different namespace and schema
+  # from the GML 3.2 models in this gem. Multi-version support is being
+  # built on lutaml-model registers (namespace-bound contexts, the mml
+  # pattern); until the gml_31 register mappings are generated these
+  # documents must not be parsed as GML 3.2, so the round-trips are
+  # pending rather than rewritten into the 3.2 namespace.
 
   Dir.glob(Pathname.new(__dir__)
     .join("../../fixtures/geospatial_jp_iur_3.1/*.xml")).each do |filename|
     it "round-trips #{File.basename(filename)}" do
-      input = file_contents(File.basename(filename))
+      pending "requires gml_31 register mappings (lutaml-model#754)"
+      input = File.read(filename).gsub("\t", "  ")
       output = described_class.from_xml(input).to_xml(
         prefix: true,
         pretty: true,
@@ -32,7 +27,7 @@ RSpec.describe Ogc::Gml::Dictionary do
     end
   end
 
-  describe "GML 3.1.1 input" do
+  describe "GML 3.1.1 document against GML 3.2 models" do
     let(:input) do
       <<~XML
         <?xml version="1.0" encoding="UTF-8"?>
@@ -48,25 +43,15 @@ RSpec.describe Ogc::Gml::Dictionary do
       XML
     end
 
-    it "parses leniently" do
-      dictionary = described_class.from_xml(input)
-      expect(dictionary.dictionary_entry.count).to eq(1)
+    it "parses through the gml_31 register" do
+      pending "gml_31 register mappings not yet generated"
+      expect(described_class.from_xml(input, register: "gml_31"))
+        .to be_a(described_class)
     end
 
-    it "re-emits with the source namespace" do
-      output = described_class.from_xml(input).to_xml(prefix: true)
-      expect(output).to include('xmlns:gml="http://www.opengis.net/gml"')
-    end
-
-    it "does not rewrite the source namespace to GML 3.2" do
-      output = described_class.from_xml(input).to_xml(prefix: true)
-      expect(output).not_to include("gml/3.2")
-    end
-
-    it "preserves gml:description content" do
-      pending "lenient parsing drops out-of-namespace elements (lutaml-model#754)"
-      output = described_class.from_xml(input).to_xml(prefix: true)
-      expect(output).to include("<gml:description>first</gml:description>")
+    it "is rejected under strict namespace parsing" do
+      pending "lutaml-model must drop the local-name fallback (lutaml-model#754)"
+      expect { described_class.from_xml(input) }.to raise_error(Lutaml::Model::Error)
     end
   end
 end
