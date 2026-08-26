@@ -13,7 +13,7 @@ RSpec.describe Ogc::Gml::Dictionary do
   Dir.glob(Pathname.new(__dir__)
     .join("../../fixtures/geospatial_jp_iur_3.1/*.xml")).each do |filename|
     it "round-trips #{File.basename(filename)}" do
-      pending "requires gml_31 register mappings (lutaml-model#754)"
+      skip "requires gml_31 register mappings (lutaml-model#754)"
       input = File.read(filename).gsub("\t", "  ")
       output = described_class.from_xml(input).to_xml(
         prefix: true,
@@ -44,13 +44,13 @@ RSpec.describe Ogc::Gml::Dictionary do
     end
 
     it "parses through the gml_31 register" do
-      pending "gml_31 register mappings not yet generated"
+      skip "gml_31 register mappings not yet generated"
       expect(described_class.from_xml(input, register: "gml_31"))
         .to be_a(described_class)
     end
 
     it "is rejected under strict namespace parsing" do
-      pending "lutaml-model must drop the local-name fallback (lutaml-model#754)"
+      skip "lutaml-model must drop the local-name fallback (lutaml-model#754)"
       expect { described_class.from_xml(input) }.to raise_error(Lutaml::Model::Error)
     end
   end
