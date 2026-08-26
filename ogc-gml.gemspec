@@ -31,7 +31,9 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = ">= 2.7.0"
 
-  spec.add_dependency "lutaml-model", "~> 0.8"
+  # 0.8.20 is the first release with source-namespace-preserving XML
+  # serialization, which the round-trip specs rely on.
+  spec.add_dependency "lutaml-model", "~> 0.8.20"
   spec.add_dependency "nokogiri"
   spec.metadata["rubygems_mfa_required"] = "true"
 end
