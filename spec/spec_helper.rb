@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "ogc/gml"
+require "moxml"
 require "canon/rspec_matchers"
 
 # Configure Canon to ignore XML comments (lutaml-model doesn't preserve them)
@@ -28,8 +29,8 @@ module SpecHelpers
   module_function
 
   def remove_xml_comments(xml_string)
-    doc = Nokogiri::XML(xml_string)
-    doc.xpath("//comment()").remove
+    doc = Moxml.parse(xml_string)
+    doc.traverse { |node| node.remove if node.node_type == :comment }
     doc.to_xml
   end
 end
