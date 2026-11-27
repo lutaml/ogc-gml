@@ -6,6 +6,7 @@ permissions:
   contents: write
   packages: write
   id-token: write
+  pull-requests: write
 
 on:
   workflow_dispatch:
@@ -27,3 +28,4 @@ jobs:
       next_version: ${{ github.event.inputs.next_version }}
     secrets:
       rubygems-api-key: ${{ secrets.LUTAML_CI_RUBYGEMS_API_KEY }}
+      pat_token: ${{ secrets.LUTAML_CI_PAT_TOKEN }}
